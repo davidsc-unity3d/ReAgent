@@ -1,0 +1,514 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ml.rl.prediction package &mdash; ReAgent 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ml.rl.preprocessing package" href="ml.rl.preprocessing.html" />
+    <link rel="prev" title="ml.rl.models package" href="ml.rl.models.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ReAgent
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rasp_tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Advanced Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../distributed.html">Distributed Training</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../continuous_integration.html">Continuous Integration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Package Reference</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="ml.rl.evaluation.html">Evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml.rl.models.html">Models</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Prediction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ml.rl.prediction.dqn_torch_predictor">ml.rl.prediction.dqn_torch_predictor module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ml.rl.prediction.predictor_wrapper">ml.rl.prediction.predictor_wrapper module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ml.rl.prediction">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ml.rl.preprocessing.html">Preprocessing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml.rl.readers.html">Readers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml.rl.simulators.html">Simulators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml.rl.thrift.html">Thrift</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml.rl.training.html">Training</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml.rl.workflow.html">Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">All Modules</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/facebookresearch/ReAgent">Github</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ReAgent</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>ml.rl.prediction package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/ml.rl.prediction.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ml-rl-prediction-package">
+<h1>ml.rl.prediction package<a class="headerlink" href="#ml-rl-prediction-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-ml.rl.prediction.dqn_torch_predictor">
+<span id="ml-rl-prediction-dqn-torch-predictor-module"></span><h2>ml.rl.prediction.dqn_torch_predictor module<a class="headerlink" href="#module-ml.rl.prediction.dqn_torch_predictor" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ml.rl.prediction.dqn_torch_predictor.ActorTorchPredictor">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.prediction.dqn_torch_predictor.</code><code class="sig-name descname">ActorTorchPredictor</code><span class="sig-paren">(</span><em class="sig-param">model, action_feature_ids: List[int]</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.prediction.dqn_torch_predictor.ActorTorchPredictor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="ml.rl.prediction.dqn_torch_predictor.ActorTorchPredictor.actor_prediction">
+<code class="sig-name descname">actor_prediction</code><span class="sig-paren">(</span><em class="sig-param">float_state_features: List[Dict[int, float]]</em><span class="sig-paren">)</span> &#x2192; List[Dict[str, float]]<a class="headerlink" href="#ml.rl.prediction.dqn_torch_predictor.ActorTorchPredictor.actor_prediction" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.prediction.dqn_torch_predictor.ActorTorchPredictor.predict">
+<code class="sig-name descname">predict</code><span class="sig-paren">(</span><em class="sig-param">state_features: List[Dict[int, float]]</em><span class="sig-paren">)</span> &#x2192; List[Dict[str, float]]<a class="headerlink" href="#ml.rl.prediction.dqn_torch_predictor.ActorTorchPredictor.predict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ml.rl.prediction.dqn_torch_predictor.DiscreteDqnTorchPredictor">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.prediction.dqn_torch_predictor.</code><code class="sig-name descname">DiscreteDqnTorchPredictor</code><span class="sig-paren">(</span><em class="sig-param">model</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.prediction.dqn_torch_predictor.DiscreteDqnTorchPredictor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="ml.rl.prediction.dqn_torch_predictor.DiscreteDqnTorchPredictor.discrete_action">
+<code class="sig-name descname">discrete_action</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#ml.rl.prediction.dqn_torch_predictor.DiscreteDqnTorchPredictor.discrete_action" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.prediction.dqn_torch_predictor.DiscreteDqnTorchPredictor.policy">
+<code class="sig-name descname">policy</code><span class="sig-paren">(</span><em class="sig-param">state: torch.Tensor</em>, <em class="sig-param">state_feature_presence: Optional[torch.Tensor] = None</em>, <em class="sig-param">possible_actions_presence: Optional[torch.Tensor] = None</em><span class="sig-paren">)</span> &#x2192; ml.rl.types.DqnPolicyActionSet<a class="headerlink" href="#ml.rl.prediction.dqn_torch_predictor.DiscreteDqnTorchPredictor.policy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.prediction.dqn_torch_predictor.DiscreteDqnTorchPredictor.policy_given_q_values">
+<em class="property">static </em><code class="sig-name descname">policy_given_q_values</code><span class="sig-paren">(</span><em class="sig-param">q_scores: torch.Tensor, action_names: List[str], softmax_temperature: float, possible_actions_presence: Optional[torch.Tensor] = None</em><span class="sig-paren">)</span> &#x2192; ml.rl.types.DqnPolicyActionSet<a class="headerlink" href="#ml.rl.prediction.dqn_torch_predictor.DiscreteDqnTorchPredictor.policy_given_q_values" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.prediction.dqn_torch_predictor.DiscreteDqnTorchPredictor.policy_net">
+<code class="sig-name descname">policy_net</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#ml.rl.prediction.dqn_torch_predictor.DiscreteDqnTorchPredictor.policy_net" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.prediction.dqn_torch_predictor.DiscreteDqnTorchPredictor.predict">
+<code class="sig-name descname">predict</code><span class="sig-paren">(</span><em class="sig-param">state_features: List[Dict[int, float]]</em><span class="sig-paren">)</span> &#x2192; List[Dict[str, float]]<a class="headerlink" href="#ml.rl.prediction.dqn_torch_predictor.DiscreteDqnTorchPredictor.predict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ml.rl.prediction.dqn_torch_predictor.ParametricDqnTorchPredictor">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.prediction.dqn_torch_predictor.</code><code class="sig-name descname">ParametricDqnTorchPredictor</code><span class="sig-paren">(</span><em class="sig-param">model</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.prediction.dqn_torch_predictor.ParametricDqnTorchPredictor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="ml.rl.prediction.dqn_torch_predictor.ParametricDqnTorchPredictor.discrete_action">
+<code class="sig-name descname">discrete_action</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#ml.rl.prediction.dqn_torch_predictor.ParametricDqnTorchPredictor.discrete_action" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.prediction.dqn_torch_predictor.ParametricDqnTorchPredictor.policy">
+<code class="sig-name descname">policy</code><span class="sig-paren">(</span><em class="sig-param">tiled_states: torch.Tensor, possible_actions_with_presence: Tuple[torch.Tensor, torch.Tensor]</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.prediction.dqn_torch_predictor.ParametricDqnTorchPredictor.policy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.prediction.dqn_torch_predictor.ParametricDqnTorchPredictor.policy_given_q_values">
+<em class="property">static </em><code class="sig-name descname">policy_given_q_values</code><span class="sig-paren">(</span><em class="sig-param">q_scores: torch.Tensor</em>, <em class="sig-param">softmax_temperature: float</em>, <em class="sig-param">possible_actions_presence: torch.Tensor</em><span class="sig-paren">)</span> &#x2192; ml.rl.types.DqnPolicyActionSet<a class="headerlink" href="#ml.rl.prediction.dqn_torch_predictor.ParametricDqnTorchPredictor.policy_given_q_values" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.prediction.dqn_torch_predictor.ParametricDqnTorchPredictor.policy_net">
+<code class="sig-name descname">policy_net</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#ml.rl.prediction.dqn_torch_predictor.ParametricDqnTorchPredictor.policy_net" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.prediction.dqn_torch_predictor.ParametricDqnTorchPredictor.predict">
+<code class="sig-name descname">predict</code><span class="sig-paren">(</span><em class="sig-param">state_features: List[Dict[int, float]], action_features: List[Dict[int, float]]</em><span class="sig-paren">)</span> &#x2192; List[Dict[str, float]]<a class="headerlink" href="#ml.rl.prediction.dqn_torch_predictor.ParametricDqnTorchPredictor.predict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ml.rl.prediction.predictor_wrapper">
+<span id="ml-rl-prediction-predictor-wrapper-module"></span><h2>ml.rl.prediction.predictor_wrapper module<a class="headerlink" href="#module-ml.rl.prediction.predictor_wrapper" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ml.rl.prediction.predictor_wrapper.ActorPredictorWrapper">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.prediction.predictor_wrapper.</code><code class="sig-name descname">ActorPredictorWrapper</code><span class="sig-paren">(</span><em class="sig-param">actor_with_preprocessor: ml.rl.prediction.predictor_wrapper.ActorWithPreprocessor</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.prediction.predictor_wrapper.ActorPredictorWrapper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.jit.ScriptModule</span></code></p>
+<dl class="method">
+<dt id="ml.rl.prediction.predictor_wrapper.ActorPredictorWrapper.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">state_with_presence: Tuple[torch.Tensor, torch.Tensor]</em><span class="sig-paren">)</span> &#x2192; torch.Tensor<a class="headerlink" href="#ml.rl.prediction.predictor_wrapper.ActorPredictorWrapper.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.prediction.predictor_wrapper.ActorPredictorWrapper.state_sorted_features">
+<code class="sig-name descname">state_sorted_features</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; List[int]<a class="headerlink" href="#ml.rl.prediction.predictor_wrapper.ActorPredictorWrapper.state_sorted_features" title="Permalink to this definition">¶</a></dt>
+<dd><p>This interface is used by ActorTorchPredictor</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ml.rl.prediction.predictor_wrapper.ActorWithPreprocessor">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.prediction.predictor_wrapper.</code><code class="sig-name descname">ActorWithPreprocessor</code><span class="sig-paren">(</span><em class="sig-param">model: ml.rl.models.base.ModelBase</em>, <em class="sig-param">state_preprocessor: ml.rl.preprocessing.preprocessor.Preprocessor</em>, <em class="sig-param">action_postprocessor: Optional[ml.rl.preprocessing.postprocessor.Postprocessor] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.prediction.predictor_wrapper.ActorWithPreprocessor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="ml.rl.models.html#ml.rl.models.base.ModelBase" title="ml.rl.models.base.ModelBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.models.base.ModelBase</span></code></a></p>
+<p>This is separate from ActorPredictorWrapper so that we can pass typed inputs
+into the model. This is possible because JIT only traces tensor operation.
+In contrast, JIT scripting needs to compile the code, therefore, it won’t recognize
+any custom Python type.</p>
+<dl class="method">
+<dt id="ml.rl.prediction.predictor_wrapper.ActorWithPreprocessor.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">state_with_presence: Tuple[torch.Tensor, torch.Tensor]</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.prediction.predictor_wrapper.ActorWithPreprocessor.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.prediction.predictor_wrapper.ActorWithPreprocessor.input_prototype">
+<code class="sig-name descname">input_prototype</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.prediction.predictor_wrapper.ActorWithPreprocessor.input_prototype" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function provides the input for ONNX graph tracing.</p>
+<p>The return value should be what expected by <cite>forward()</cite>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.prediction.predictor_wrapper.ActorWithPreprocessor.sorted_features">
+<em class="property">property </em><code class="sig-name descname">sorted_features</code><a class="headerlink" href="#ml.rl.prediction.predictor_wrapper.ActorWithPreprocessor.sorted_features" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ml.rl.prediction.predictor_wrapper.DiscreteDqnPredictorWrapper">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.prediction.predictor_wrapper.</code><code class="sig-name descname">DiscreteDqnPredictorWrapper</code><span class="sig-paren">(</span><em class="sig-param">dqn_with_preprocessor: ml.rl.prediction.predictor_wrapper.DiscreteDqnWithPreprocessor, action_names: List[str]</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.prediction.predictor_wrapper.DiscreteDqnPredictorWrapper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.jit.ScriptModule</span></code></p>
+<dl class="method">
+<dt id="ml.rl.prediction.predictor_wrapper.DiscreteDqnPredictorWrapper.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">state_with_presence: Tuple[torch.Tensor, torch.Tensor]</em><span class="sig-paren">)</span> &#x2192; Tuple[List[str], torch.Tensor]<a class="headerlink" href="#ml.rl.prediction.predictor_wrapper.DiscreteDqnPredictorWrapper.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.prediction.predictor_wrapper.DiscreteDqnPredictorWrapper.state_sorted_features">
+<code class="sig-name descname">state_sorted_features</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; List[int]<a class="headerlink" href="#ml.rl.prediction.predictor_wrapper.DiscreteDqnPredictorWrapper.state_sorted_features" title="Permalink to this definition">¶</a></dt>
+<dd><p>This interface is used by DiscreteDqnTorchPredictor</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ml.rl.prediction.predictor_wrapper.DiscreteDqnWithPreprocessor">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.prediction.predictor_wrapper.</code><code class="sig-name descname">DiscreteDqnWithPreprocessor</code><span class="sig-paren">(</span><em class="sig-param">model: ml.rl.models.base.ModelBase</em>, <em class="sig-param">state_preprocessor: ml.rl.preprocessing.preprocessor.Preprocessor</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.prediction.predictor_wrapper.DiscreteDqnWithPreprocessor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="ml.rl.models.html#ml.rl.models.base.ModelBase" title="ml.rl.models.base.ModelBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.models.base.ModelBase</span></code></a></p>
+<p>This is separated from DiscreteDqnPredictorWrapper so that we can pass typed inputs
+into the model. This is possible because JIT only traces tensor operation.
+In contrast, JIT scripting needs to compile the code, therefore, it won’t recognize
+any custom Python type.</p>
+<dl class="method">
+<dt id="ml.rl.prediction.predictor_wrapper.DiscreteDqnWithPreprocessor.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">state_with_presence: Tuple[torch.Tensor, torch.Tensor]</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.prediction.predictor_wrapper.DiscreteDqnWithPreprocessor.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.prediction.predictor_wrapper.DiscreteDqnWithPreprocessor.input_prototype">
+<code class="sig-name descname">input_prototype</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.prediction.predictor_wrapper.DiscreteDqnWithPreprocessor.input_prototype" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function provides the input for ONNX graph tracing.</p>
+<p>The return value should be what expected by <cite>forward()</cite>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.prediction.predictor_wrapper.DiscreteDqnWithPreprocessor.sorted_features">
+<em class="property">property </em><code class="sig-name descname">sorted_features</code><a class="headerlink" href="#ml.rl.prediction.predictor_wrapper.DiscreteDqnWithPreprocessor.sorted_features" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ml.rl.prediction.predictor_wrapper.ParametricDqnPredictorWrapper">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.prediction.predictor_wrapper.</code><code class="sig-name descname">ParametricDqnPredictorWrapper</code><span class="sig-paren">(</span><em class="sig-param">dqn_with_preprocessor: ml.rl.prediction.predictor_wrapper.ParametricDqnWithPreprocessor</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.prediction.predictor_wrapper.ParametricDqnPredictorWrapper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.jit.ScriptModule</span></code></p>
+<dl class="method">
+<dt id="ml.rl.prediction.predictor_wrapper.ParametricDqnPredictorWrapper.action_sorted_features">
+<code class="sig-name descname">action_sorted_features</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; List[int]<a class="headerlink" href="#ml.rl.prediction.predictor_wrapper.ParametricDqnPredictorWrapper.action_sorted_features" title="Permalink to this definition">¶</a></dt>
+<dd><p>This interface is used by ParametricDqnTorchPredictor</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.prediction.predictor_wrapper.ParametricDqnPredictorWrapper.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">state_with_presence: Tuple[torch.Tensor, torch.Tensor], action_with_presence: Tuple[torch.Tensor, torch.Tensor]</em><span class="sig-paren">)</span> &#x2192; Tuple[List[str], torch.Tensor]<a class="headerlink" href="#ml.rl.prediction.predictor_wrapper.ParametricDqnPredictorWrapper.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.prediction.predictor_wrapper.ParametricDqnPredictorWrapper.state_sorted_features">
+<code class="sig-name descname">state_sorted_features</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; List[int]<a class="headerlink" href="#ml.rl.prediction.predictor_wrapper.ParametricDqnPredictorWrapper.state_sorted_features" title="Permalink to this definition">¶</a></dt>
+<dd><p>This interface is used by ParametricDqnTorchPredictor</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ml.rl.prediction.predictor_wrapper.ParametricDqnWithPreprocessor">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.prediction.predictor_wrapper.</code><code class="sig-name descname">ParametricDqnWithPreprocessor</code><span class="sig-paren">(</span><em class="sig-param">model: ml.rl.models.base.ModelBase</em>, <em class="sig-param">state_preprocessor: ml.rl.preprocessing.preprocessor.Preprocessor</em>, <em class="sig-param">action_preprocessor: ml.rl.preprocessing.preprocessor.Preprocessor</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.prediction.predictor_wrapper.ParametricDqnWithPreprocessor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="ml.rl.models.html#ml.rl.models.base.ModelBase" title="ml.rl.models.base.ModelBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.models.base.ModelBase</span></code></a></p>
+<dl class="method">
+<dt id="ml.rl.prediction.predictor_wrapper.ParametricDqnWithPreprocessor.action_sorted_features">
+<em class="property">property </em><code class="sig-name descname">action_sorted_features</code><a class="headerlink" href="#ml.rl.prediction.predictor_wrapper.ParametricDqnWithPreprocessor.action_sorted_features" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.prediction.predictor_wrapper.ParametricDqnWithPreprocessor.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">state_with_presence: Tuple[torch.Tensor, torch.Tensor], action_with_presence: Tuple[torch.Tensor, torch.Tensor]</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.prediction.predictor_wrapper.ParametricDqnWithPreprocessor.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.prediction.predictor_wrapper.ParametricDqnWithPreprocessor.input_prototype">
+<code class="sig-name descname">input_prototype</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.prediction.predictor_wrapper.ParametricDqnWithPreprocessor.input_prototype" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function provides the input for ONNX graph tracing.</p>
+<p>The return value should be what expected by <cite>forward()</cite>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.prediction.predictor_wrapper.ParametricDqnWithPreprocessor.state_sorted_features">
+<em class="property">property </em><code class="sig-name descname">state_sorted_features</code><a class="headerlink" href="#ml.rl.prediction.predictor_wrapper.ParametricDqnWithPreprocessor.state_sorted_features" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ml.rl.prediction.predictor_wrapper.Seq2SlatePredictorWrapper">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.prediction.predictor_wrapper.</code><code class="sig-name descname">Seq2SlatePredictorWrapper</code><span class="sig-paren">(</span><em class="sig-param">seq2slate_with_preprocessor: ml.rl.prediction.predictor_wrapper.Seq2SlateWithPreprocessor</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.prediction.predictor_wrapper.Seq2SlatePredictorWrapper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.jit.ScriptModule</span></code></p>
+<dl class="method">
+<dt id="ml.rl.prediction.predictor_wrapper.Seq2SlatePredictorWrapper.candidate_sorted_features">
+<code class="sig-name descname">candidate_sorted_features</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; List[int]<a class="headerlink" href="#ml.rl.prediction.predictor_wrapper.Seq2SlatePredictorWrapper.candidate_sorted_features" title="Permalink to this definition">¶</a></dt>
+<dd><p>This interface is used by Seq2SlateTorchPredictor</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.prediction.predictor_wrapper.Seq2SlatePredictorWrapper.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">state_with_presence: Tuple[torch.Tensor, torch.Tensor], candidate_with_presence: Tuple[torch.Tensor, torch.Tensor]</em><span class="sig-paren">)</span> &#x2192; Tuple[torch.Tensor, torch.Tensor]<a class="headerlink" href="#ml.rl.prediction.predictor_wrapper.Seq2SlatePredictorWrapper.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.prediction.predictor_wrapper.Seq2SlatePredictorWrapper.state_sorted_features">
+<code class="sig-name descname">state_sorted_features</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; List[int]<a class="headerlink" href="#ml.rl.prediction.predictor_wrapper.Seq2SlatePredictorWrapper.state_sorted_features" title="Permalink to this definition">¶</a></dt>
+<dd><p>This interface is used by Seq2SlateTorchPredictor</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ml.rl.prediction.predictor_wrapper.Seq2SlateWithPreprocessor">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.prediction.predictor_wrapper.</code><code class="sig-name descname">Seq2SlateWithPreprocessor</code><span class="sig-paren">(</span><em class="sig-param">model: ml.rl.models.seq2slate.Seq2SlateTransformerNet</em>, <em class="sig-param">state_preprocessor: ml.rl.preprocessing.preprocessor.Preprocessor</em>, <em class="sig-param">candidate_preprocessor: ml.rl.preprocessing.preprocessor.Preprocessor</em>, <em class="sig-param">greedy: bool</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.prediction.predictor_wrapper.Seq2SlateWithPreprocessor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="ml.rl.models.html#ml.rl.models.base.ModelBase" title="ml.rl.models.base.ModelBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.models.base.ModelBase</span></code></a></p>
+<dl class="method">
+<dt id="ml.rl.prediction.predictor_wrapper.Seq2SlateWithPreprocessor.candidate_sorted_features">
+<em class="property">property </em><code class="sig-name descname">candidate_sorted_features</code><a class="headerlink" href="#ml.rl.prediction.predictor_wrapper.Seq2SlateWithPreprocessor.candidate_sorted_features" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.prediction.predictor_wrapper.Seq2SlateWithPreprocessor.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">state_with_presence: Tuple[torch.Tensor, torch.Tensor], candidate_with_presence: Tuple[torch.Tensor, torch.Tensor]</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.prediction.predictor_wrapper.Seq2SlateWithPreprocessor.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.prediction.predictor_wrapper.Seq2SlateWithPreprocessor.input_prototype">
+<code class="sig-name descname">input_prototype</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.prediction.predictor_wrapper.Seq2SlateWithPreprocessor.input_prototype" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function provides the input for ONNX graph tracing.</p>
+<p>The return value should be what expected by <cite>forward()</cite>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.prediction.predictor_wrapper.Seq2SlateWithPreprocessor.state_sorted_features">
+<em class="property">property </em><code class="sig-name descname">state_sorted_features</code><a class="headerlink" href="#ml.rl.prediction.predictor_wrapper.Seq2SlateWithPreprocessor.state_sorted_features" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ml.rl.prediction">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ml.rl.prediction" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ml.rl.preprocessing.html" class="btn btn-neutral float-right" title="ml.rl.preprocessing package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ml.rl.models.html" class="btn btn-neutral float-left" title="ml.rl.models package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Facebook Inc.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

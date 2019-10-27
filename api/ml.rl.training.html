@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ml.rl.training package &mdash; Horizon 1.0 documentation</title>
+  <title>ml.rl.training package &mdash; ReAgent 1.0 documentation</title>
   
 
   
@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="ml.rl.training.world_model package" href="ml.rl.training.world_model.html" />
+    <link rel="next" title="ml.rl.training.gradient_free package" href="ml.rl.training.gradient_free.html" />
     <link rel="prev" title="ml.rl.thrift.core package" href="ml.rl.thrift.core.html" /> 
 </head>
 
@@ -50,7 +50,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> Horizon
+            <a href="../index.html" class="icon icon-home"> ReAgent
           
 
           
@@ -89,15 +89,21 @@
 <p class="caption"><span class="caption-text">Advanced Topics</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../distributed.html">Distributed Training</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../continuous_integration.html">Continuous Integration</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Package Reference</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="ml.rl.workflow.html">Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml.rl.evaluation.html">Evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml.rl.models.html">Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml.rl.prediction.html">Prediction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ml.rl.preprocessing.html">Preprocessing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml.rl.readers.html">Readers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ml.rl.simulators.html">Simulators</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ml.rl.thrift.html">Thrift</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Training</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ml.rl.training.gradient_free.html">ml.rl.training.gradient_free package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ml.rl.training.ranking.html">ml.rl.training.ranking package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ml.rl.training.world_model.html">ml.rl.training.world_model package</a></li>
 </ul>
 </li>
@@ -122,6 +128,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#module-ml.rl.training">Module contents</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="ml.rl.workflow.html">Workflow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">All Modules</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Others</span></p>
@@ -142,7 +149,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Horizon</a>
+          <a href="../index.html">ReAgent</a>
         
       </nav>
 
@@ -198,6 +205,20 @@
 <h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="ml.rl.training.gradient_free.html">ml.rl.training.gradient_free package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.training.gradient_free.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.training.gradient_free.html#module-ml.rl.training.gradient_free.es_worker">ml.rl.training.gradient_free.es_worker module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.training.gradient_free.html#module-ml.rl.training.gradient_free.evolution_pool">ml.rl.training.gradient_free.evolution_pool module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.training.gradient_free.html#module-ml.rl.training.gradient_free">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ml.rl.training.ranking.html">ml.rl.training.ranking package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.training.ranking.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.training.ranking.html#module-ml.rl.training.ranking.ranking_trainer">ml.rl.training.ranking.ranking_trainer module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.training.ranking.html#module-ml.rl.training.ranking.seq2slate_trainer">ml.rl.training.ranking.seq2slate_trainer module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.training.ranking.html#module-ml.rl.training.ranking">Module contents</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="ml.rl.training.world_model.html">ml.rl.training.world_model package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="ml.rl.training.world_model.html#submodules">Submodules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ml.rl.training.world_model.html#module-ml.rl.training.world_model.mdnrnn_trainer">ml.rl.training.world_model.mdnrnn_trainer module</a></li>
@@ -805,7 +826,7 @@ Use the classes in off_policy_predictor.py</p>
 <dt id="ml.rl.training.qrdqn_trainer.QRDQNTrainer">
 <em class="property">class </em><code class="sig-prename descclassname">ml.rl.training.qrdqn_trainer.</code><code class="sig-name descname">QRDQNTrainer</code><span class="sig-paren">(</span><em class="sig-param">q_network</em>, <em class="sig-param">q_network_target</em>, <em class="sig-param">parameters: ml.rl.parameters.DiscreteActionModelParameters</em>, <em class="sig-param">use_gpu=False</em>, <em class="sig-param">metrics_to_score=None</em>, <em class="sig-param">reward_network=None</em>, <em class="sig-param">q_network_cpe=None</em>, <em class="sig-param">q_network_cpe_target=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.training.qrdqn_trainer.QRDQNTrainer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#ml.rl.training.dqn_trainer_base.DQNTrainerBase" title="ml.rl.training.dqn_trainer_base.DQNTrainerBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.training.dqn_trainer_base.DQNTrainerBase</span></code></a></p>
-<p>Implementation of QR-DQN (Quantile Regression Deep Q-Nework)</p>
+<p>Implementation of QR-DQN (Quantile Regression Deep Q-Network)</p>
 <p>See <a class="reference external" href="https://arxiv.org/abs/1710.10044">https://arxiv.org/abs/1710.10044</a> for details</p>
 <dl class="method">
 <dt id="ml.rl.training.qrdqn_trainer.QRDQNTrainer.argmax_with_mask">
@@ -1192,7 +1213,7 @@ reward/terminal shape: 1 x batch_size</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="ml.rl.training.world_model.html" class="btn btn-neutral float-right" title="ml.rl.training.world_model package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="ml.rl.training.gradient_free.html" class="btn btn-neutral float-right" title="ml.rl.training.gradient_free package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="ml.rl.thrift.core.html" class="btn btn-neutral float-left" title="ml.rl.thrift.core package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

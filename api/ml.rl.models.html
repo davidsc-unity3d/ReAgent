@@ -1,0 +1,1246 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ml.rl.models package &mdash; ReAgent 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ml.rl.prediction package" href="ml.rl.prediction.html" />
+    <link rel="prev" title="ml.rl.evaluation package" href="ml.rl.evaluation.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ReAgent
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rasp_tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Advanced Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../distributed.html">Distributed Training</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../continuous_integration.html">Continuous Integration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Package Reference</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="ml.rl.evaluation.html">Evaluation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Models</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ml.rl.models.actor">ml.rl.models.actor module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ml.rl.models.base">ml.rl.models.base module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ml.rl.models.bcq">ml.rl.models.bcq module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ml.rl.models.categorical_dqn">ml.rl.models.categorical_dqn module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ml.rl.models.cem_planner">ml.rl.models.cem_planner module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ml.rl.models.convolutional_network">ml.rl.models.convolutional_network module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ml.rl.models.dqn">ml.rl.models.dqn module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ml.rl.models.dueling_q_network">ml.rl.models.dueling_q_network module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ml.rl.models.dueling_quantile_dqn">ml.rl.models.dueling_quantile_dqn module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ml.rl.models.example_sequence_model">ml.rl.models.example_sequence_model module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ml.rl.models.fully_connected_network">ml.rl.models.fully_connected_network module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ml.rl.models.mdn_rnn">ml.rl.models.mdn_rnn module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ml.rl.models.no_soft_update_embedding">ml.rl.models.no_soft_update_embedding module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ml.rl.models.parametric_dqn">ml.rl.models.parametric_dqn module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ml.rl.models.quantile_dqn">ml.rl.models.quantile_dqn module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ml.rl.models.seq2slate">ml.rl.models.seq2slate module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ml.rl.models.world_model">ml.rl.models.world_model module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ml.rl.models">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ml.rl.prediction.html">Prediction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml.rl.preprocessing.html">Preprocessing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml.rl.readers.html">Readers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml.rl.simulators.html">Simulators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml.rl.thrift.html">Thrift</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml.rl.training.html">Training</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml.rl.workflow.html">Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">All Modules</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/facebookresearch/ReAgent">Github</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ReAgent</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>ml.rl.models package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/ml.rl.models.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ml-rl-models-package">
+<h1>ml.rl.models package<a class="headerlink" href="#ml-rl-models-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-ml.rl.models.actor">
+<span id="ml-rl-models-actor-module"></span><h2>ml.rl.models.actor module<a class="headerlink" href="#module-ml.rl.models.actor" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ml.rl.models.actor.DirichletFullyConnectedActor">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.models.actor.</code><code class="sig-name descname">DirichletFullyConnectedActor</code><span class="sig-paren">(</span><em class="sig-param">state_dim</em>, <em class="sig-param">action_dim</em>, <em class="sig-param">sizes</em>, <em class="sig-param">activations</em>, <em class="sig-param">use_batch_norm=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.actor.DirichletFullyConnectedActor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ml.rl.models.base.ModelBase" title="ml.rl.models.base.ModelBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.models.base.ModelBase</span></code></a></p>
+<dl class="attribute">
+<dt id="ml.rl.models.actor.DirichletFullyConnectedActor.EPSILON">
+<code class="sig-name descname">EPSILON</code><em class="property"> = 1e-06</em><a class="headerlink" href="#ml.rl.models.actor.DirichletFullyConnectedActor.EPSILON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.actor.DirichletFullyConnectedActor.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.actor.DirichletFullyConnectedActor.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.actor.DirichletFullyConnectedActor.get_log_prob">
+<code class="sig-name descname">get_log_prob</code><span class="sig-paren">(</span><em class="sig-param">state</em>, <em class="sig-param">action</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.actor.DirichletFullyConnectedActor.get_log_prob" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.actor.DirichletFullyConnectedActor.input_prototype">
+<code class="sig-name descname">input_prototype</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.actor.DirichletFullyConnectedActor.input_prototype" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function provides the input for ONNX graph tracing.</p>
+<p>The return value should be what expected by <cite>forward()</cite>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ml.rl.models.actor.FullyConnectedActor">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.models.actor.</code><code class="sig-name descname">FullyConnectedActor</code><span class="sig-paren">(</span><em class="sig-param">state_dim</em>, <em class="sig-param">action_dim</em>, <em class="sig-param">sizes</em>, <em class="sig-param">activations</em>, <em class="sig-param">use_batch_norm=False</em>, <em class="sig-param">action_activation='tanh'</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.actor.FullyConnectedActor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ml.rl.models.base.ModelBase" title="ml.rl.models.base.ModelBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.models.base.ModelBase</span></code></a></p>
+<dl class="method">
+<dt id="ml.rl.models.actor.FullyConnectedActor.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.actor.FullyConnectedActor.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.actor.FullyConnectedActor.input_prototype">
+<code class="sig-name descname">input_prototype</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.actor.FullyConnectedActor.input_prototype" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function provides the input for ONNX graph tracing.</p>
+<p>The return value should be what expected by <cite>forward()</cite>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ml.rl.models.actor.GaussianFullyConnectedActor">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.models.actor.</code><code class="sig-name descname">GaussianFullyConnectedActor</code><span class="sig-paren">(</span><em class="sig-param">state_dim</em>, <em class="sig-param">action_dim</em>, <em class="sig-param">sizes</em>, <em class="sig-param">activations</em>, <em class="sig-param">scale=0.05</em>, <em class="sig-param">use_batch_norm=False</em>, <em class="sig-param">use_layer_norm=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.actor.GaussianFullyConnectedActor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ml.rl.models.base.ModelBase" title="ml.rl.models.base.ModelBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.models.base.ModelBase</span></code></a></p>
+<dl class="method">
+<dt id="ml.rl.models.actor.GaussianFullyConnectedActor.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.actor.GaussianFullyConnectedActor.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.actor.GaussianFullyConnectedActor.get_log_prob">
+<code class="sig-name descname">get_log_prob</code><span class="sig-paren">(</span><em class="sig-param">state</em>, <em class="sig-param">squashed_action</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.actor.GaussianFullyConnectedActor.get_log_prob" title="Permalink to this definition">¶</a></dt>
+<dd><p>Action is expected to be squashed with tanh</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.actor.GaussianFullyConnectedActor.input_prototype">
+<code class="sig-name descname">input_prototype</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.actor.GaussianFullyConnectedActor.input_prototype" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function provides the input for ONNX graph tracing.</p>
+<p>The return value should be what expected by <cite>forward()</cite>.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ml.rl.models.base">
+<span id="ml-rl-models-base-module"></span><h2>ml.rl.models.base module<a class="headerlink" href="#module-ml.rl.models.base" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ml.rl.models.base.ModelBase">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.models.base.</code><code class="sig-name descname">ModelBase</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.base.ModelBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.Module</span></code></p>
+<p>A base class to support exporting through ONNX</p>
+<dl class="method">
+<dt id="ml.rl.models.base.ModelBase.cpu_model">
+<code class="sig-name descname">cpu_model</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.base.ModelBase.cpu_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override this in DistributedDataParallel models</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.base.ModelBase.feature_config">
+<code class="sig-name descname">feature_config</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Optional[ml.rl.types.ModelFeatureConfig]<a class="headerlink" href="#ml.rl.models.base.ModelBase.feature_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>If the model needs additional preprocessing, e.g., using sequence features,
+returns the config here.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.base.ModelBase.get_distributed_data_parallel_model">
+<code class="sig-name descname">get_distributed_data_parallel_model</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.base.ModelBase.get_distributed_data_parallel_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return DistributedDataParallel version of this model</p>
+<p>This needs to be implemented explicitly because:
+1) Model with EmbeddingBag module is not compatible with vanilla DistributedDataParallel
+2) Exporting logic needs structured data. DistributedDataParallel doesn’t work with structured data.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.base.ModelBase.get_target_network">
+<code class="sig-name descname">get_target_network</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.base.ModelBase.get_target_network" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a copy of this network to be used as target network</p>
+<p>Subclass should override this if the target network should share parameters
+with the network to be trained.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.base.ModelBase.input_prototype">
+<code class="sig-name descname">input_prototype</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Any<a class="headerlink" href="#ml.rl.models.base.ModelBase.input_prototype" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function provides the input for ONNX graph tracing.</p>
+<p>The return value should be what expected by <cite>forward()</cite>.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ml.rl.models.bcq">
+<span id="ml-rl-models-bcq-module"></span><h2>ml.rl.models.bcq module<a class="headerlink" href="#module-ml.rl.models.bcq" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ml.rl.models.bcq.BatchConstrainedDQN">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.models.bcq.</code><code class="sig-name descname">BatchConstrainedDQN</code><span class="sig-paren">(</span><em class="sig-param">state_dim</em>, <em class="sig-param">q_network</em>, <em class="sig-param">imitator_network</em>, <em class="sig-param">bcq_drop_threshold</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.bcq.BatchConstrainedDQN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ml.rl.models.base.ModelBase" title="ml.rl.models.base.ModelBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.models.base.ModelBase</span></code></a></p>
+<dl class="method">
+<dt id="ml.rl.models.bcq.BatchConstrainedDQN.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.bcq.BatchConstrainedDQN.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.bcq.BatchConstrainedDQN.input_prototype">
+<code class="sig-name descname">input_prototype</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.bcq.BatchConstrainedDQN.input_prototype" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function provides the input for ONNX graph tracing.</p>
+<p>The return value should be what expected by <cite>forward()</cite>.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ml.rl.models.categorical_dqn">
+<span id="ml-rl-models-categorical-dqn-module"></span><h2>ml.rl.models.categorical_dqn module<a class="headerlink" href="#module-ml.rl.models.categorical_dqn" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ml.rl.models.categorical_dqn.CategoricalDQN">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.models.categorical_dqn.</code><code class="sig-name descname">CategoricalDQN</code><span class="sig-paren">(</span><em class="sig-param">state_dim</em>, <em class="sig-param">action_dim</em>, <em class="sig-param">num_atoms</em>, <em class="sig-param">qmin</em>, <em class="sig-param">qmax</em>, <em class="sig-param">sizes</em>, <em class="sig-param">activations</em>, <em class="sig-param">use_batch_norm=False</em>, <em class="sig-param">dropout_ratio=0.0</em>, <em class="sig-param">use_gpu=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.categorical_dqn.CategoricalDQN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ml.rl.models.base.ModelBase" title="ml.rl.models.base.ModelBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.models.base.ModelBase</span></code></a></p>
+<dl class="method">
+<dt id="ml.rl.models.categorical_dqn.CategoricalDQN.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input: ml.rl.types.PreprocessedState</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.categorical_dqn.CategoricalDQN.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.categorical_dqn.CategoricalDQN.input_prototype">
+<code class="sig-name descname">input_prototype</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.categorical_dqn.CategoricalDQN.input_prototype" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function provides the input for ONNX graph tracing.</p>
+<p>The return value should be what expected by <cite>forward()</cite>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.categorical_dqn.CategoricalDQN.log_dist">
+<code class="sig-name descname">log_dist</code><span class="sig-paren">(</span><em class="sig-param">input: ml.rl.types.PreprocessedState</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.categorical_dqn.CategoricalDQN.log_dist" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.categorical_dqn.CategoricalDQN.serving_model">
+<code class="sig-name descname">serving_model</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.categorical_dqn.CategoricalDQN.serving_model" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ml.rl.models.cem_planner">
+<span id="ml-rl-models-cem-planner-module"></span><h2>ml.rl.models.cem_planner module<a class="headerlink" href="#module-ml.rl.models.cem_planner" title="Permalink to this headline">¶</a></h2>
+<p>A network which implements a cross entropy method-based planner</p>
+<p>The planner plans the best next action based on simulation data generated by
+an ensemble of world models.</p>
+<p>The idea is inspired by: <a class="reference external" href="https://arxiv.org/abs/1805.12114">https://arxiv.org/abs/1805.12114</a></p>
+<dl class="class">
+<dt id="ml.rl.models.cem_planner.CEMPlanner">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.models.cem_planner.</code><code class="sig-name descname">CEMPlanner</code><span class="sig-paren">(</span><em class="sig-param">cem_planner_network: ml.rl.models.cem_planner.CEMPlannerNetwork</em>, <em class="sig-param">plan_horizon_length: int</em>, <em class="sig-param">state_dim: int</em>, <em class="sig-param">action_dim: int</em>, <em class="sig-param">discrete_action: bool</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.cem_planner.CEMPlanner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ml.rl.models.base.ModelBase" title="ml.rl.models.base.ModelBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.models.base.ModelBase</span></code></a></p>
+<dl class="method">
+<dt id="ml.rl.models.cem_planner.CEMPlanner.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input: ml.rl.types.PreprocessedState</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.cem_planner.CEMPlanner.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.cem_planner.CEMPlanner.get_distributed_data_parallel_model">
+<code class="sig-name descname">get_distributed_data_parallel_model</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.cem_planner.CEMPlanner.get_distributed_data_parallel_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return DistributedDataParallel version of this model</p>
+<p>This needs to be implemented explicitly because:
+1) Model with EmbeddingBag module is not compatible with vanilla DistributedDataParallel
+2) Exporting logic needs structured data. DistributedDataParallel doesn’t work with structured data.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.cem_planner.CEMPlanner.input_prototype">
+<code class="sig-name descname">input_prototype</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.cem_planner.CEMPlanner.input_prototype" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function provides the input for ONNX graph tracing.</p>
+<p>The return value should be what expected by <cite>forward()</cite>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ml.rl.models.cem_planner.CEMPlannerNetwork">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.models.cem_planner.</code><code class="sig-name descname">CEMPlannerNetwork</code><span class="sig-paren">(</span><em class="sig-param">mem_net_list: List[ml.rl.models.world_model.MemoryNetwork], cem_num_iterations: int, cem_population_size: int, ensemble_population_size: int, num_elites: int, plan_horizon_length: int, state_dim: int, action_dim: int, discrete_action: bool, terminal_effective: bool, gamma: float, alpha: float = 0.25, epsilon: float = 0.001, action_upper_bounds: Optional[numpy.ndarray] = None, action_lower_bounds: Optional[numpy.ndarray] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.cem_planner.CEMPlannerNetwork" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.Module</span></code></p>
+<dl class="method">
+<dt id="ml.rl.models.cem_planner.CEMPlannerNetwork.acc_rewards_of_all_solutions">
+<code class="sig-name descname">acc_rewards_of_all_solutions</code><span class="sig-paren">(</span><em class="sig-param">input: ml.rl.types.PreprocessedState</em>, <em class="sig-param">solutions: torch.Tensor</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#ml.rl.models.cem_planner.CEMPlannerNetwork.acc_rewards_of_all_solutions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate accumulated rewards of solutions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input</strong> – the input which contains the starting state</p></li>
+<li><p><strong>solutions</strong> – its shape is (cem_pop_size, plan_horizon_length, action_dim)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a vector of size cem_pop_size, which is the reward of each solution</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.cem_planner.CEMPlannerNetwork.acc_rewards_of_one_solution">
+<code class="sig-name descname">acc_rewards_of_one_solution</code><span class="sig-paren">(</span><em class="sig-param">init_state: torch.Tensor</em>, <em class="sig-param">solution: torch.Tensor</em>, <em class="sig-param">solution_idx: int</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.cem_planner.CEMPlannerNetwork.acc_rewards_of_one_solution" title="Permalink to this definition">¶</a></dt>
+<dd><p>ensemble_pop_size trajectories will be sampled to evaluate a
+CEM solution. Each trajectory is generated by one world model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>init_state</strong> – its shape is (state_dim, )</p></li>
+<li><p><strong>solution</strong> – its shape is (plan_horizon_length, action_dim)</p></li>
+<li><p><strong>solution_idx</strong> – the index of the solution</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return reward</dt>
+<dd class="field-even"><p>Reward of each of ensemble_pop_size trajectories</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.cem_planner.CEMPlannerNetwork.constrained_variance">
+<code class="sig-name descname">constrained_variance</code><span class="sig-paren">(</span><em class="sig-param">mean</em>, <em class="sig-param">var</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.cem_planner.CEMPlannerNetwork.constrained_variance" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.cem_planner.CEMPlannerNetwork.continuous_planning">
+<code class="sig-name descname">continuous_planning</code><span class="sig-paren">(</span><em class="sig-param">input: ml.rl.types.PreprocessedState</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray<a class="headerlink" href="#ml.rl.models.cem_planner.CEMPlannerNetwork.continuous_planning" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.cem_planner.CEMPlannerNetwork.discrete_planning">
+<code class="sig-name descname">discrete_planning</code><span class="sig-paren">(</span><em class="sig-param">input: ml.rl.types.PreprocessedState</em><span class="sig-paren">)</span> &#x2192; Tuple[int, numpy.ndarray]<a class="headerlink" href="#ml.rl.models.cem_planner.CEMPlannerNetwork.discrete_planning" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.cem_planner.CEMPlannerNetwork.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input: ml.rl.types.PreprocessedState</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.cem_planner.CEMPlannerNetwork.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.cem_planner.CEMPlannerNetwork.sample_reward_next_state_terminal">
+<code class="sig-name descname">sample_reward_next_state_terminal</code><span class="sig-paren">(</span><em class="sig-param">world_model_input: ml.rl.types.PreprocessedStateAction</em>, <em class="sig-param">mem_net: ml.rl.models.world_model.MemoryNetwork</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.cem_planner.CEMPlannerNetwork.sample_reward_next_state_terminal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sample one-step dynamics based on the provided world model</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ml.rl.models.convolutional_network">
+<span id="ml-rl-models-convolutional-network-module"></span><h2>ml.rl.models.convolutional_network module<a class="headerlink" href="#module-ml.rl.models.convolutional_network" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ml.rl.models.convolutional_network.ConvolutionalNetwork">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.models.convolutional_network.</code><code class="sig-name descname">ConvolutionalNetwork</code><span class="sig-paren">(</span><em class="sig-param">cnn_parameters</em>, <em class="sig-param">layers</em>, <em class="sig-param">activations</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.convolutional_network.ConvolutionalNetwork" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.Module</span></code></p>
+<dl class="method">
+<dt id="ml.rl.models.convolutional_network.ConvolutionalNetwork.conv_forward">
+<code class="sig-name descname">conv_forward</code><span class="sig-paren">(</span><em class="sig-param">input</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.convolutional_network.ConvolutionalNetwork.conv_forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.convolutional_network.ConvolutionalNetwork.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input</em><span class="sig-paren">)</span> &#x2192; torch.FloatTensor<a class="headerlink" href="#ml.rl.models.convolutional_network.ConvolutionalNetwork.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Forward pass for generic convnet DNNs. Assumes activation names
+are valid pytorch activation names.
+:param input image tensor</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ml.rl.models.dqn">
+<span id="ml-rl-models-dqn-module"></span><h2>ml.rl.models.dqn module<a class="headerlink" href="#module-ml.rl.models.dqn" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ml.rl.models.dqn.FullyConnectedDQN">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.models.dqn.</code><code class="sig-name descname">FullyConnectedDQN</code><span class="sig-paren">(</span><em class="sig-param">state_dim</em>, <em class="sig-param">action_dim</em>, <em class="sig-param">sizes</em>, <em class="sig-param">activations</em>, <em class="sig-param">use_batch_norm=False</em>, <em class="sig-param">dropout_ratio=0.0</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.dqn.FullyConnectedDQN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ml.rl.models.base.ModelBase" title="ml.rl.models.base.ModelBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.models.base.ModelBase</span></code></a></p>
+<dl class="method">
+<dt id="ml.rl.models.dqn.FullyConnectedDQN.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input: ml.rl.types.PreprocessedState</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.dqn.FullyConnectedDQN.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.dqn.FullyConnectedDQN.get_distributed_data_parallel_model">
+<code class="sig-name descname">get_distributed_data_parallel_model</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.dqn.FullyConnectedDQN.get_distributed_data_parallel_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return DistributedDataParallel version of this model</p>
+<p>This needs to be implemented explicitly because:
+1) Model with EmbeddingBag module is not compatible with vanilla DistributedDataParallel
+2) Exporting logic needs structured data. DistributedDataParallel doesn’t work with structured data.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.dqn.FullyConnectedDQN.input_prototype">
+<code class="sig-name descname">input_prototype</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.dqn.FullyConnectedDQN.input_prototype" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function provides the input for ONNX graph tracing.</p>
+<p>The return value should be what expected by <cite>forward()</cite>.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ml.rl.models.dueling_q_network">
+<span id="ml-rl-models-dueling-q-network-module"></span><h2>ml.rl.models.dueling_q_network module<a class="headerlink" href="#module-ml.rl.models.dueling_q_network" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ml.rl.models.dueling_q_network.DuelingQNetwork">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.models.dueling_q_network.</code><code class="sig-name descname">DuelingQNetwork</code><span class="sig-paren">(</span><em class="sig-param">layers</em>, <em class="sig-param">activations</em>, <em class="sig-param">use_batch_norm=False</em>, <em class="sig-param">action_dim=0</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.dueling_q_network.DuelingQNetwork" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ml.rl.models.base.ModelBase" title="ml.rl.models.base.ModelBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.models.base.ModelBase</span></code></a></p>
+<dl class="method">
+<dt id="ml.rl.models.dueling_q_network.DuelingQNetwork.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input</em><span class="sig-paren">)</span> &#x2192; Union[NamedTuple, torch.FloatTensor]<a class="headerlink" href="#ml.rl.models.dueling_q_network.DuelingQNetwork.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.dueling_q_network.DuelingQNetwork.input_prototype">
+<code class="sig-name descname">input_prototype</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.dueling_q_network.DuelingQNetwork.input_prototype" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function provides the input for ONNX graph tracing.</p>
+<p>The return value should be what expected by <cite>forward()</cite>.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ml.rl.models.dueling_quantile_dqn">
+<span id="ml-rl-models-dueling-quantile-dqn-module"></span><h2>ml.rl.models.dueling_quantile_dqn module<a class="headerlink" href="#module-ml.rl.models.dueling_quantile_dqn" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ml.rl.models.dueling_quantile_dqn.DuelingQuantileDQN">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.models.dueling_quantile_dqn.</code><code class="sig-name descname">DuelingQuantileDQN</code><span class="sig-paren">(</span><em class="sig-param">layers</em>, <em class="sig-param">activations</em>, <em class="sig-param">num_atoms=50</em>, <em class="sig-param">use_batch_norm=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.dueling_quantile_dqn.DuelingQuantileDQN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ml.rl.models.base.ModelBase" title="ml.rl.models.base.ModelBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.models.base.ModelBase</span></code></a></p>
+<dl class="method">
+<dt id="ml.rl.models.dueling_quantile_dqn.DuelingQuantileDQN.dist">
+<code class="sig-name descname">dist</code><span class="sig-paren">(</span><em class="sig-param">input: ml.rl.types.PreprocessedState</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.dueling_quantile_dqn.DuelingQuantileDQN.dist" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.dueling_quantile_dqn.DuelingQuantileDQN.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input: ml.rl.types.PreprocessedState</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.dueling_quantile_dqn.DuelingQuantileDQN.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.dueling_quantile_dqn.DuelingQuantileDQN.input_prototype">
+<code class="sig-name descname">input_prototype</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.dueling_quantile_dqn.DuelingQuantileDQN.input_prototype" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function provides the input for ONNX graph tracing.</p>
+<p>The return value should be what expected by <cite>forward()</cite>.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ml.rl.models.example_sequence_model">
+<span id="ml-rl-models-example-sequence-model-module"></span><h2>ml.rl.models.example_sequence_model module<a class="headerlink" href="#module-ml.rl.models.example_sequence_model" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ml.rl.models.example_sequence_model.ExampleSequenceModel">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.models.example_sequence_model.</code><code class="sig-name descname">ExampleSequenceModel</code><span class="sig-paren">(</span><em class="sig-param">state_dim</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.example_sequence_model.ExampleSequenceModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ml.rl.models.base.ModelBase" title="ml.rl.models.base.ModelBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.models.base.ModelBase</span></code></a></p>
+<dl class="method">
+<dt id="ml.rl.models.example_sequence_model.ExampleSequenceModel.feature_config">
+<code class="sig-name descname">feature_config</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.example_sequence_model.ExampleSequenceModel.feature_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>If the model needs additional preprocessing, e.g., using sequence features,
+returns the config here.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.example_sequence_model.ExampleSequenceModel.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">state</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.example_sequence_model.ExampleSequenceModel.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.example_sequence_model.ExampleSequenceModel.input_prototype">
+<code class="sig-name descname">input_prototype</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.example_sequence_model.ExampleSequenceModel.input_prototype" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function provides the input for ONNX graph tracing.</p>
+<p>The return value should be what expected by <cite>forward()</cite>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ml.rl.models.example_sequence_model.ExampleSequenceModelOutput">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.models.example_sequence_model.</code><code class="sig-name descname">ExampleSequenceModelOutput</code><span class="sig-paren">(</span><em class="sig-param">value:torch.Tensor</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.example_sequence_model.ExampleSequenceModelOutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="ml.rl.models.example_sequence_model.SequenceFeatures">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.models.example_sequence_model.</code><code class="sig-name descname">SequenceFeatures</code><span class="sig-paren">(</span><em class="sig-param">watched_videos: ml.rl.models.example_sequence_model.WatchedVideoSequence</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.example_sequence_model.SequenceFeatures" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="ml.rl.html#ml.rl.types.SequenceFeatures" title="ml.rl.types.SequenceFeatures"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.types.SequenceFeatures</span></code></a></p>
+<p>The whole class hierarchy can be created dynamically from config.
+Another diff will show this.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="ml.rl.models.example_sequence_model.VideoIDFeatures">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.models.example_sequence_model.</code><code class="sig-name descname">VideoIDFeatures</code><span class="sig-paren">(</span><em class="sig-param">page_id:torch.Tensor</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.example_sequence_model.VideoIDFeatures" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="ml.rl.html#ml.rl.types.IdFeatureBase" title="ml.rl.types.IdFeatureBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.types.IdFeatureBase</span></code></a></p>
+<dl class="method">
+<dt id="ml.rl.models.example_sequence_model.VideoIDFeatures.get_feature_config">
+<em class="property">classmethod </em><code class="sig-name descname">get_feature_config</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Dict[str, ml.rl.types.IdFeatureConfig]<a class="headerlink" href="#ml.rl.models.example_sequence_model.VideoIDFeatures.get_feature_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns mapping from feature name, which must be a field in this dataclass, to
+feature config.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ml.rl.models.example_sequence_model.WatchedVideoSequence">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.models.example_sequence_model.</code><code class="sig-name descname">WatchedVideoSequence</code><span class="sig-paren">(</span><em class="sig-param">id_features:ml.rl.models.example_sequence_model.VideoIDFeatures, float_features:Union[ml.rl.types.ValuePresence, NoneType]</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.example_sequence_model.WatchedVideoSequence" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="ml.rl.html#ml.rl.types.SequenceFeatureBase" title="ml.rl.types.SequenceFeatureBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.types.SequenceFeatureBase</span></code></a></p>
+<dl class="method">
+<dt id="ml.rl.models.example_sequence_model.WatchedVideoSequence.get_float_feature_infos">
+<em class="property">classmethod </em><code class="sig-name descname">get_float_feature_infos</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; List[ml.rl.types.FloatFeatureInfo]<a class="headerlink" href="#ml.rl.models.example_sequence_model.WatchedVideoSequence.get_float_feature_infos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override this if the sequence has float features associated to it.
+Float features should be stored as ID-score-list, where the ID part corresponds
+to primary entity ID of the sequence. E.g., if this is a sequence of previously
+watched videos, then the key should be video ID.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.example_sequence_model.WatchedVideoSequence.get_max_length">
+<em class="property">classmethod </em><code class="sig-name descname">get_max_length</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#ml.rl.models.example_sequence_model.WatchedVideoSequence.get_max_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Subclass should return the max-length of this sequence. If the raw data is
+longer, feature extractor will truncate the front. If the raw data is shorter,
+feature extractor will fill the front with zero.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ml.rl.models.fully_connected_network">
+<span id="ml-rl-models-fully-connected-network-module"></span><h2>ml.rl.models.fully_connected_network module<a class="headerlink" href="#module-ml.rl.models.fully_connected_network" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ml.rl.models.fully_connected_network.FullyConnectedNetwork">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.models.fully_connected_network.</code><code class="sig-name descname">FullyConnectedNetwork</code><span class="sig-paren">(</span><em class="sig-param">layers</em>, <em class="sig-param">activations</em>, <em class="sig-param">use_batch_norm=False</em>, <em class="sig-param">min_std=0.0</em>, <em class="sig-param">dropout_ratio=0.0</em>, <em class="sig-param">use_layer_norm=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.fully_connected_network.FullyConnectedNetwork" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.Module</span></code></p>
+<dl class="method">
+<dt id="ml.rl.models.fully_connected_network.FullyConnectedNetwork.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input: torch.FloatTensor</em><span class="sig-paren">)</span> &#x2192; torch.FloatTensor<a class="headerlink" href="#ml.rl.models.fully_connected_network.FullyConnectedNetwork.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Forward pass for generic feed-forward DNNs. Assumes activation names
+are valid pytorch activation names.
+:param input tensor</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="ml.rl.models.fully_connected_network.gaussian_fill_w_gain">
+<code class="sig-prename descclassname">ml.rl.models.fully_connected_network.</code><code class="sig-name descname">gaussian_fill_w_gain</code><span class="sig-paren">(</span><em class="sig-param">tensor</em>, <em class="sig-param">activation</em>, <em class="sig-param">dim_in</em>, <em class="sig-param">min_std=0.0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ml.rl.models.fully_connected_network.gaussian_fill_w_gain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gaussian initialization with gain.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ml.rl.models.mdn_rnn">
+<span id="ml-rl-models-mdn-rnn-module"></span><h2>ml.rl.models.mdn_rnn module<a class="headerlink" href="#module-ml.rl.models.mdn_rnn" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ml.rl.models.mdn_rnn.MDNRNN">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.models.mdn_rnn.</code><code class="sig-name descname">MDNRNN</code><span class="sig-paren">(</span><em class="sig-param">state_dim</em>, <em class="sig-param">action_dim</em>, <em class="sig-param">num_hiddens</em>, <em class="sig-param">num_hidden_layers</em>, <em class="sig-param">num_gaussians</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.mdn_rnn.MDNRNN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.models.mdn_rnn._MDNRNNBase</span></code></p>
+<p>Mixture Density Network - Recurrent Neural Network</p>
+<dl class="method">
+<dt id="ml.rl.models.mdn_rnn.MDNRNN.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">actions</em>, <em class="sig-param">states</em>, <em class="sig-param">hidden=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.mdn_rnn.MDNRNN.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Forward pass of MDN-RNN</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>actions</strong> – (SEQ_LEN, BATCH_SIZE, ACTION_DIM) torch tensor</p></li>
+<li><p><strong>states</strong> – (SEQ_LEN, BATCH_SIZE, STATE_DIM) torch tensor</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>parameters of the GMM prediction for the next state,</p>
+</dd>
+</dl>
+<p>gaussian prediction of the reward and logit prediction of
+non-terminality. And the RNN’s outputs.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>mus: (SEQ_LEN, BATCH_SIZE, NUM_GAUSSIANS, STATE_DIM) torch tensor</p></li>
+<li><p>sigmas: (SEQ_LEN, BATCH_SIZE, NUM_GAUSSIANS, STATE_DIM) torch tensor</p></li>
+<li><p>logpi: (SEQ_LEN, BATCH_SIZE, NUM_GAUSSIANS) torch tensor</p></li>
+<li><p>reward: (SEQ_LEN, BATCH_SIZE) torch tensor</p></li>
+<li><p>not_terminal: (SEQ_LEN, BATCH_SIZE) torch tensor</p></li>
+<li><dl class="simple">
+<dt>last_step_hidden_and_cell: TUPLE(</dt><dd><p>(NUM_LAYERS, BATCH_SIZE, HIDDEN_SIZE),
+(NUM_LAYERS, BATCH_SIZE, HIDDEN_SIZE)</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>) torch tensor
+- all_steps_hidden: (SEQ_LEN, BATCH_SIZE, HIDDEN_SIZE) torch tensor</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.mdn_rnn.MDNRNN.get_initial_hidden_state">
+<code class="sig-name descname">get_initial_hidden_state</code><span class="sig-paren">(</span><em class="sig-param">batch_size=1</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.mdn_rnn.MDNRNN.get_initial_hidden_state" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ml.rl.models.mdn_rnn.MDNRNNMemoryPool">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.models.mdn_rnn.</code><code class="sig-name descname">MDNRNNMemoryPool</code><span class="sig-paren">(</span><em class="sig-param">max_replay_memory_size</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.mdn_rnn.MDNRNNMemoryPool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="ml.rl.models.mdn_rnn.MDNRNNMemoryPool.deque_sample">
+<code class="sig-name descname">deque_sample</code><span class="sig-paren">(</span><em class="sig-param">indices</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.mdn_rnn.MDNRNNMemoryPool.deque_sample" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.mdn_rnn.MDNRNNMemoryPool.insert_into_memory">
+<code class="sig-name descname">insert_into_memory</code><span class="sig-paren">(</span><em class="sig-param">state</em>, <em class="sig-param">action</em>, <em class="sig-param">next_state</em>, <em class="sig-param">reward</em>, <em class="sig-param">not_terminal</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.mdn_rnn.MDNRNNMemoryPool.insert_into_memory" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.mdn_rnn.MDNRNNMemoryPool.memory_size">
+<em class="property">property </em><code class="sig-name descname">memory_size</code><a class="headerlink" href="#ml.rl.models.mdn_rnn.MDNRNNMemoryPool.memory_size" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.mdn_rnn.MDNRNNMemoryPool.sample_memories">
+<code class="sig-name descname">sample_memories</code><span class="sig-paren">(</span><em class="sig-param">batch_size</em>, <em class="sig-param">use_gpu=False</em>, <em class="sig-param">batch_first=False</em><span class="sig-paren">)</span> &#x2192; ml.rl.types.PreprocessedTrainingBatch<a class="headerlink" href="#ml.rl.models.mdn_rnn.MDNRNNMemoryPool.sample_memories" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>batch_size</strong> – number of samples to return</p></li>
+<li><p><strong>use_gpu</strong> – whether to put samples on gpu</p></li>
+<li><p><strong>batch_first</strong> – If True, the first dimension of data is batch_size.
+If False (default), the first dimension is SEQ_LEN. Therefore,
+state’s shape is SEQ_LEN x BATCH_SIZE x STATE_DIM, for example. By default,
+MDN-RNN consumes data with SEQ_LEN as the first dimension.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ml.rl.models.mdn_rnn.MDNRNNMemorySample">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.models.mdn_rnn.</code><code class="sig-name descname">MDNRNNMemorySample</code><span class="sig-paren">(</span><em class="sig-param">state</em>, <em class="sig-param">action</em>, <em class="sig-param">next_state</em>, <em class="sig-param">reward</em>, <em class="sig-param">not_terminal</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.mdn_rnn.MDNRNNMemorySample" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></p>
+<dl class="method">
+<dt id="ml.rl.models.mdn_rnn.MDNRNNMemorySample.action">
+<em class="property">property </em><code class="sig-name descname">action</code><a class="headerlink" href="#ml.rl.models.mdn_rnn.MDNRNNMemorySample.action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.mdn_rnn.MDNRNNMemorySample.next_state">
+<em class="property">property </em><code class="sig-name descname">next_state</code><a class="headerlink" href="#ml.rl.models.mdn_rnn.MDNRNNMemorySample.next_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 2</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.mdn_rnn.MDNRNNMemorySample.not_terminal">
+<em class="property">property </em><code class="sig-name descname">not_terminal</code><a class="headerlink" href="#ml.rl.models.mdn_rnn.MDNRNNMemorySample.not_terminal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 4</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.mdn_rnn.MDNRNNMemorySample.reward">
+<em class="property">property </em><code class="sig-name descname">reward</code><a class="headerlink" href="#ml.rl.models.mdn_rnn.MDNRNNMemorySample.reward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 3</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.mdn_rnn.MDNRNNMemorySample.state">
+<em class="property">property </em><code class="sig-name descname">state</code><a class="headerlink" href="#ml.rl.models.mdn_rnn.MDNRNNMemorySample.state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="ml.rl.models.mdn_rnn.gmm_loss">
+<code class="sig-prename descclassname">ml.rl.models.mdn_rnn.</code><code class="sig-name descname">gmm_loss</code><span class="sig-paren">(</span><em class="sig-param">batch</em>, <em class="sig-param">mus</em>, <em class="sig-param">sigmas</em>, <em class="sig-param">logpi</em>, <em class="sig-param">reduce=True</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.mdn_rnn.gmm_loss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the gmm loss.</p>
+<p>Compute minus the log probability of batch under the GMM model described
+by mus, sigmas, pi. Precisely, with bs1, bs2, … the sizes of the batch
+dimensions (several batch dimension are useful when you have both a batch
+axis and a time step axis), gs the number of mixtures and fs the number of
+features.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>batch</strong> – (bs1, bs2, <a href="#id1"><span class="problematic" id="id2">*</span></a>, fs) torch tensor</p></li>
+<li><p><strong>mus</strong> – (bs1, bs2, <a href="#id3"><span class="problematic" id="id4">*</span></a>, gs, fs) torch tensor</p></li>
+<li><p><strong>sigmas</strong> – (bs1, bs2, <a href="#id5"><span class="problematic" id="id6">*</span></a>, gs, fs) torch tensor</p></li>
+<li><p><strong>logpi</strong> – (bs1, bs2, <a href="#id7"><span class="problematic" id="id8">*</span></a>, gs) torch tensor</p></li>
+<li><p><strong>reduce</strong> – if not reduce, the mean in the following formula is omitted</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>loss(batch) = - mean_{i1=0..bs1, i2=0..bs2, …} log(</dt><dd><dl class="simple">
+<dt>sum_{k=1..gs} pi[i1, i2, …, k] * N(</dt><dd><p>batch[i1, i2, …, :] | mus[i1, i2, …, k, :], sigmas[i1, i2, …, k, :]))</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>NOTE: The loss is not reduced along the feature dimension (i.e. it should
+scale linearily with fs).</p>
+<p>Adapted from: <a class="reference external" href="https://github.com/ctallec/world-models">https://github.com/ctallec/world-models</a></p>
+</dd></dl>
+
+<dl class="function">
+<dt id="ml.rl.models.mdn_rnn.transpose">
+<code class="sig-prename descclassname">ml.rl.models.mdn_rnn.</code><code class="sig-name descname">transpose</code><span class="sig-paren">(</span><em class="sig-param">*args</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.mdn_rnn.transpose" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-ml.rl.models.no_soft_update_embedding">
+<span id="ml-rl-models-no-soft-update-embedding-module"></span><h2>ml.rl.models.no_soft_update_embedding module<a class="headerlink" href="#module-ml.rl.models.no_soft_update_embedding" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ml.rl.models.no_soft_update_embedding.NoSoftUpdateEmbedding">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.models.no_soft_update_embedding.</code><code class="sig-name descname">NoSoftUpdateEmbedding</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.no_soft_update_embedding.NoSoftUpdateEmbedding" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.Embedding</span></code></p>
+<p>Use this instead of vanilla Embedding module to avoid soft-updating the embedding
+table in the target network.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ml.rl.models.parametric_dqn">
+<span id="ml-rl-models-parametric-dqn-module"></span><h2>ml.rl.models.parametric_dqn module<a class="headerlink" href="#module-ml.rl.models.parametric_dqn" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ml.rl.models.parametric_dqn.FullyConnectedParametricDQN">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.models.parametric_dqn.</code><code class="sig-name descname">FullyConnectedParametricDQN</code><span class="sig-paren">(</span><em class="sig-param">state_dim</em>, <em class="sig-param">action_dim</em>, <em class="sig-param">sizes</em>, <em class="sig-param">activations</em>, <em class="sig-param">use_batch_norm=False</em>, <em class="sig-param">use_layer_norm=False</em>, <em class="sig-param">output_dim=1</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.parametric_dqn.FullyConnectedParametricDQN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ml.rl.models.base.ModelBase" title="ml.rl.models.base.ModelBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.models.base.ModelBase</span></code></a></p>
+<dl class="method">
+<dt id="ml.rl.models.parametric_dqn.FullyConnectedParametricDQN.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.parametric_dqn.FullyConnectedParametricDQN.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.parametric_dqn.FullyConnectedParametricDQN.get_distributed_data_parallel_model">
+<code class="sig-name descname">get_distributed_data_parallel_model</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.parametric_dqn.FullyConnectedParametricDQN.get_distributed_data_parallel_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return DistributedDataParallel version of this model</p>
+<p>This needs to be implemented explicitly because:
+1) Model with EmbeddingBag module is not compatible with vanilla DistributedDataParallel
+2) Exporting logic needs structured data. DistributedDataParallel doesn’t work with structured data.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.parametric_dqn.FullyConnectedParametricDQN.input_prototype">
+<code class="sig-name descname">input_prototype</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.parametric_dqn.FullyConnectedParametricDQN.input_prototype" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function provides the input for ONNX graph tracing.</p>
+<p>The return value should be what expected by <cite>forward()</cite>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ml.rl.models.parametric_dqn.ParametricDQNWithPreprocessing">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.models.parametric_dqn.</code><code class="sig-name descname">ParametricDQNWithPreprocessing</code><span class="sig-paren">(</span><em class="sig-param">q_network</em>, <em class="sig-param">state_preprocessor</em>, <em class="sig-param">action_preprocessor=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.parametric_dqn.ParametricDQNWithPreprocessing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ml.rl.models.base.ModelBase" title="ml.rl.models.base.ModelBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.models.base.ModelBase</span></code></a></p>
+<dl class="method">
+<dt id="ml.rl.models.parametric_dqn.ParametricDQNWithPreprocessing.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.parametric_dqn.ParametricDQNWithPreprocessing.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.parametric_dqn.ParametricDQNWithPreprocessing.input_prototype">
+<code class="sig-name descname">input_prototype</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.parametric_dqn.ParametricDQNWithPreprocessing.input_prototype" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function provides the input for ONNX graph tracing.</p>
+<p>The return value should be what expected by <cite>forward()</cite>.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ml.rl.models.quantile_dqn">
+<span id="ml-rl-models-quantile-dqn-module"></span><h2>ml.rl.models.quantile_dqn module<a class="headerlink" href="#module-ml.rl.models.quantile_dqn" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ml.rl.models.quantile_dqn.QuantileDQN">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.models.quantile_dqn.</code><code class="sig-name descname">QuantileDQN</code><span class="sig-paren">(</span><em class="sig-param">state_dim</em>, <em class="sig-param">action_dim</em>, <em class="sig-param">sizes</em>, <em class="sig-param">activations</em>, <em class="sig-param">num_atoms=50</em>, <em class="sig-param">use_batch_norm=False</em>, <em class="sig-param">dropout_ratio=0.0</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.quantile_dqn.QuantileDQN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ml.rl.models.base.ModelBase" title="ml.rl.models.base.ModelBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.models.base.ModelBase</span></code></a></p>
+<dl class="method">
+<dt id="ml.rl.models.quantile_dqn.QuantileDQN.dist">
+<code class="sig-name descname">dist</code><span class="sig-paren">(</span><em class="sig-param">input: ml.rl.types.PreprocessedState</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.quantile_dqn.QuantileDQN.dist" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.quantile_dqn.QuantileDQN.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input: ml.rl.types.PreprocessedState</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.quantile_dqn.QuantileDQN.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.quantile_dqn.QuantileDQN.input_prototype">
+<code class="sig-name descname">input_prototype</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.quantile_dqn.QuantileDQN.input_prototype" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function provides the input for ONNX graph tracing.</p>
+<p>The return value should be what expected by <cite>forward()</cite>.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ml.rl.models.seq2slate">
+<span id="ml-rl-models-seq2slate-module"></span><h2>ml.rl.models.seq2slate module<a class="headerlink" href="#module-ml.rl.models.seq2slate" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ml.rl.models.seq2slate.BaselineNet">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.models.seq2slate.</code><code class="sig-name descname">BaselineNet</code><span class="sig-paren">(</span><em class="sig-param">state_dim</em>, <em class="sig-param">dim_feedforward</em>, <em class="sig-param">num_stacked_layers</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.seq2slate.BaselineNet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.Module</span></code></p>
+<dl class="method">
+<dt id="ml.rl.models.seq2slate.BaselineNet.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input: ml.rl.types.PreprocessedRankingInput</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.seq2slate.BaselineNet.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ml.rl.models.seq2slate.Decoder">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.models.seq2slate.</code><code class="sig-name descname">Decoder</code><span class="sig-paren">(</span><em class="sig-param">layer</em>, <em class="sig-param">num_layers</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.seq2slate.Decoder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.Module</span></code></p>
+<p>Generic num_layers layer decoder with masking.</p>
+<dl class="method">
+<dt id="ml.rl.models.seq2slate.Decoder.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">memory</em>, <em class="sig-param">tgt_src_mask</em>, <em class="sig-param">tgt_tgt_mask</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.seq2slate.Decoder.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ml.rl.models.seq2slate.DecoderLayer">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.models.seq2slate.</code><code class="sig-name descname">DecoderLayer</code><span class="sig-paren">(</span><em class="sig-param">size</em>, <em class="sig-param">self_attn</em>, <em class="sig-param">src_attn</em>, <em class="sig-param">feed_forward</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.seq2slate.DecoderLayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.Module</span></code></p>
+<p>Decoder is made of self-attn, src-attn, and feed forward</p>
+<dl class="method">
+<dt id="ml.rl.models.seq2slate.DecoderLayer.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">m</em>, <em class="sig-param">tgt_src_mask</em>, <em class="sig-param">tgt_tgt_mask</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.seq2slate.DecoderLayer.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ml.rl.models.seq2slate.Embedder">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.models.seq2slate.</code><code class="sig-name descname">Embedder</code><span class="sig-paren">(</span><em class="sig-param">dim_in</em>, <em class="sig-param">dim_out</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.seq2slate.Embedder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.Module</span></code></p>
+<dl class="method">
+<dt id="ml.rl.models.seq2slate.Embedder.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.seq2slate.Embedder.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ml.rl.models.seq2slate.Encoder">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.models.seq2slate.</code><code class="sig-name descname">Encoder</code><span class="sig-paren">(</span><em class="sig-param">layer</em>, <em class="sig-param">num_layers</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.seq2slate.Encoder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.Module</span></code></p>
+<p>Core encoder is a stack of num_layers layers</p>
+<dl class="method">
+<dt id="ml.rl.models.seq2slate.Encoder.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">mask</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.seq2slate.Encoder.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pass the input (and mask) through each layer in turn.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ml.rl.models.seq2slate.EncoderLayer">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.models.seq2slate.</code><code class="sig-name descname">EncoderLayer</code><span class="sig-paren">(</span><em class="sig-param">dim_model</em>, <em class="sig-param">self_attn</em>, <em class="sig-param">feed_forward</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.seq2slate.EncoderLayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.Module</span></code></p>
+<p>Encoder is made up of self-attn and feed forward</p>
+<dl class="method">
+<dt id="ml.rl.models.seq2slate.EncoderLayer.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">src_embed</em>, <em class="sig-param">src_mask</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.seq2slate.EncoderLayer.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ml.rl.models.seq2slate.Generator">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.models.seq2slate.</code><code class="sig-name descname">Generator</code><span class="sig-paren">(</span><em class="sig-param">dim_model</em>, <em class="sig-param">candidate_size</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.seq2slate.Generator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.Module</span></code></p>
+<p>Define standard linear + softmax generation step.</p>
+<dl class="method">
+<dt id="ml.rl.models.seq2slate.Generator.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">mode</em>, <em class="sig-param">decoder_output=None</em>, <em class="sig-param">tgt_in_idx=None</em>, <em class="sig-param">greedy=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.seq2slate.Generator.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ml.rl.models.seq2slate.MultiHeadedAttention">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.models.seq2slate.</code><code class="sig-name descname">MultiHeadedAttention</code><span class="sig-paren">(</span><em class="sig-param">num_heads</em>, <em class="sig-param">dim_model</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.seq2slate.MultiHeadedAttention" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.Module</span></code></p>
+<dl class="method">
+<dt id="ml.rl.models.seq2slate.MultiHeadedAttention.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">query</em>, <em class="sig-param">key</em>, <em class="sig-param">value</em>, <em class="sig-param">mask=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.seq2slate.MultiHeadedAttention.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ml.rl.models.seq2slate.PositionalEncoding">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.models.seq2slate.</code><code class="sig-name descname">PositionalEncoding</code><span class="sig-paren">(</span><em class="sig-param">dim_model</em>, <em class="sig-param">max_len=5000</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.seq2slate.PositionalEncoding" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.Module</span></code></p>
+<dl class="method">
+<dt id="ml.rl.models.seq2slate.PositionalEncoding.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">seq_len</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.seq2slate.PositionalEncoding.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ml.rl.models.seq2slate.PositionwiseFeedForward">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.models.seq2slate.</code><code class="sig-name descname">PositionwiseFeedForward</code><span class="sig-paren">(</span><em class="sig-param">dim_model</em>, <em class="sig-param">dim_feedforward</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.seq2slate.PositionwiseFeedForward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.Module</span></code></p>
+<dl class="method">
+<dt id="ml.rl.models.seq2slate.PositionwiseFeedForward.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.seq2slate.PositionwiseFeedForward.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ml.rl.models.seq2slate.Seq2SlateTransformerModel">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.models.seq2slate.</code><code class="sig-name descname">Seq2SlateTransformerModel</code><span class="sig-paren">(</span><em class="sig-param">state_dim: int</em>, <em class="sig-param">candidate_dim: int</em>, <em class="sig-param">num_stacked_layers: int</em>, <em class="sig-param">num_heads: int</em>, <em class="sig-param">dim_model: int</em>, <em class="sig-param">dim_feedforward: int</em>, <em class="sig-param">max_src_seq_len: int</em>, <em class="sig-param">max_tgt_seq_len: int</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.seq2slate.Seq2SlateTransformerModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.Module</span></code></p>
+<p>A Seq2Slate network with Transformer. The network is essentially an
+encoder-decoder structure. The encoder inputs a sequence of candidate feature
+vectors and a state feature vector, and the decoder outputs an ordered
+list of candidate indices. The output order is learned through REINFORCE
+algorithm to optimize some sequence-wise reward which is also specific to
+the provided state feature.</p>
+<p>One application example is to rank candidate feeds to a specific user such
+that the final list of feeds as a whole optimizes the user’s engagement.</p>
+<p>Seq2Slate paper: <a class="reference external" href="https://arxiv.org/abs/1810.02019">https://arxiv.org/abs/1810.02019</a>
+Transformer paper: <a class="reference external" href="https://arxiv.org/abs/1706.03762">https://arxiv.org/abs/1706.03762</a></p>
+<dl class="method">
+<dt id="ml.rl.models.seq2slate.Seq2SlateTransformerModel.decode">
+<code class="sig-name descname">decode</code><span class="sig-paren">(</span><em class="sig-param">memory</em>, <em class="sig-param">state</em>, <em class="sig-param">tgt_src_mask</em>, <em class="sig-param">tgt_seq</em>, <em class="sig-param">tgt_tgt_mask</em>, <em class="sig-param">tgt_seq_len</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.seq2slate.Seq2SlateTransformerModel.decode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.seq2slate.Seq2SlateTransformerModel.encode">
+<code class="sig-name descname">encode</code><span class="sig-paren">(</span><em class="sig-param">state</em>, <em class="sig-param">src_seq</em>, <em class="sig-param">src_mask</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.seq2slate.Seq2SlateTransformerModel.encode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.seq2slate.Seq2SlateTransformerModel.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input: ml.rl.types.PreprocessedRankingInput</em>, <em class="sig-param">mode: str</em>, <em class="sig-param">tgt_seq_len: Optional[int] = None</em>, <em class="sig-param">greedy: Optional[bool] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.seq2slate.Seq2SlateTransformerModel.forward" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input</strong> – model input</p></li>
+<li><p><strong>mode</strong> – a string indicating which mode to perform.
+“rank”: return ranked actions and their generative probabilities.
+“log_probs”: return generative log probabilities of given tgt sequences
+(used for REINFORCE training)</p></li>
+<li><p><strong>tgt_seq_len</strong> – the length of output sequence to be decoded. Only used
+in rank mode</p></li>
+<li><p><strong>greedy</strong> – whether to sample based on softmax distribution or greedily
+when decoding. Only used in rank mode</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ml.rl.models.seq2slate.Seq2SlateTransformerNet">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.models.seq2slate.</code><code class="sig-name descname">Seq2SlateTransformerNet</code><span class="sig-paren">(</span><em class="sig-param">state_dim: int</em>, <em class="sig-param">candidate_dim: int</em>, <em class="sig-param">num_stacked_layers: int</em>, <em class="sig-param">num_heads: int</em>, <em class="sig-param">dim_model: int</em>, <em class="sig-param">dim_feedforward: int</em>, <em class="sig-param">max_src_seq_len: int</em>, <em class="sig-param">max_tgt_seq_len: int</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.seq2slate.Seq2SlateTransformerNet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ml.rl.models.base.ModelBase" title="ml.rl.models.base.ModelBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.models.base.ModelBase</span></code></a></p>
+<dl class="method">
+<dt id="ml.rl.models.seq2slate.Seq2SlateTransformerNet.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input: ml.rl.types.PreprocessedRankingInput</em>, <em class="sig-param">mode: str</em>, <em class="sig-param">tgt_seq_len: Optional[int] = None</em>, <em class="sig-param">greedy: Optional[bool] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.seq2slate.Seq2SlateTransformerNet.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.seq2slate.Seq2SlateTransformerNet.get_distributed_data_parallel_model">
+<code class="sig-name descname">get_distributed_data_parallel_model</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.seq2slate.Seq2SlateTransformerNet.get_distributed_data_parallel_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return DistributedDataParallel version of this model</p>
+<p>This needs to be implemented explicitly because:
+1) Model with EmbeddingBag module is not compatible with vanilla DistributedDataParallel
+2) Exporting logic needs structured data. DistributedDataParallel doesn’t work with structured data.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.seq2slate.Seq2SlateTransformerNet.input_prototype">
+<code class="sig-name descname">input_prototype</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.seq2slate.Seq2SlateTransformerNet.input_prototype" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function provides the input for ONNX graph tracing.</p>
+<p>The return value should be what expected by <cite>forward()</cite>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ml.rl.models.seq2slate.SublayerConnection">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.models.seq2slate.</code><code class="sig-name descname">SublayerConnection</code><span class="sig-paren">(</span><em class="sig-param">dim_model</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.seq2slate.SublayerConnection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.Module</span></code></p>
+<p>A residual connection followed by a layer norm.</p>
+<dl class="method">
+<dt id="ml.rl.models.seq2slate.SublayerConnection.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">sublayer</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.seq2slate.SublayerConnection.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="ml.rl.models.seq2slate.attention">
+<code class="sig-prename descclassname">ml.rl.models.seq2slate.</code><code class="sig-name descname">attention</code><span class="sig-paren">(</span><em class="sig-param">query</em>, <em class="sig-param">key</em>, <em class="sig-param">value</em>, <em class="sig-param">mask</em>, <em class="sig-param">d_k</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.seq2slate.attention" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scaled Dot Product Attention</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="ml.rl.models.seq2slate.clones">
+<code class="sig-prename descclassname">ml.rl.models.seq2slate.</code><code class="sig-name descname">clones</code><span class="sig-paren">(</span><em class="sig-param">module</em>, <em class="sig-param">N</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.seq2slate.clones" title="Permalink to this definition">¶</a></dt>
+<dd><p>Produce N identical layers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>module</strong> – nn.Module class</p></li>
+<li><p><strong>N</strong> – number of copies</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="ml.rl.models.seq2slate.subsequent_and_padding_mask">
+<code class="sig-prename descclassname">ml.rl.models.seq2slate.</code><code class="sig-name descname">subsequent_and_padding_mask</code><span class="sig-paren">(</span><em class="sig-param">tgt_in_idx</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.seq2slate.subsequent_and_padding_mask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a mask to hide padding and future items</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="ml.rl.models.seq2slate.subsequent_mask">
+<code class="sig-prename descclassname">ml.rl.models.seq2slate.</code><code class="sig-name descname">subsequent_mask</code><span class="sig-paren">(</span><em class="sig-param">size</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.seq2slate.subsequent_mask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mask out subsequent positions. Mainly used in the decoding process,
+in which an item should not attend subsequent items.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ml.rl.models.world_model">
+<span id="ml-rl-models-world-model-module"></span><h2>ml.rl.models.world_model module<a class="headerlink" href="#module-ml.rl.models.world_model" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ml.rl.models.world_model.MemoryNetwork">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.models.world_model.</code><code class="sig-name descname">MemoryNetwork</code><span class="sig-paren">(</span><em class="sig-param">state_dim</em>, <em class="sig-param">action_dim</em>, <em class="sig-param">num_hiddens</em>, <em class="sig-param">num_hidden_layers</em>, <em class="sig-param">num_gaussians</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.world_model.MemoryNetwork" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ml.rl.models.base.ModelBase" title="ml.rl.models.base.ModelBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.models.base.ModelBase</span></code></a></p>
+<dl class="method">
+<dt id="ml.rl.models.world_model.MemoryNetwork.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.world_model.MemoryNetwork.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.world_model.MemoryNetwork.get_distributed_data_parallel_model">
+<code class="sig-name descname">get_distributed_data_parallel_model</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.world_model.MemoryNetwork.get_distributed_data_parallel_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return DistributedDataParallel version of this model</p>
+<p>This needs to be implemented explicitly because:
+1) Model with EmbeddingBag module is not compatible with vanilla DistributedDataParallel
+2) Exporting logic needs structured data. DistributedDataParallel doesn’t work with structured data.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.world_model.MemoryNetwork.input_prototype">
+<code class="sig-name descname">input_prototype</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.world_model.MemoryNetwork.input_prototype" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function provides the input for ONNX graph tracing.</p>
+<p>The return value should be what expected by <cite>forward()</cite>.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ml.rl.models">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ml.rl.models" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ml.rl.prediction.html" class="btn btn-neutral float-right" title="ml.rl.prediction package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ml.rl.evaluation.html" class="btn btn-neutral float-left" title="ml.rl.evaluation package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Facebook Inc.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

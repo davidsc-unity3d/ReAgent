@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ml.rl package &mdash; Horizon 1.0 documentation</title>
+  <title>ml.rl package &mdash; ReAgent 1.0 documentation</title>
   
 
   
@@ -50,7 +50,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> Horizon
+            <a href="../index.html" class="icon icon-home"> ReAgent
           
 
           
@@ -89,14 +89,19 @@
 <p class="caption"><span class="caption-text">Advanced Topics</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../distributed.html">Distributed Training</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../continuous_integration.html">Continuous Integration</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Package Reference</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="ml.rl.workflow.html">Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml.rl.evaluation.html">Evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml.rl.models.html">Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml.rl.prediction.html">Prediction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ml.rl.preprocessing.html">Preprocessing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml.rl.readers.html">Readers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ml.rl.simulators.html">Simulators</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ml.rl.thrift.html">Thrift</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ml.rl.training.html">Training</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml.rl.workflow.html">Workflow</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">All Modules</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="ml.html">ml package</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="ml.html#subpackages">Subpackages</a><ul class="current">
@@ -127,7 +132,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Horizon</a>
+          <a href="../index.html">ReAgent</a>
         
       </nav>
 
@@ -187,6 +192,48 @@
 <h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="ml.rl.evaluation.html">ml.rl.evaluation package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.evaluation.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.evaluation.html#module-ml.rl.evaluation.cpe">ml.rl.evaluation.cpe module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.evaluation.html#module-ml.rl.evaluation.doubly_robust_estimator">ml.rl.evaluation.doubly_robust_estimator module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.evaluation.html#module-ml.rl.evaluation.evaluation_data_page">ml.rl.evaluation.evaluation_data_page module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.evaluation.html#module-ml.rl.evaluation.evaluator">ml.rl.evaluation.evaluator module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.evaluation.html#module-ml.rl.evaluation.ranking_evaluator">ml.rl.evaluation.ranking_evaluator module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.evaluation.html#module-ml.rl.evaluation.sequential_doubly_robust_estimator">ml.rl.evaluation.sequential_doubly_robust_estimator module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.evaluation.html#module-ml.rl.evaluation.weighted_sequential_doubly_robust_estimator">ml.rl.evaluation.weighted_sequential_doubly_robust_estimator module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.evaluation.html#module-ml.rl.evaluation.world_model_evaluator">ml.rl.evaluation.world_model_evaluator module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.evaluation.html#module-ml.rl.evaluation">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ml.rl.models.html">ml.rl.models package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.models.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.models.html#module-ml.rl.models.actor">ml.rl.models.actor module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.models.html#module-ml.rl.models.base">ml.rl.models.base module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.models.html#module-ml.rl.models.bcq">ml.rl.models.bcq module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.models.html#module-ml.rl.models.categorical_dqn">ml.rl.models.categorical_dqn module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.models.html#module-ml.rl.models.cem_planner">ml.rl.models.cem_planner module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.models.html#module-ml.rl.models.convolutional_network">ml.rl.models.convolutional_network module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.models.html#module-ml.rl.models.dqn">ml.rl.models.dqn module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.models.html#module-ml.rl.models.dueling_q_network">ml.rl.models.dueling_q_network module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.models.html#module-ml.rl.models.dueling_quantile_dqn">ml.rl.models.dueling_quantile_dqn module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.models.html#module-ml.rl.models.example_sequence_model">ml.rl.models.example_sequence_model module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.models.html#module-ml.rl.models.fully_connected_network">ml.rl.models.fully_connected_network module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.models.html#module-ml.rl.models.mdn_rnn">ml.rl.models.mdn_rnn module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.models.html#module-ml.rl.models.no_soft_update_embedding">ml.rl.models.no_soft_update_embedding module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.models.html#module-ml.rl.models.parametric_dqn">ml.rl.models.parametric_dqn module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.models.html#module-ml.rl.models.quantile_dqn">ml.rl.models.quantile_dqn module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.models.html#module-ml.rl.models.seq2slate">ml.rl.models.seq2slate module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.models.html#module-ml.rl.models.world_model">ml.rl.models.world_model module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.models.html#module-ml.rl.models">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ml.rl.prediction.html">ml.rl.prediction package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.prediction.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.prediction.html#module-ml.rl.prediction.dqn_torch_predictor">ml.rl.prediction.dqn_torch_predictor module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.prediction.html#module-ml.rl.prediction.predictor_wrapper">ml.rl.prediction.predictor_wrapper module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.prediction.html#module-ml.rl.prediction">Module contents</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="ml.rl.preprocessing.html">ml.rl.preprocessing package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="ml.rl.preprocessing.html#submodules">Submodules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ml.rl.preprocessing.html#module-ml.rl.preprocessing.batch_preprocessor">ml.rl.preprocessing.batch_preprocessor module</a></li>
@@ -200,6 +247,15 @@
 <li class="toctree-l2"><a class="reference internal" href="ml.rl.preprocessing.html#module-ml.rl.preprocessing">Module contents</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="ml.rl.readers.html">ml.rl.readers package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.readers.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.readers.html#module-ml.rl.readers.base">ml.rl.readers.base module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.readers.html#module-ml.rl.readers.data_streamer">ml.rl.readers.data_streamer module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.readers.html#module-ml.rl.readers.json_dataset_reader">ml.rl.readers.json_dataset_reader module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.readers.html#module-ml.rl.readers.nparray_reader">ml.rl.readers.nparray_reader module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.readers.html#module-ml.rl.readers">Module contents</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="ml.rl.simulators.html">ml.rl.simulators package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="ml.rl.simulators.html#submodules">Submodules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ml.rl.simulators.html#module-ml.rl.simulators.recsim">ml.rl.simulators.recsim module</a></li>
@@ -208,6 +264,20 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="ml.rl.training.html">ml.rl.training package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="ml.rl.training.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ml.rl.training.gradient_free.html">ml.rl.training.gradient_free package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ml.rl.training.gradient_free.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml.rl.training.gradient_free.html#module-ml.rl.training.gradient_free.es_worker">ml.rl.training.gradient_free.es_worker module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml.rl.training.gradient_free.html#module-ml.rl.training.gradient_free.evolution_pool">ml.rl.training.gradient_free.evolution_pool module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml.rl.training.gradient_free.html#module-ml.rl.training.gradient_free">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ml.rl.training.ranking.html">ml.rl.training.ranking package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ml.rl.training.ranking.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml.rl.training.ranking.html#module-ml.rl.training.ranking.ranking_trainer">ml.rl.training.ranking.ranking_trainer module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml.rl.training.ranking.html#module-ml.rl.training.ranking.seq2slate_trainer">ml.rl.training.ranking.seq2slate_trainer module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml.rl.training.ranking.html#module-ml.rl.training.ranking">Module contents</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="ml.rl.training.world_model.html">ml.rl.training.world_model package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="ml.rl.training.world_model.html#submodules">Submodules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ml.rl.training.world_model.html#module-ml.rl.training.world_model.mdnrnn_trainer">ml.rl.training.world_model.mdnrnn_trainer module</a></li>
@@ -424,6 +494,12 @@ holding net.</p>
 </div>
 <div class="section" id="module-ml.rl.parameters">
 <span id="ml-rl-parameters-module"></span><h2>ml.rl.parameters module<a class="headerlink" href="#module-ml.rl.parameters" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ml.rl.parameters.BaselineParameters">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.parameters.</code><code class="sig-name descname">BaselineParameters</code><span class="sig-paren">(</span><em class="sig-param">dim_feedforward:int</em>, <em class="sig-param">num_stacked_layers:int</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.parameters.BaselineParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ml.rl.types.BaseDataClass" title="ml.rl.types.BaseDataClass"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.types.BaseDataClass</span></code></a></p>
+</dd></dl>
+
 <dl class="class">
 <dt id="ml.rl.parameters.CEMParameters">
 <em class="property">class </em><code class="sig-prename descclassname">ml.rl.parameters.</code><code class="sig-name descname">CEMParameters</code><span class="sig-paren">(</span><em class="sig-param">plan_horizon_length:int=0</em>, <em class="sig-param">num_world_models:int=0</em>, <em class="sig-param">cem_population_size:int=0</em>, <em class="sig-param">cem_num_iterations:int=0</em>, <em class="sig-param">ensemble_population_size:int=0</em>, <em class="sig-param">num_elites:int=0</em>, <em class="sig-param">mdnrnn:ml.rl.parameters.MDNRNNParameters=MDNRNNParameters(hidden_size=64</em>, <em class="sig-param">num_hidden_layers=2</em>, <em class="sig-param">minibatch_size=16</em>, <em class="sig-param">learning_rate=0.001</em>, <em class="sig-param">num_gaussians=5</em>, <em class="sig-param">train_data_percentage=60.0</em>, <em class="sig-param">validation_data_percentage=20.0</em>, <em class="sig-param">test_data_percentage=20.0</em>, <em class="sig-param">reward_loss_weight=1.0</em>, <em class="sig-param">next_state_loss_weight=1.0</em>, <em class="sig-param">not_terminal_loss_weight=1.0</em>, <em class="sig-param">fit_only_one_next_step=False)</em>, <em class="sig-param">rl:ml.rl.parameters.RLParameters=RLParameters(gamma=0.9</em>, <em class="sig-param">epsilon=0.1</em>, <em class="sig-param">target_update_rate=0.001</em>, <em class="sig-param">maxq_learning=True</em>, <em class="sig-param">reward_boost=None</em>, <em class="sig-param">temperature=0.01</em>, <em class="sig-param">softmax_policy=1</em>, <em class="sig-param">use_seq_num_diff_as_time_diff=False</em>, <em class="sig-param">q_network_loss='mse'</em>, <em class="sig-param">set_missing_value_to_zero=False</em>, <em class="sig-param">tensorboard_logging_freq=0</em>, <em class="sig-param">predictor_atol_check=0.0</em>, <em class="sig-param">predictor_rtol_check=5e-05</em>, <em class="sig-param">time_diff_unit_length=1.0</em>, <em class="sig-param">multi_steps=None</em>, <em class="sig-param">ratio_different_predictions_tolerance=0)</em>, <em class="sig-param">evaluation:ml.rl.parameters.EvaluationParameters=EvaluationParameters(calc_cpe_in_training=True)</em>, <em class="sig-param">alpha:float=0.25</em>, <em class="sig-param">epsilon:float=0.001</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.parameters.CEMParameters" title="Permalink to this definition">¶</a></dt>
@@ -780,7 +856,7 @@ holding net.</p>
 
 <dl class="class">
 <dt id="ml.rl.parameters.OpenAiGymParameters">
-<em class="property">class </em><code class="sig-prename descclassname">ml.rl.parameters.</code><code class="sig-name descname">OpenAiGymParameters</code><span class="sig-paren">(</span><em class="sig-param">env:str</em>, <em class="sig-param">run_details:ml.rl.parameters.OpenAiRunDetails</em>, <em class="sig-param">model_type:str=''</em>, <em class="sig-param">use_gpu:bool=False</em>, <em class="sig-param">max_replay_memory_size:int=0</em>, <em class="sig-param">rl:Union[ml.rl.parameters.RLParameters</em>, <em class="sig-param">NoneType]=None</em>, <em class="sig-param">rainbow:Union[ml.rl.parameters.RainbowDQNParameters</em>, <em class="sig-param">NoneType]=None</em>, <em class="sig-param">training:Union[ml.rl.parameters.TrainingParameters</em>, <em class="sig-param">NoneType]=None</em>, <em class="sig-param">td3_training:Union[ml.rl.parameters.TD3TrainingParameters</em>, <em class="sig-param">NoneType]=None</em>, <em class="sig-param">sac_training:Union[ml.rl.parameters.SACTrainingParameters</em>, <em class="sig-param">NoneType]=None</em>, <em class="sig-param">sac_value_training:Union[ml.rl.parameters.FeedForwardParameters</em>, <em class="sig-param">NoneType]=None</em>, <em class="sig-param">critic_training:Union[ml.rl.parameters.FeedForwardParameters</em>, <em class="sig-param">NoneType]=None</em>, <em class="sig-param">actor_training:Union[ml.rl.parameters.FeedForwardParameters</em>, <em class="sig-param">NoneType]=None</em>, <em class="sig-param">cem:Union[ml.rl.parameters.CEMParameters</em>, <em class="sig-param">NoneType]=None</em>, <em class="sig-param">mdnrnn:Union[ml.rl.parameters.MDNRNNParameters</em>, <em class="sig-param">NoneType]=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.parameters.OpenAiGymParameters" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.parameters.</code><code class="sig-name descname">OpenAiGymParameters</code><span class="sig-paren">(</span><em class="sig-param">env:str</em>, <em class="sig-param">run_details:ml.rl.parameters.OpenAiRunDetails</em>, <em class="sig-param">model_type:str=''</em>, <em class="sig-param">use_gpu:bool=False</em>, <em class="sig-param">max_replay_memory_size:int=0</em>, <em class="sig-param">rl:Union[ml.rl.parameters.RLParameters</em>, <em class="sig-param">NoneType]=None</em>, <em class="sig-param">rainbow:Union[ml.rl.parameters.RainbowDQNParameters</em>, <em class="sig-param">NoneType]=None</em>, <em class="sig-param">training:Union[ml.rl.parameters.TrainingParameters</em>, <em class="sig-param">NoneType]=None</em>, <em class="sig-param">td3_training:Union[ml.rl.parameters.TD3TrainingParameters</em>, <em class="sig-param">NoneType]=None</em>, <em class="sig-param">sac_training:Union[ml.rl.parameters.SACTrainingParameters</em>, <em class="sig-param">NoneType]=None</em>, <em class="sig-param">sac_value_training:Union[ml.rl.parameters.FeedForwardParameters</em>, <em class="sig-param">NoneType]=None</em>, <em class="sig-param">critic_training:Union[ml.rl.parameters.FeedForwardParameters</em>, <em class="sig-param">NoneType]=None</em>, <em class="sig-param">actor_training:Union[ml.rl.parameters.FeedForwardParameters</em>, <em class="sig-param">NoneType]=None</em>, <em class="sig-param">cem:Union[ml.rl.parameters.CEMParameters</em>, <em class="sig-param">NoneType]=None</em>, <em class="sig-param">mdnrnn:Union[ml.rl.parameters.MDNRNNParameters</em>, <em class="sig-param">NoneType]=None</em>, <em class="sig-param">evaluation:ml.rl.parameters.EvaluationParameters=EvaluationParameters(calc_cpe_in_training=True)</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.parameters.OpenAiGymParameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#ml.rl.types.BaseDataClass" title="ml.rl.types.BaseDataClass"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.types.BaseDataClass</span></code></a></p>
 <dl class="attribute">
 <dt id="ml.rl.parameters.OpenAiGymParameters.actor_training">
@@ -795,6 +871,11 @@ holding net.</p>
 <dl class="attribute">
 <dt id="ml.rl.parameters.OpenAiGymParameters.critic_training">
 <code class="sig-name descname">critic_training</code><em class="property"> = None</em><a class="headerlink" href="#ml.rl.parameters.OpenAiGymParameters.critic_training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ml.rl.parameters.OpenAiGymParameters.evaluation">
+<code class="sig-name descname">evaluation</code><em class="property"> = EvaluationParameters(calc_cpe_in_training=True)</em><a class="headerlink" href="#ml.rl.parameters.OpenAiGymParameters.evaluation" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -851,7 +932,7 @@ holding net.</p>
 
 <dl class="class">
 <dt id="ml.rl.parameters.OpenAiRunDetails">
-<em class="property">class </em><code class="sig-prename descclassname">ml.rl.parameters.</code><code class="sig-name descname">OpenAiRunDetails</code><span class="sig-paren">(</span><em class="sig-param">solved_reward_threshold:Union[int</em>, <em class="sig-param">NoneType]=None</em>, <em class="sig-param">max_episodes_to_run_after_solved:int=0</em>, <em class="sig-param">stop_training_after_solved:bool=False</em>, <em class="sig-param">num_episodes:int=301</em>, <em class="sig-param">max_steps:Union[int</em>, <em class="sig-param">NoneType]=None</em>, <em class="sig-param">train_every_ts:int=100</em>, <em class="sig-param">train_after_ts:int=10</em>, <em class="sig-param">test_every_ts:int=100</em>, <em class="sig-param">test_after_ts:int=10</em>, <em class="sig-param">num_train_batches:int=1</em>, <em class="sig-param">avg_over_num_episodes:int=100</em>, <em class="sig-param">render:bool=False</em>, <em class="sig-param">epsilon_decay:Union[float</em>, <em class="sig-param">NoneType]=None</em>, <em class="sig-param">minimum_epsilon:Union[float</em>, <em class="sig-param">NoneType]=0.0</em>, <em class="sig-param">offline_train_epochs:Union[int</em>, <em class="sig-param">NoneType]=None</em>, <em class="sig-param">offline_score_bar:Union[float</em>, <em class="sig-param">NoneType]=None</em>, <em class="sig-param">offline_num_batches_per_epoch:Union[int</em>, <em class="sig-param">NoneType]=None</em>, <em class="sig-param">seq_len:int=5</em>, <em class="sig-param">num_train_episodes:int=4000</em>, <em class="sig-param">num_test_episodes:int=100</em>, <em class="sig-param">num_state_embed_episodes:int=1800</em>, <em class="sig-param">train_epochs:int=6</em>, <em class="sig-param">early_stopping_patience:int=3</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.parameters.OpenAiRunDetails" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.parameters.</code><code class="sig-name descname">OpenAiRunDetails</code><span class="sig-paren">(</span><em class="sig-param">solved_reward_threshold:Union[int</em>, <em class="sig-param">NoneType]=None</em>, <em class="sig-param">max_episodes_to_run_after_solved:Union[int</em>, <em class="sig-param">NoneType]=None</em>, <em class="sig-param">stop_training_after_solved:bool=False</em>, <em class="sig-param">num_episodes:int=301</em>, <em class="sig-param">max_steps:Union[int</em>, <em class="sig-param">NoneType]=None</em>, <em class="sig-param">train_every_ts:int=100</em>, <em class="sig-param">train_after_ts:int=10</em>, <em class="sig-param">test_every_ts:int=100</em>, <em class="sig-param">test_after_ts:int=10</em>, <em class="sig-param">num_train_batches:int=1</em>, <em class="sig-param">avg_over_num_episodes:int=100</em>, <em class="sig-param">render:bool=False</em>, <em class="sig-param">epsilon_decay:Union[float</em>, <em class="sig-param">NoneType]=None</em>, <em class="sig-param">minimum_epsilon:Union[float</em>, <em class="sig-param">NoneType]=0.0</em>, <em class="sig-param">offline_train_epochs:Union[int</em>, <em class="sig-param">NoneType]=None</em>, <em class="sig-param">offline_score_bar:Union[float</em>, <em class="sig-param">NoneType]=None</em>, <em class="sig-param">offline_num_batches_per_epoch:Union[int</em>, <em class="sig-param">NoneType]=None</em>, <em class="sig-param">seq_len:int=5</em>, <em class="sig-param">num_train_episodes:int=4000</em>, <em class="sig-param">num_test_episodes:int=100</em>, <em class="sig-param">num_state_embed_episodes:int=1800</em>, <em class="sig-param">train_epochs:int=6</em>, <em class="sig-param">early_stopping_patience:int=3</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.parameters.OpenAiRunDetails" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#ml.rl.types.BaseDataClass" title="ml.rl.types.BaseDataClass"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.types.BaseDataClass</span></code></a></p>
 <dl class="attribute">
 <dt id="ml.rl.parameters.OpenAiRunDetails.avg_over_num_episodes">
@@ -870,7 +951,7 @@ holding net.</p>
 
 <dl class="attribute">
 <dt id="ml.rl.parameters.OpenAiRunDetails.max_episodes_to_run_after_solved">
-<code class="sig-name descname">max_episodes_to_run_after_solved</code><em class="property"> = 0</em><a class="headerlink" href="#ml.rl.parameters.OpenAiRunDetails.max_episodes_to_run_after_solved" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">max_episodes_to_run_after_solved</code><em class="property"> = None</em><a class="headerlink" href="#ml.rl.parameters.OpenAiRunDetails.max_episodes_to_run_after_solved" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -1134,6 +1215,17 @@ holding net.</p>
 </dd></dl>
 
 <dl class="class">
+<dt id="ml.rl.parameters.RankingParameters">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.parameters.</code><code class="sig-name descname">RankingParameters</code><span class="sig-paren">(</span><em class="sig-param">minibatch_size:int</em>, <em class="sig-param">max_src_seq_len:int</em>, <em class="sig-param">max_tgt_seq_len:int</em>, <em class="sig-param">greedy_serving:bool</em>, <em class="sig-param">evaluation:ml.rl.parameters.EvaluationParameters=EvaluationParameters(calc_cpe_in_training=True)</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.parameters.RankingParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ml.rl.types.BaseDataClass" title="ml.rl.types.BaseDataClass"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.types.BaseDataClass</span></code></a></p>
+<dl class="attribute">
+<dt id="ml.rl.parameters.RankingParameters.evaluation">
+<code class="sig-name descname">evaluation</code><em class="property"> = EvaluationParameters(calc_cpe_in_training=True)</em><a class="headerlink" href="#ml.rl.parameters.RankingParameters.evaluation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="ml.rl.parameters.SACModelParameters">
 <em class="property">class </em><code class="sig-prename descclassname">ml.rl.parameters.</code><code class="sig-name descname">SACModelParameters</code><span class="sig-paren">(</span><em class="sig-param">rl:ml.rl.parameters.RLParameters=RLParameters(gamma=0.9, epsilon=0.1, target_update_rate=0.001, maxq_learning=True, reward_boost=None, temperature=0.01, softmax_policy=1, use_seq_num_diff_as_time_diff=False, q_network_loss='mse', set_missing_value_to_zero=False, tensorboard_logging_freq=0, predictor_atol_check=0.0, predictor_rtol_check=5e-05, time_diff_unit_length=1.0, multi_steps=None, ratio_different_predictions_tolerance=0), training:ml.rl.parameters.SACTrainingParameters=SACTrainingParameters(minibatch_size=1024, q_network_optimizer=OptimizerParameters(optimizer='ADAM', learning_rate=0.001, l2_decay=0.01), value_network_optimizer=OptimizerParameters(optimizer='ADAM', learning_rate=0.001, l2_decay=0.01), actor_network_optimizer=OptimizerParameters(optimizer='ADAM', learning_rate=0.001, l2_decay=0.01), use_2_q_functions=True, entropy_temperature=None, warm_start_model_path=None, logged_action_uniform_prior=True, minibatches_per_step=1, use_value_network=True, target_entropy=-1.0, alpha_optimizer=OptimizerParameters(optimizer='ADAM', learning_rate=0.001, l2_decay=0.01), action_embedding_kld_weight=None, action_embedding_mean=None, action_embedding_variance=None), q_network:ml.rl.parameters.FeedForwardParameters=FeedForwardParameters(layers=[256, 128], activations=['relu', 'relu'], use_layer_norm=None), value_network:Union[ml.rl.parameters.FeedForwardParameters, NoneType]=None, actor_network:ml.rl.parameters.FeedForwardParameters=FeedForwardParameters(layers=[256, 128], activations=['relu', 'relu'], use_layer_norm=None), state_feature_params:Union[ml.rl.parameters.StateFeatureParameters, NoneType]=None, evaluation:ml.rl.parameters.EvaluationParameters=EvaluationParameters(calc_cpe_in_training=True), constrain_action_sum:bool=False, do_not_preprocess_action:Union[bool, NoneType]=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.parameters.SACModelParameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#ml.rl.types.BaseDataClass" title="ml.rl.types.BaseDataClass"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.types.BaseDataClass</span></code></a></p>
@@ -1263,6 +1355,12 @@ holding net.</p>
 <code class="sig-name descname">warm_start_model_path</code><em class="property"> = None</em><a class="headerlink" href="#ml.rl.parameters.SACTrainingParameters.warm_start_model_path" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
+</dd></dl>
+
+<dl class="class">
+<dt id="ml.rl.parameters.Seq2SlateTransformerParameters">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.parameters.</code><code class="sig-name descname">Seq2SlateTransformerParameters</code><span class="sig-paren">(</span><em class="sig-param">transformer:ml.rl.parameters.TransformerParameters</em>, <em class="sig-param">baseline:ml.rl.parameters.BaselineParameters</em>, <em class="sig-param">on_policy:bool</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.parameters.Seq2SlateTransformerParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ml.rl.types.BaseDataClass" title="ml.rl.types.BaseDataClass"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.types.BaseDataClass</span></code></a></p>
 </dd></dl>
 
 <dl class="class">
@@ -1422,6 +1520,12 @@ holding net.</p>
 <code class="sig-name descname">weight_init_min_std</code><em class="property"> = 0.0</em><a class="headerlink" href="#ml.rl.parameters.TrainingParameters.weight_init_min_std" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
+</dd></dl>
+
+<dl class="class">
+<dt id="ml.rl.parameters.TransformerParameters">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.parameters.</code><code class="sig-name descname">TransformerParameters</code><span class="sig-paren">(</span><em class="sig-param">num_heads:int</em>, <em class="sig-param">dim_model:int</em>, <em class="sig-param">dim_feedforward:int</em>, <em class="sig-param">num_stacked_layers:int</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.parameters.TransformerParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ml.rl.types.BaseDataClass" title="ml.rl.types.BaseDataClass"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.types.BaseDataClass</span></code></a></p>
 </dd></dl>
 
 </div>
@@ -1734,6 +1838,57 @@ feature config.</p>
 </dd></dl>
 
 <dl class="class">
+<dt id="ml.rl.types.PreprocessedRankingInput">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.types.</code><code class="sig-name descname">PreprocessedRankingInput</code><span class="sig-paren">(</span><em class="sig-param">state:ml.rl.types.PreprocessedFeatureVector</em>, <em class="sig-param">src_seq:ml.rl.types.PreprocessedFeatureVector</em>, <em class="sig-param">src_src_mask:torch.Tensor</em>, <em class="sig-param">tgt_seq:Union[ml.rl.types.PreprocessedFeatureVector</em>, <em class="sig-param">NoneType]=None</em>, <em class="sig-param">tgt_tgt_mask:Union[torch.Tensor</em>, <em class="sig-param">NoneType]=None</em>, <em class="sig-param">slate_reward:Union[torch.Tensor</em>, <em class="sig-param">NoneType]=None</em>, <em class="sig-param">src_in_idx:Union[torch.Tensor</em>, <em class="sig-param">NoneType]=None</em>, <em class="sig-param">tgt_in_idx:Union[torch.Tensor</em>, <em class="sig-param">NoneType]=None</em>, <em class="sig-param">tgt_out_idx:Union[torch.Tensor</em>, <em class="sig-param">NoneType]=None</em>, <em class="sig-param">tgt_out_probs:Union[torch.Tensor</em>, <em class="sig-param">NoneType]=None</em>, <em class="sig-param">optim_tgt_out_idx:Union[torch.Tensor</em>, <em class="sig-param">NoneType]=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.types.PreprocessedRankingInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ml.rl.types.BaseDataClass" title="ml.rl.types.BaseDataClass"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.types.BaseDataClass</span></code></a></p>
+<dl class="method">
+<dt id="ml.rl.types.PreprocessedRankingInput.from_tensors">
+<em class="property">classmethod </em><code class="sig-name descname">from_tensors</code><span class="sig-paren">(</span><em class="sig-param">state: torch.Tensor</em>, <em class="sig-param">src_seq: torch.Tensor</em>, <em class="sig-param">src_src_mask: torch.Tensor</em>, <em class="sig-param">tgt_seq: Optional[torch.Tensor] = None</em>, <em class="sig-param">tgt_tgt_mask: Optional[torch.Tensor] = None</em>, <em class="sig-param">slate_reward: Optional[torch.Tensor] = None</em>, <em class="sig-param">src_in_idx: Optional[torch.Tensor] = None</em>, <em class="sig-param">tgt_in_idx: Optional[torch.Tensor] = None</em>, <em class="sig-param">tgt_out_idx: Optional[torch.Tensor] = None</em>, <em class="sig-param">tgt_out_probs: Optional[torch.Tensor] = None</em>, <em class="sig-param">optim_tgt_out_idx: Optional[torch.Tensor] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.types.PreprocessedRankingInput.from_tensors" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ml.rl.types.PreprocessedRankingInput.optim_tgt_out_idx">
+<code class="sig-name descname">optim_tgt_out_idx</code><em class="property"> = None</em><a class="headerlink" href="#ml.rl.types.PreprocessedRankingInput.optim_tgt_out_idx" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ml.rl.types.PreprocessedRankingInput.slate_reward">
+<code class="sig-name descname">slate_reward</code><em class="property"> = None</em><a class="headerlink" href="#ml.rl.types.PreprocessedRankingInput.slate_reward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ml.rl.types.PreprocessedRankingInput.src_in_idx">
+<code class="sig-name descname">src_in_idx</code><em class="property"> = None</em><a class="headerlink" href="#ml.rl.types.PreprocessedRankingInput.src_in_idx" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ml.rl.types.PreprocessedRankingInput.tgt_in_idx">
+<code class="sig-name descname">tgt_in_idx</code><em class="property"> = None</em><a class="headerlink" href="#ml.rl.types.PreprocessedRankingInput.tgt_in_idx" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ml.rl.types.PreprocessedRankingInput.tgt_out_idx">
+<code class="sig-name descname">tgt_out_idx</code><em class="property"> = None</em><a class="headerlink" href="#ml.rl.types.PreprocessedRankingInput.tgt_out_idx" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ml.rl.types.PreprocessedRankingInput.tgt_out_probs">
+<code class="sig-name descname">tgt_out_probs</code><em class="property"> = None</em><a class="headerlink" href="#ml.rl.types.PreprocessedRankingInput.tgt_out_probs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ml.rl.types.PreprocessedRankingInput.tgt_seq">
+<code class="sig-name descname">tgt_seq</code><em class="property"> = None</em><a class="headerlink" href="#ml.rl.types.PreprocessedRankingInput.tgt_seq" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ml.rl.types.PreprocessedRankingInput.tgt_tgt_mask">
+<code class="sig-name descname">tgt_tgt_mask</code><em class="property"> = None</em><a class="headerlink" href="#ml.rl.types.PreprocessedRankingInput.tgt_tgt_mask" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="ml.rl.types.PreprocessedState">
 <em class="property">class </em><code class="sig-prename descclassname">ml.rl.types.</code><code class="sig-name descname">PreprocessedState</code><span class="sig-paren">(</span><em class="sig-param">state</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.types.PreprocessedState" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#ml.rl.types.BaseDataClass" title="ml.rl.types.BaseDataClass"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.types.BaseDataClass</span></code></a></p>
@@ -1758,11 +1913,32 @@ feature config.</p>
 
 <dl class="class">
 <dt id="ml.rl.types.PreprocessedTrainingBatch">
-<em class="property">class </em><code class="sig-prename descclassname">ml.rl.types.</code><code class="sig-name descname">PreprocessedTrainingBatch</code><span class="sig-paren">(</span><em class="sig-param">training_input:ml.rl.types.PreprocessedBaseInput</em>, <em class="sig-param">extras:Any</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.types.PreprocessedTrainingBatch" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.types.</code><code class="sig-name descname">PreprocessedTrainingBatch</code><span class="sig-paren">(</span><em class="sig-param">training_input:Union[ml.rl.types.PreprocessedBaseInput, ml.rl.types.PreprocessedRankingInput], extras:Any</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.types.PreprocessedTrainingBatch" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#ml.rl.types.BaseDataClass" title="ml.rl.types.BaseDataClass"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.types.BaseDataClass</span></code></a></p>
 <dl class="method">
 <dt id="ml.rl.types.PreprocessedTrainingBatch.batch_size">
 <code class="sig-name descname">batch_size</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.types.PreprocessedTrainingBatch.batch_size" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ml.rl.types.RankingOutput">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.types.</code><code class="sig-name descname">RankingOutput</code><span class="sig-paren">(</span><em class="sig-param">ranked_tgt_out_idx:Union[torch.Tensor</em>, <em class="sig-param">NoneType]=None</em>, <em class="sig-param">ranked_tgt_out_probs:Union[torch.Tensor</em>, <em class="sig-param">NoneType]=None</em>, <em class="sig-param">log_probs:Union[torch.Tensor</em>, <em class="sig-param">NoneType]=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.types.RankingOutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ml.rl.types.BaseDataClass" title="ml.rl.types.BaseDataClass"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.types.BaseDataClass</span></code></a></p>
+<dl class="attribute">
+<dt id="ml.rl.types.RankingOutput.log_probs">
+<code class="sig-name descname">log_probs</code><em class="property"> = None</em><a class="headerlink" href="#ml.rl.types.RankingOutput.log_probs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ml.rl.types.RankingOutput.ranked_tgt_out_idx">
+<code class="sig-name descname">ranked_tgt_out_idx</code><em class="property"> = None</em><a class="headerlink" href="#ml.rl.types.RankingOutput.ranked_tgt_out_idx" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ml.rl.types.RankingOutput.ranked_tgt_out_probs">
+<code class="sig-name descname">ranked_tgt_out_probs</code><em class="property"> = None</em><a class="headerlink" href="#ml.rl.types.RankingOutput.ranked_tgt_out_probs" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1897,7 +2073,7 @@ feature extractor will fill the front with zero.</p>
 <dt id="ml.rl.types.SequenceFeatures">
 <em class="property">class </em><code class="sig-prename descclassname">ml.rl.types.</code><code class="sig-name descname">SequenceFeatures</code><a class="headerlink" href="#ml.rl.types.SequenceFeatures" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#ml.rl.types.BaseDataClass" title="ml.rl.types.BaseDataClass"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.types.BaseDataClass</span></code></a></p>
-<p>A stub-class for sequence features in the model. All fileds should be subclass of
+<p>A stub-class for sequence features in the model. All fields should be subclass of
 SequenceFeatureBase above.</p>
 <dl class="method">
 <dt id="ml.rl.types.SequenceFeatures.prototype">

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ml.rl.workflow package &mdash; Horizon 1.0 documentation</title>
+  <title>ml.rl.workflow package &mdash; ReAgent 1.0 documentation</title>
   
 
   
@@ -35,8 +35,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="ml.rl.preprocessing package" href="ml.rl.preprocessing.html" />
-    <link rel="prev" title="Training a model across multiple GPUs" href="../distributed.html" /> 
+    <link rel="next" title="ml" href="modules.html" />
+    <link rel="prev" title="ml.rl.training.world_model package" href="ml.rl.training.world_model.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -50,7 +50,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> Horizon
+            <a href="../index.html" class="icon icon-home"> ReAgent
           
 
           
@@ -89,9 +89,18 @@
 <p class="caption"><span class="caption-text">Advanced Topics</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../distributed.html">Distributed Training</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../continuous_integration.html">Continuous Integration</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Package Reference</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="ml.rl.evaluation.html">Evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml.rl.models.html">Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml.rl.prediction.html">Prediction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml.rl.preprocessing.html">Preprocessing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml.rl.readers.html">Readers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml.rl.simulators.html">Simulators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml.rl.thrift.html">Thrift</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml.rl.training.html">Training</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Workflow</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-ml.rl.workflow.base_workflow">ml.rl.workflow.base_workflow module</a></li>
@@ -105,10 +114,6 @@
 <li class="toctree-l2"><a class="reference internal" href="#module-ml.rl.workflow">Module contents</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="ml.rl.preprocessing.html">Preprocessing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ml.rl.simulators.html">Simulators</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ml.rl.thrift.html">Thrift</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ml.rl.training.html">Training</a></li>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">All Modules</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Others</span></p>
@@ -129,7 +134,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Horizon</a>
+          <a href="../index.html">ReAgent</a>
         
       </nav>
 
@@ -335,11 +340,6 @@ to warm start it.</p>
 <em class="property">class </em><code class="sig-prename descclassname">ml.rl.workflow.page_handler.</code><code class="sig-name descname">ImitatorPageHandler</code><span class="sig-paren">(</span><em class="sig-param">trainer</em>, <em class="sig-param">train=True</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.workflow.page_handler.ImitatorPageHandler" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#ml.rl.workflow.page_handler.PageHandler" title="ml.rl.workflow.page_handler.PageHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.workflow.page_handler.PageHandler</span></code></a></p>
 <dl class="method">
-<dt id="ml.rl.workflow.page_handler.ImitatorPageHandler.finish">
-<code class="sig-name descname">finish</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ml.rl.workflow.page_handler.ImitatorPageHandler.finish" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
 <dt id="ml.rl.workflow.page_handler.ImitatorPageHandler.handle">
 <code class="sig-name descname">handle</code><span class="sig-paren">(</span><em class="sig-param">tdp: ml.rl.types.PreprocessedTrainingBatch</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ml.rl.workflow.page_handler.ImitatorPageHandler.handle" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -348,7 +348,7 @@ to warm start it.</p>
 
 <dl class="class">
 <dt id="ml.rl.workflow.page_handler.PageHandler">
-<em class="property">class </em><code class="sig-prename descclassname">ml.rl.workflow.page_handler.</code><code class="sig-name descname">PageHandler</code><a class="headerlink" href="#ml.rl.workflow.page_handler.PageHandler" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.workflow.page_handler.</code><code class="sig-name descname">PageHandler</code><span class="sig-paren">(</span><em class="sig-param">trainer_or_evaluator</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.workflow.page_handler.PageHandler" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="method">
 <dt id="ml.rl.workflow.page_handler.PageHandler.finish">
@@ -356,8 +356,53 @@ to warm start it.</p>
 <dd></dd></dl>
 
 <dl class="method">
+<dt id="ml.rl.workflow.page_handler.PageHandler.get_loss">
+<code class="sig-name descname">get_loss</code><span class="sig-paren">(</span><em class="sig-param">loss_name='loss'</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.workflow.page_handler.PageHandler.get_loss" title="Permalink to this definition">¶</a></dt>
+<dd><p>See usage in get_mean_loss</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.workflow.page_handler.PageHandler.get_mean_loss">
+<code class="sig-name descname">get_mean_loss</code><span class="sig-paren">(</span><em class="sig-param">loss_name='loss'</em>, <em class="sig-param">axis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.workflow.page_handler.PageHandler.get_mean_loss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the average of a certain type of loss</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>loss_name</strong> – possible loss names:</p>
+</dd>
+</dl>
+<dl>
+<dt>For world model:</dt><dd><p>‘loss’ (referring to total loss),
+‘bce’ (loss for predicting not_terminal),
+‘gmm’ (loss for next state prediction),
+‘mse’ (loss for predicting reward)</p>
+</dd>
+<dt>For ranking model:</dt><dd><p>‘pg’ (policy gradient loss)
+‘baseline’ (the baseline model’s loss, usually for fitting V(s))
+‘kendall_tau’ (kendall_tau coefficient between advantage and log_probs,</p>
+<blockquote>
+<div><p>used in evaluation page handlers)</p>
+</div></blockquote>
+<dl class="simple">
+<dt>‘kendaull_tau_p_value’ (the p-value for kendall_tau test, used in</dt><dd><p>evaluation page handlers)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>axis</strong> – axis to perform mean function.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="ml.rl.workflow.page_handler.PageHandler.handle">
 <code class="sig-name descname">handle</code><span class="sig-paren">(</span><em class="sig-param">tdp: ml.rl.types.PreprocessedTrainingBatch</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ml.rl.workflow.page_handler.PageHandler.handle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.workflow.page_handler.PageHandler.refresh_results">
+<code class="sig-name descname">refresh_results</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ml.rl.workflow.page_handler.PageHandler.refresh_results" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -368,8 +413,35 @@ to warm start it.</p>
 </dd></dl>
 
 <dl class="class">
+<dt id="ml.rl.workflow.page_handler.RankingEvaluationPageHandler">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.workflow.page_handler.</code><code class="sig-name descname">RankingEvaluationPageHandler</code><span class="sig-paren">(</span><em class="sig-param">trainer_or_evaluator</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.workflow.page_handler.RankingEvaluationPageHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ml.rl.workflow.page_handler.PageHandler" title="ml.rl.workflow.page_handler.PageHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.workflow.page_handler.PageHandler</span></code></a></p>
+<dl class="method">
+<dt id="ml.rl.workflow.page_handler.RankingEvaluationPageHandler.finish">
+<code class="sig-name descname">finish</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.workflow.page_handler.RankingEvaluationPageHandler.finish" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.workflow.page_handler.RankingEvaluationPageHandler.handle">
+<code class="sig-name descname">handle</code><span class="sig-paren">(</span><em class="sig-param">tdp: ml.rl.types.PreprocessedTrainingBatch</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ml.rl.workflow.page_handler.RankingEvaluationPageHandler.handle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ml.rl.workflow.page_handler.RankingTrainingPageHandler">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.workflow.page_handler.</code><code class="sig-name descname">RankingTrainingPageHandler</code><span class="sig-paren">(</span><em class="sig-param">trainer_or_evaluator</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.workflow.page_handler.RankingTrainingPageHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ml.rl.workflow.page_handler.PageHandler" title="ml.rl.workflow.page_handler.PageHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.workflow.page_handler.PageHandler</span></code></a></p>
+<dl class="method">
+<dt id="ml.rl.workflow.page_handler.RankingTrainingPageHandler.handle">
+<code class="sig-name descname">handle</code><span class="sig-paren">(</span><em class="sig-param">tdp: ml.rl.types.PreprocessedTrainingBatch</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ml.rl.workflow.page_handler.RankingTrainingPageHandler.handle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="ml.rl.workflow.page_handler.TrainingPageHandler">
-<em class="property">class </em><code class="sig-prename descclassname">ml.rl.workflow.page_handler.</code><code class="sig-name descname">TrainingPageHandler</code><span class="sig-paren">(</span><em class="sig-param">trainer</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.workflow.page_handler.TrainingPageHandler" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.workflow.page_handler.</code><code class="sig-name descname">TrainingPageHandler</code><span class="sig-paren">(</span><em class="sig-param">trainer_or_evaluator</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.workflow.page_handler.TrainingPageHandler" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#ml.rl.workflow.page_handler.PageHandler" title="ml.rl.workflow.page_handler.PageHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.workflow.page_handler.PageHandler</span></code></a></p>
 <dl class="method">
 <dt id="ml.rl.workflow.page_handler.TrainingPageHandler.finish">
@@ -386,7 +458,7 @@ to warm start it.</p>
 <dl class="class">
 <dt id="ml.rl.workflow.page_handler.WorldModelEvaluationPageHandler">
 <em class="property">class </em><code class="sig-prename descclassname">ml.rl.workflow.page_handler.</code><code class="sig-name descname">WorldModelEvaluationPageHandler</code><span class="sig-paren">(</span><em class="sig-param">trainer_or_evaluator</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.workflow.page_handler.WorldModelEvaluationPageHandler" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#ml.rl.workflow.page_handler.WorldModelPageHandler" title="ml.rl.workflow.page_handler.WorldModelPageHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.workflow.page_handler.WorldModelPageHandler</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#ml.rl.workflow.page_handler.PageHandler" title="ml.rl.workflow.page_handler.PageHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.workflow.page_handler.PageHandler</span></code></a></p>
 <dl class="method">
 <dt id="ml.rl.workflow.page_handler.WorldModelEvaluationPageHandler.handle">
 <code class="sig-name descname">handle</code><span class="sig-paren">(</span><em class="sig-param">tdp: ml.rl.types.PreprocessedTrainingBatch</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ml.rl.workflow.page_handler.WorldModelEvaluationPageHandler.handle" title="Permalink to this definition">¶</a></dt>
@@ -395,40 +467,9 @@ to warm start it.</p>
 </dd></dl>
 
 <dl class="class">
-<dt id="ml.rl.workflow.page_handler.WorldModelPageHandler">
-<em class="property">class </em><code class="sig-prename descclassname">ml.rl.workflow.page_handler.</code><code class="sig-name descname">WorldModelPageHandler</code><span class="sig-paren">(</span><em class="sig-param">trainer_or_evaluator</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.workflow.page_handler.WorldModelPageHandler" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#ml.rl.workflow.page_handler.PageHandler" title="ml.rl.workflow.page_handler.PageHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.workflow.page_handler.PageHandler</span></code></a></p>
-<dl class="method">
-<dt id="ml.rl.workflow.page_handler.WorldModelPageHandler.finish">
-<code class="sig-name descname">finish</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ml.rl.workflow.page_handler.WorldModelPageHandler.finish" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="ml.rl.workflow.page_handler.WorldModelPageHandler.get_mean_loss">
-<code class="sig-name descname">get_mean_loss</code><span class="sig-paren">(</span><em class="sig-param">loss_name='loss'</em>, <em class="sig-param">axis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.workflow.page_handler.WorldModelPageHandler.get_mean_loss" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>loss_name</strong> – possible loss names: ‘loss’ (referring to total loss),
-‘bce’ (loss for predicting not_terminal), ‘gmm’ (loss for next state
-prediction), ‘mse’ (loss for predicting reward)</p></li>
-<li><p><strong>axis</strong> – axis to perform mean function.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="ml.rl.workflow.page_handler.WorldModelPageHandler.refresh_results">
-<code class="sig-name descname">refresh_results</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ml.rl.workflow.page_handler.WorldModelPageHandler.refresh_results" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
 <dt id="ml.rl.workflow.page_handler.WorldModelRandomTrainingPageHandler">
 <em class="property">class </em><code class="sig-prename descclassname">ml.rl.workflow.page_handler.</code><code class="sig-name descname">WorldModelRandomTrainingPageHandler</code><span class="sig-paren">(</span><em class="sig-param">trainer_or_evaluator</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.workflow.page_handler.WorldModelRandomTrainingPageHandler" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#ml.rl.workflow.page_handler.WorldModelPageHandler" title="ml.rl.workflow.page_handler.WorldModelPageHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.workflow.page_handler.WorldModelPageHandler</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#ml.rl.workflow.page_handler.PageHandler" title="ml.rl.workflow.page_handler.PageHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.workflow.page_handler.PageHandler</span></code></a></p>
 <p>Train a baseline model based on randomly shuffled data</p>
 <dl class="method">
 <dt id="ml.rl.workflow.page_handler.WorldModelRandomTrainingPageHandler.handle">
@@ -440,7 +481,7 @@ prediction), ‘mse’ (loss for predicting reward)</p></li>
 <dl class="class">
 <dt id="ml.rl.workflow.page_handler.WorldModelTrainingPageHandler">
 <em class="property">class </em><code class="sig-prename descclassname">ml.rl.workflow.page_handler.</code><code class="sig-name descname">WorldModelTrainingPageHandler</code><span class="sig-paren">(</span><em class="sig-param">trainer_or_evaluator</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.workflow.page_handler.WorldModelTrainingPageHandler" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#ml.rl.workflow.page_handler.WorldModelPageHandler" title="ml.rl.workflow.page_handler.WorldModelPageHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.workflow.page_handler.WorldModelPageHandler</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#ml.rl.workflow.page_handler.PageHandler" title="ml.rl.workflow.page_handler.PageHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.workflow.page_handler.PageHandler</span></code></a></p>
 <dl class="method">
 <dt id="ml.rl.workflow.page_handler.WorldModelTrainingPageHandler.handle">
 <code class="sig-name descname">handle</code><span class="sig-paren">(</span><em class="sig-param">tdp: ml.rl.types.PreprocessedTrainingBatch</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ml.rl.workflow.page_handler.WorldModelTrainingPageHandler.handle" title="Permalink to this definition">¶</a></dt>
@@ -581,10 +622,10 @@ prediction), ‘mse’ (loss for predicting reward)</p></li>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="ml.rl.preprocessing.html" class="btn btn-neutral float-right" title="ml.rl.preprocessing package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="modules.html" class="btn btn-neutral float-right" title="ml" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../distributed.html" class="btn btn-neutral float-left" title="Training a model across multiple GPUs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="ml.rl.training.world_model.html" class="btn btn-neutral float-left" title="ml.rl.training.world_model package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

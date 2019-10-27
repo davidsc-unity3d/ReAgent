@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ml package &mdash; Horizon 1.0 documentation</title>
+  <title>ml package &mdash; ReAgent 1.0 documentation</title>
   
 
   
@@ -50,7 +50,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> Horizon
+            <a href="../index.html" class="icon icon-home"> ReAgent
           
 
           
@@ -89,14 +89,19 @@
 <p class="caption"><span class="caption-text">Advanced Topics</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../distributed.html">Distributed Training</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../continuous_integration.html">Continuous Integration</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Package Reference</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="ml.rl.workflow.html">Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml.rl.evaluation.html">Evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml.rl.models.html">Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml.rl.prediction.html">Prediction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ml.rl.preprocessing.html">Preprocessing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml.rl.readers.html">Readers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ml.rl.simulators.html">Simulators</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ml.rl.thrift.html">Thrift</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ml.rl.training.html">Training</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml.rl.workflow.html">Workflow</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">All Modules</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">ml package</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
@@ -127,7 +132,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Horizon</a>
+          <a href="../index.html">ReAgent</a>
         
       </nav>
 
@@ -187,6 +192,48 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="ml.rl.html">ml.rl package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="ml.rl.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ml.rl.evaluation.html">ml.rl.evaluation package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ml.rl.evaluation.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml.rl.evaluation.html#module-ml.rl.evaluation.cpe">ml.rl.evaluation.cpe module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml.rl.evaluation.html#module-ml.rl.evaluation.doubly_robust_estimator">ml.rl.evaluation.doubly_robust_estimator module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml.rl.evaluation.html#module-ml.rl.evaluation.evaluation_data_page">ml.rl.evaluation.evaluation_data_page module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml.rl.evaluation.html#module-ml.rl.evaluation.evaluator">ml.rl.evaluation.evaluator module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml.rl.evaluation.html#module-ml.rl.evaluation.ranking_evaluator">ml.rl.evaluation.ranking_evaluator module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml.rl.evaluation.html#module-ml.rl.evaluation.sequential_doubly_robust_estimator">ml.rl.evaluation.sequential_doubly_robust_estimator module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml.rl.evaluation.html#module-ml.rl.evaluation.weighted_sequential_doubly_robust_estimator">ml.rl.evaluation.weighted_sequential_doubly_robust_estimator module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml.rl.evaluation.html#module-ml.rl.evaluation.world_model_evaluator">ml.rl.evaluation.world_model_evaluator module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml.rl.evaluation.html#module-ml.rl.evaluation">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ml.rl.models.html">ml.rl.models package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ml.rl.models.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml.rl.models.html#module-ml.rl.models.actor">ml.rl.models.actor module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml.rl.models.html#module-ml.rl.models.base">ml.rl.models.base module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml.rl.models.html#module-ml.rl.models.bcq">ml.rl.models.bcq module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml.rl.models.html#module-ml.rl.models.categorical_dqn">ml.rl.models.categorical_dqn module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml.rl.models.html#module-ml.rl.models.cem_planner">ml.rl.models.cem_planner module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml.rl.models.html#module-ml.rl.models.convolutional_network">ml.rl.models.convolutional_network module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml.rl.models.html#module-ml.rl.models.dqn">ml.rl.models.dqn module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml.rl.models.html#module-ml.rl.models.dueling_q_network">ml.rl.models.dueling_q_network module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml.rl.models.html#module-ml.rl.models.dueling_quantile_dqn">ml.rl.models.dueling_quantile_dqn module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml.rl.models.html#module-ml.rl.models.example_sequence_model">ml.rl.models.example_sequence_model module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml.rl.models.html#module-ml.rl.models.fully_connected_network">ml.rl.models.fully_connected_network module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml.rl.models.html#module-ml.rl.models.mdn_rnn">ml.rl.models.mdn_rnn module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml.rl.models.html#module-ml.rl.models.no_soft_update_embedding">ml.rl.models.no_soft_update_embedding module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml.rl.models.html#module-ml.rl.models.parametric_dqn">ml.rl.models.parametric_dqn module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml.rl.models.html#module-ml.rl.models.quantile_dqn">ml.rl.models.quantile_dqn module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml.rl.models.html#module-ml.rl.models.seq2slate">ml.rl.models.seq2slate module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml.rl.models.html#module-ml.rl.models.world_model">ml.rl.models.world_model module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml.rl.models.html#module-ml.rl.models">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ml.rl.prediction.html">ml.rl.prediction package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ml.rl.prediction.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml.rl.prediction.html#module-ml.rl.prediction.dqn_torch_predictor">ml.rl.prediction.dqn_torch_predictor module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml.rl.prediction.html#module-ml.rl.prediction.predictor_wrapper">ml.rl.prediction.predictor_wrapper module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml.rl.prediction.html#module-ml.rl.prediction">Module contents</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="ml.rl.preprocessing.html">ml.rl.preprocessing package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="ml.rl.preprocessing.html#submodules">Submodules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ml.rl.preprocessing.html#module-ml.rl.preprocessing.batch_preprocessor">ml.rl.preprocessing.batch_preprocessor module</a></li>
@@ -200,6 +247,15 @@
 <li class="toctree-l4"><a class="reference internal" href="ml.rl.preprocessing.html#module-ml.rl.preprocessing">Module contents</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="ml.rl.readers.html">ml.rl.readers package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ml.rl.readers.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml.rl.readers.html#module-ml.rl.readers.base">ml.rl.readers.base module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml.rl.readers.html#module-ml.rl.readers.data_streamer">ml.rl.readers.data_streamer module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml.rl.readers.html#module-ml.rl.readers.json_dataset_reader">ml.rl.readers.json_dataset_reader module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml.rl.readers.html#module-ml.rl.readers.nparray_reader">ml.rl.readers.nparray_reader module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml.rl.readers.html#module-ml.rl.readers">Module contents</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="ml.rl.simulators.html">ml.rl.simulators package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="ml.rl.simulators.html#submodules">Submodules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ml.rl.simulators.html#module-ml.rl.simulators.recsim">ml.rl.simulators.recsim module</a></li>
@@ -208,6 +264,20 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="ml.rl.training.html">ml.rl.training package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="ml.rl.training.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="ml.rl.training.gradient_free.html">ml.rl.training.gradient_free package</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="ml.rl.training.gradient_free.html#submodules">Submodules</a></li>
+<li class="toctree-l6"><a class="reference internal" href="ml.rl.training.gradient_free.html#module-ml.rl.training.gradient_free.es_worker">ml.rl.training.gradient_free.es_worker module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="ml.rl.training.gradient_free.html#module-ml.rl.training.gradient_free.evolution_pool">ml.rl.training.gradient_free.evolution_pool module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="ml.rl.training.gradient_free.html#module-ml.rl.training.gradient_free">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="ml.rl.training.ranking.html">ml.rl.training.ranking package</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="ml.rl.training.ranking.html#submodules">Submodules</a></li>
+<li class="toctree-l6"><a class="reference internal" href="ml.rl.training.ranking.html#module-ml.rl.training.ranking.ranking_trainer">ml.rl.training.ranking.ranking_trainer module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="ml.rl.training.ranking.html#module-ml.rl.training.ranking.seq2slate_trainer">ml.rl.training.ranking.seq2slate_trainer module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="ml.rl.training.ranking.html#module-ml.rl.training.ranking">Module contents</a></li>
+</ul>
+</li>
 <li class="toctree-l5"><a class="reference internal" href="ml.rl.training.world_model.html">ml.rl.training.world_model package</a><ul>
 <li class="toctree-l6"><a class="reference internal" href="ml.rl.training.world_model.html#submodules">Submodules</a></li>
 <li class="toctree-l6"><a class="reference internal" href="ml.rl.training.world_model.html#module-ml.rl.training.world_model.mdnrnn_trainer">ml.rl.training.world_model.mdnrnn_trainer module</a></li>
