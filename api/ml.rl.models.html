@@ -112,6 +112,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#module-ml.rl.models.parametric_dqn">ml.rl.models.parametric_dqn module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-ml.rl.models.quantile_dqn">ml.rl.models.quantile_dqn module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-ml.rl.models.seq2slate">ml.rl.models.seq2slate module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ml.rl.models.seq2slate_reward">ml.rl.models.seq2slate_reward module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-ml.rl.models.world_model">ml.rl.models.world_model module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-ml.rl.models">Module contents</a></li>
 </ul>
@@ -120,7 +121,6 @@
 <li class="toctree-l1"><a class="reference internal" href="ml.rl.preprocessing.html">Preprocessing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ml.rl.readers.html">Readers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ml.rl.simulators.html">Simulators</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ml.rl.thrift.html">Thrift</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ml.rl.training.html">Training</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ml.rl.workflow.html">Workflow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">All Modules</a></li>
@@ -1041,6 +1041,33 @@ table in the target network.</p>
 </dd></dl>
 
 <dl class="class">
+<dt id="ml.rl.models.seq2slate.Seq2SlateMode">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.models.seq2slate.</code><code class="sig-name descname">Seq2SlateMode</code><a class="headerlink" href="#ml.rl.models.seq2slate.Seq2SlateMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="ml.rl.models.seq2slate.Seq2SlateMode.DECODE_ONE_STEP_MODE">
+<code class="sig-name descname">DECODE_ONE_STEP_MODE</code><em class="property"> = 'decode_one_step'</em><a class="headerlink" href="#ml.rl.models.seq2slate.Seq2SlateMode.DECODE_ONE_STEP_MODE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ml.rl.models.seq2slate.Seq2SlateMode.PER_SEQ_LOG_PROB_MODE">
+<code class="sig-name descname">PER_SEQ_LOG_PROB_MODE</code><em class="property"> = 'per_sequence_log_prob'</em><a class="headerlink" href="#ml.rl.models.seq2slate.Seq2SlateMode.PER_SEQ_LOG_PROB_MODE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ml.rl.models.seq2slate.Seq2SlateMode.PER_SYMBOL_LOG_PROB_DIST_MODE">
+<code class="sig-name descname">PER_SYMBOL_LOG_PROB_DIST_MODE</code><em class="property"> = 'per_symbol_log_prob_dist'</em><a class="headerlink" href="#ml.rl.models.seq2slate.Seq2SlateMode.PER_SYMBOL_LOG_PROB_DIST_MODE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ml.rl.models.seq2slate.Seq2SlateMode.RANK_MODE">
+<code class="sig-name descname">RANK_MODE</code><em class="property"> = 'rank'</em><a class="headerlink" href="#ml.rl.models.seq2slate.Seq2SlateMode.RANK_MODE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="ml.rl.models.seq2slate.Seq2SlateTransformerModel">
 <em class="property">class </em><code class="sig-prename descclassname">ml.rl.models.seq2slate.</code><code class="sig-name descname">Seq2SlateTransformerModel</code><span class="sig-paren">(</span><em class="sig-param">state_dim: int</em>, <em class="sig-param">candidate_dim: int</em>, <em class="sig-param">num_stacked_layers: int</em>, <em class="sig-param">num_heads: int</em>, <em class="sig-param">dim_model: int</em>, <em class="sig-param">dim_feedforward: int</em>, <em class="sig-param">max_src_seq_len: int</em>, <em class="sig-param">max_tgt_seq_len: int</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.seq2slate.Seq2SlateTransformerModel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.Module</span></code></p>
@@ -1056,7 +1083,7 @@ that the final list of feeds as a whole optimizes the user’s engagement.</p>
 Transformer paper: <a class="reference external" href="https://arxiv.org/abs/1706.03762">https://arxiv.org/abs/1706.03762</a></p>
 <dl class="method">
 <dt id="ml.rl.models.seq2slate.Seq2SlateTransformerModel.decode">
-<code class="sig-name descname">decode</code><span class="sig-paren">(</span><em class="sig-param">memory</em>, <em class="sig-param">state</em>, <em class="sig-param">tgt_src_mask</em>, <em class="sig-param">tgt_seq</em>, <em class="sig-param">tgt_tgt_mask</em>, <em class="sig-param">tgt_seq_len</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.seq2slate.Seq2SlateTransformerModel.decode" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">decode</code><span class="sig-paren">(</span><em class="sig-param">memory</em>, <em class="sig-param">state</em>, <em class="sig-param">tgt_src_mask</em>, <em class="sig-param">tgt_in_seq</em>, <em class="sig-param">tgt_tgt_mask</em>, <em class="sig-param">tgt_seq_len</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.seq2slate.Seq2SlateTransformerModel.decode" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -1156,6 +1183,58 @@ when decoding. Only used in rank mode</p></li>
 <code class="sig-prename descclassname">ml.rl.models.seq2slate.</code><code class="sig-name descname">subsequent_mask</code><span class="sig-paren">(</span><em class="sig-param">size</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.seq2slate.subsequent_mask" title="Permalink to this definition">¶</a></dt>
 <dd><p>Mask out subsequent positions. Mainly used in the decoding process,
 in which an item should not attend subsequent items.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ml.rl.models.seq2slate_reward">
+<span id="ml-rl-models-seq2slate-reward-module"></span><h2>ml.rl.models.seq2slate_reward module<a class="headerlink" href="#module-ml.rl.models.seq2slate_reward" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ml.rl.models.seq2slate_reward.Seq2SlateRewardNet">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.models.seq2slate_reward.</code><code class="sig-name descname">Seq2SlateRewardNet</code><span class="sig-paren">(</span><em class="sig-param">state_dim: int</em>, <em class="sig-param">candidate_dim: int</em>, <em class="sig-param">num_stacked_layers: int</em>, <em class="sig-param">num_heads: int</em>, <em class="sig-param">dim_model: int</em>, <em class="sig-param">dim_feedforward: int</em>, <em class="sig-param">max_src_seq_len: int</em>, <em class="sig-param">max_tgt_seq_len: int</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.seq2slate_reward.Seq2SlateRewardNet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ml.rl.models.base.ModelBase" title="ml.rl.models.base.ModelBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.models.base.ModelBase</span></code></a></p>
+<dl class="method">
+<dt id="ml.rl.models.seq2slate_reward.Seq2SlateRewardNet.decode">
+<code class="sig-name descname">decode</code><span class="sig-paren">(</span><em class="sig-param">memory</em>, <em class="sig-param">state</em>, <em class="sig-param">tgt_src_mask</em>, <em class="sig-param">tgt_in_seq</em>, <em class="sig-param">tgt_tgt_mask</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.seq2slate_reward.Seq2SlateRewardNet.decode" title="Permalink to this definition">¶</a></dt>
+<dd><p>One step decoder. The decoder’s output will be used as the input to
+the last layer for predicting slate reward</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.seq2slate_reward.Seq2SlateRewardNet.encode">
+<code class="sig-name descname">encode</code><span class="sig-paren">(</span><em class="sig-param">state</em>, <em class="sig-param">src_seq</em>, <em class="sig-param">src_mask</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.seq2slate_reward.Seq2SlateRewardNet.encode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.seq2slate_reward.Seq2SlateRewardNet.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input: ml.rl.types.PreprocessedRankingInput</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.seq2slate_reward.Seq2SlateRewardNet.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Encode tgt sequences and predict the slate reward.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.seq2slate_reward.Seq2SlateRewardNet.input_prototype">
+<code class="sig-name descname">input_prototype</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.seq2slate_reward.Seq2SlateRewardNet.input_prototype" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function provides the input for ONNX graph tracing.</p>
+<p>The return value should be what expected by <cite>forward()</cite>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ml.rl.models.seq2slate_reward.Seq2SlateRewardNetJITWrapper">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.models.seq2slate_reward.</code><code class="sig-name descname">Seq2SlateRewardNetJITWrapper</code><span class="sig-paren">(</span><em class="sig-param">model: ml.rl.models.seq2slate_reward.Seq2SlateRewardNet</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.seq2slate_reward.Seq2SlateRewardNetJITWrapper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ml.rl.models.base.ModelBase" title="ml.rl.models.base.ModelBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.models.base.ModelBase</span></code></a></p>
+<dl class="method">
+<dt id="ml.rl.models.seq2slate_reward.Seq2SlateRewardNetJITWrapper.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">state: torch.Tensor</em>, <em class="sig-param">src_seq: torch.Tensor</em>, <em class="sig-param">tgt_out_seq: torch.Tensor</em>, <em class="sig-param">src_src_mask: torch.Tensor</em>, <em class="sig-param">slate_reward: torch.Tensor</em>, <em class="sig-param">tgt_out_idx: torch.Tensor</em><span class="sig-paren">)</span> &#x2192; torch.Tensor<a class="headerlink" href="#ml.rl.models.seq2slate_reward.Seq2SlateRewardNetJITWrapper.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.models.seq2slate_reward.Seq2SlateRewardNetJITWrapper.input_prototype">
+<code class="sig-name descname">input_prototype</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.models.seq2slate_reward.Seq2SlateRewardNetJITWrapper.input_prototype" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function provides the input for ONNX graph tracing.</p>
+<p>The return value should be what expected by <cite>forward()</cite>.</p>
+</dd></dl>
+
 </dd></dl>
 
 </div>

@@ -111,7 +111,6 @@
 <li class="toctree-l1"><a class="reference internal" href="api/ml.rl.preprocessing.html">Preprocessing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api/ml.rl.readers.html">Readers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api/ml.rl.simulators.html">Simulators</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api/ml.rl.thrift.html">Thrift</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api/ml.rl.training.html">Training</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api/ml.rl.workflow.html">Workflow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api/modules.html">All Modules</a></li>
@@ -218,7 +217,7 @@ actions of another policy.</p>
 <p>First we need to generate the data required to train our RL models. For this example we generate data from the <code class="docutils literal notranslate"><span class="pre">Cartpole-v0</span></code> environment in OpenAI Gym. In practice, end users would generate a dataset in a similar format from their production system.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">cartpole_discrete</span>
 
-<span class="n">python</span> <span class="n">ml</span><span class="o">/</span><span class="n">rl</span><span class="o">/</span><span class="n">test</span><span class="o">/</span><span class="n">gym</span><span class="o">/</span><span class="n">run_gym</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">p</span> <span class="n">ml</span><span class="o">/</span><span class="n">rl</span><span class="o">/</span><span class="n">test</span><span class="o">/</span><span class="n">gym</span><span class="o">/</span><span class="n">discrete_dqn_cartpole_v0</span><span class="o">.</span><span class="n">json</span> <span class="o">-</span><span class="n">f</span> <span class="n">cartpole_discrete</span><span class="o">/</span><span class="n">training_data</span><span class="o">.</span><span class="n">json</span>
+<span class="n">python</span> <span class="n">ml</span><span class="o">/</span><span class="n">rl</span><span class="o">/</span><span class="n">test</span><span class="o">/</span><span class="n">gym</span><span class="o">/</span><span class="n">run_gym</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">p</span> <span class="n">ml</span><span class="o">/</span><span class="n">rl</span><span class="o">/</span><span class="n">test</span><span class="o">/</span><span class="n">gym</span><span class="o">/</span><span class="n">discrete_dqn_cartpole_small_v0</span><span class="o">.</span><span class="n">json</span> <span class="o">-</span><span class="n">f</span> <span class="n">cartpole_discrete</span><span class="o">/</span><span class="n">training_data</span><span class="o">.</span><span class="n">json</span> <span class="o">--</span><span class="n">seed</span> <span class="mi">0</span>
 </pre></div>
 </div>
 <p>Let’s look at one row of data to see the expected input format:</p>
@@ -364,7 +363,7 @@ actions of another policy.</p>
 <div class="section" id="step-5-evaluate-the-model">
 <h3>Step 5 - Evaluate the Model<a class="headerlink" href="#step-5-evaluate-the-model" title="Permalink to this headline">¶</a></h3>
 <p>Now that we have trained a new policy on the offline <code class="docutils literal notranslate"><span class="pre">Cartpole-v0</span></code> data, we can try it out to see how it does:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">ml</span><span class="o">/</span><span class="n">rl</span><span class="o">/</span><span class="n">test</span><span class="o">/</span><span class="n">workflow</span><span class="o">/</span><span class="n">eval_cartpole</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">m</span> <span class="n">outputs</span><span class="o">/</span><span class="n">predictor</span><span class="o">*</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">ml</span><span class="o">/</span><span class="n">rl</span><span class="o">/</span><span class="n">test</span><span class="o">/</span><span class="n">workflow</span><span class="o">/</span><span class="n">eval_cartpole</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">m</span> <span class="n">outputs</span><span class="o">/</span><span class="n">model_</span><span class="o">*</span> <span class="o">--</span><span class="n">softmax_temperature</span><span class="o">=</span><span class="mf">0.35</span> <span class="o">--</span><span class="n">log_file</span><span class="o">=</span><span class="n">outputs</span><span class="o">/</span><span class="n">eval_output</span><span class="o">.</span><span class="n">txt</span>
 </pre></div>
 </div>
 </div>

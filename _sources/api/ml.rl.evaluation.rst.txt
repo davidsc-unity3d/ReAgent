@@ -44,6 +44,14 @@ ml.rl.evaluation.ranking\_evaluator module
    :undoc-members:
    :show-inheritance:
 
+ml.rl.evaluation.reward\_net\_evaluator module
+----------------------------------------------
+
+.. automodule:: ml.rl.evaluation.reward_net_evaluator
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 ml.rl.evaluation.sequential\_doubly\_robust\_estimator module
 -------------------------------------------------------------
 

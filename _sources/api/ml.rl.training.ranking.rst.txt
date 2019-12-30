@@ -4,10 +4,10 @@ ml.rl.training.ranking package
 Submodules
 ----------
 
-ml.rl.training.ranking.ranking\_trainer module
-----------------------------------------------
+ml.rl.training.ranking.seq2slate\_tf\_trainer module
+----------------------------------------------------
 
-.. automodule:: ml.rl.training.ranking.ranking_trainer
+.. automodule:: ml.rl.training.ranking.seq2slate_tf_trainer
    :members:
    :undoc-members:
    :show-inheritance:

@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="ml.rl.thrift package" href="ml.rl.thrift.html" />
+    <link rel="next" title="ml.rl.training package" href="ml.rl.training.html" />
     <link rel="prev" title="ml.rl.readers package" href="ml.rl.readers.html" /> 
 </head>
 
@@ -104,7 +104,6 @@
 <li class="toctree-l2"><a class="reference internal" href="#module-ml.rl.simulators">Module contents</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="ml.rl.thrift.html">Thrift</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ml.rl.training.html">Training</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ml.rl.workflow.html">Workflow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">All Modules</a></li>
@@ -189,6 +188,12 @@
 <em class="property">class </em><code class="sig-prename descclassname">ml.rl.simulators.recsim.</code><code class="sig-name descname">DocumentFeature</code><span class="sig-paren">(</span><em class="sig-param">topic</em>, <em class="sig-param">length</em>, <em class="sig-param">quality</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.simulators.recsim.DocumentFeature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></p>
 <dl class="method">
+<dt id="ml.rl.simulators.recsim.DocumentFeature.as_vector">
+<code class="sig-name descname">as_vector</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.simulators.recsim.DocumentFeature.as_vector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenient function to get single tensor</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="ml.rl.simulators.recsim.DocumentFeature.length">
 <em class="property">property </em><code class="sig-name descname">length</code><a class="headerlink" href="#ml.rl.simulators.recsim.DocumentFeature.length" title="Permalink to this definition">¶</a></dt>
 <dd><p>Alias for field number 1</p>
@@ -220,7 +225,7 @@
 
 <dl class="method">
 <dt id="ml.rl.simulators.recsim.RecSim.compute_user_choice">
-<code class="sig-name descname">compute_user_choice</code><span class="sig-paren">(</span><em class="sig-param">slate</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.simulators.recsim.RecSim.compute_user_choice" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">compute_user_choice</code><span class="sig-paren">(</span><em class="sig-param">slate: ml.rl.simulators.recsim.DocumentFeature</em><span class="sig-paren">)</span> &#x2192; Tuple[torch.Tensor, torch.Tensor]<a class="headerlink" href="#ml.rl.simulators.recsim.RecSim.compute_user_choice" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -238,7 +243,7 @@
 
 <dl class="method">
 <dt id="ml.rl.simulators.recsim.RecSim.obs">
-<code class="sig-name descname">obs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.simulators.recsim.RecSim.obs" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">obs</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Tuple[torch.Tensor, torch.Tensor, ml.rl.simulators.recsim.DocumentFeature]<a class="headerlink" href="#ml.rl.simulators.recsim.RecSim.obs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Agent can observe:
 - User interest vector
 - Document topic vector
@@ -248,7 +253,12 @@
 
 <dl class="method">
 <dt id="ml.rl.simulators.recsim.RecSim.reset">
-<code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.simulators.recsim.RecSim.reset" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ml.rl.simulators.recsim.RecSim.reset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.simulators.recsim.RecSim.rollout_policy">
+<code class="sig-name descname">rollout_policy</code><span class="sig-paren">(</span><em class="sig-param">policy</em>, <em class="sig-param">memory_pool: Optional[ml.rl.test.gym.open_ai_gym_memory_pool.OpenAIGymMemoryPool] = None</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#ml.rl.simulators.recsim.RecSim.rollout_policy" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -269,12 +279,12 @@
 
 <dl class="method">
 <dt id="ml.rl.simulators.recsim.RecSim.select">
-<code class="sig-name descname">select</code><span class="sig-paren">(</span><em class="sig-param">candidates</em>, <em class="sig-param">indices</em>, <em class="sig-param">add_null</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.simulators.recsim.RecSim.select" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">select</code><span class="sig-paren">(</span><em class="sig-param">candidates: ml.rl.simulators.recsim.DocumentFeature</em>, <em class="sig-param">indices: torch.Tensor</em>, <em class="sig-param">add_null: bool</em><span class="sig-paren">)</span> &#x2192; ml.rl.simulators.recsim.DocumentFeature<a class="headerlink" href="#ml.rl.simulators.recsim.RecSim.select" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="ml.rl.simulators.recsim.RecSim.step">
-<code class="sig-name descname">step</code><span class="sig-paren">(</span><em class="sig-param">action: torch.Tensor</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#ml.rl.simulators.recsim.RecSim.step" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">step</code><span class="sig-paren">(</span><em class="sig-param">action: torch.Tensor</em><span class="sig-paren">)</span> &#x2192; Tuple[torch.Tensor, torch.Tensor, torch.Tensor, int]<a class="headerlink" href="#ml.rl.simulators.recsim.RecSim.step" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -294,6 +304,16 @@
 
 </dd></dl>
 
+<dl class="function">
+<dt id="ml.rl.simulators.recsim.random_policy">
+<code class="sig-prename descclassname">ml.rl.simulators.recsim.</code><code class="sig-name descname">random_policy</code><span class="sig-paren">(</span><em class="sig-param">obs: Tuple[torch.Tensor, torch.Tensor, ml.rl.simulators.recsim.DocumentFeature], recsim: ml.rl.simulators.recsim.RecSim</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.simulators.recsim.random_policy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="ml.rl.simulators.recsim.top_k_policy">
+<code class="sig-prename descclassname">ml.rl.simulators.recsim.</code><code class="sig-name descname">top_k_policy</code><span class="sig-paren">(</span><em class="sig-param">q_network, obs: Tuple[torch.Tensor, torch.Tensor, ml.rl.simulators.recsim.DocumentFeature], recsim: ml.rl.simulators.recsim.RecSim</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.simulators.recsim.top_k_policy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </div>
 <div class="section" id="module-ml.rl.simulators">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ml.rl.simulators" title="Permalink to this headline">¶</a></h2>
@@ -308,7 +328,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="ml.rl.thrift.html" class="btn btn-neutral float-right" title="ml.rl.thrift package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="ml.rl.training.html" class="btn btn-neutral float-right" title="ml.rl.training package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="ml.rl.readers.html" class="btn btn-neutral float-left" title="ml.rl.readers package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

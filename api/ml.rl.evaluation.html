@@ -100,6 +100,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#module-ml.rl.evaluation.evaluation_data_page">ml.rl.evaluation.evaluation_data_page module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-ml.rl.evaluation.evaluator">ml.rl.evaluation.evaluator module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-ml.rl.evaluation.ranking_evaluator">ml.rl.evaluation.ranking_evaluator module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ml.rl.evaluation.reward_net_evaluator">ml.rl.evaluation.reward_net_evaluator module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-ml.rl.evaluation.sequential_doubly_robust_estimator">ml.rl.evaluation.sequential_doubly_robust_estimator module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-ml.rl.evaluation.weighted_sequential_doubly_robust_estimator">ml.rl.evaluation.weighted_sequential_doubly_robust_estimator module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-ml.rl.evaluation.world_model_evaluator">ml.rl.evaluation.world_model_evaluator module</a></li>
@@ -111,7 +112,6 @@
 <li class="toctree-l1"><a class="reference internal" href="ml.rl.preprocessing.html">Preprocessing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ml.rl.readers.html">Readers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ml.rl.simulators.html">Simulators</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ml.rl.thrift.html">Thrift</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ml.rl.training.html">Training</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ml.rl.workflow.html">Workflow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">All Modules</a></li>
@@ -324,7 +324,7 @@
 <p>For details, visit <a class="reference external" href="https://arxiv.org/pdf/1612.01205.pdf">https://arxiv.org/pdf/1612.01205.pdf</a></p>
 <dl class="method">
 <dt id="ml.rl.evaluation.doubly_robust_estimator.DoublyRobustEstimator.estimate">
-<code class="sig-name descname">estimate</code><span class="sig-paren">(</span><em class="sig-param">edp: ml.rl.evaluation.evaluation_data_page.EvaluationDataPage</em>, <em class="sig-param">hp: Optional[dict] = None</em><span class="sig-paren">)</span> &#x2192; Tuple[ml.rl.evaluation.cpe.CpeEstimate, ml.rl.evaluation.cpe.CpeEstimate, ml.rl.evaluation.cpe.CpeEstimate]<a class="headerlink" href="#ml.rl.evaluation.doubly_robust_estimator.DoublyRobustEstimator.estimate" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">estimate</code><span class="sig-paren">(</span><em class="sig-param">edp: ml.rl.evaluation.evaluation_data_page.EvaluationDataPage</em>, <em class="sig-param">hp: Optional[ml.rl.evaluation.doubly_robust_estimator.DoublyRobustHP] = None</em><span class="sig-paren">)</span> &#x2192; Tuple[ml.rl.evaluation.cpe.CpeEstimate, ml.rl.evaluation.cpe.CpeEstimate, ml.rl.evaluation.cpe.CpeEstimate]<a class="headerlink" href="#ml.rl.evaluation.doubly_robust_estimator.DoublyRobustEstimator.estimate" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -363,7 +363,7 @@ are used to sample the actions for the classifier training data.</p>
 </ol>
 <dl class="method">
 <dt id="ml.rl.evaluation.doubly_robust_estimator.DoublyRobustEstimatorBOPE.estimate">
-<code class="sig-name descname">estimate</code><span class="sig-paren">(</span><em class="sig-param">edp: ml.rl.evaluation.evaluation_data_page.EvaluationDataPage</em>, <em class="sig-param">hp: Optional[dict] = None</em><span class="sig-paren">)</span> &#x2192; Tuple[ml.rl.evaluation.cpe.CpeEstimate, ml.rl.evaluation.cpe.CpeEstimate, ml.rl.evaluation.cpe.CpeEstimate]<a class="headerlink" href="#ml.rl.evaluation.doubly_robust_estimator.DoublyRobustEstimatorBOPE.estimate" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">estimate</code><span class="sig-paren">(</span><em class="sig-param">edp: ml.rl.evaluation.evaluation_data_page.EvaluationDataPage</em>, <em class="sig-param">hp: Optional[ml.rl.evaluation.doubly_robust_estimator.DoublyRobustHP] = None</em><span class="sig-paren">)</span> &#x2192; Tuple[ml.rl.evaluation.cpe.CpeEstimate, ml.rl.evaluation.cpe.CpeEstimate, ml.rl.evaluation.cpe.CpeEstimate]<a class="headerlink" href="#ml.rl.evaluation.doubly_robust_estimator.DoublyRobustEstimatorBOPE.estimate" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -374,8 +374,56 @@ are used to sample the actions for the classifier training data.</p>
 <dd><p>Bases: <a class="reference internal" href="#ml.rl.evaluation.doubly_robust_estimator.DoublyRobustEstimator" title="ml.rl.evaluation.doubly_robust_estimator.DoublyRobustEstimator"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.evaluation.doubly_robust_estimator.DoublyRobustEstimator</span></code></a></p>
 <dl class="method">
 <dt id="ml.rl.evaluation.doubly_robust_estimator.DoublyRobustEstimatorEstProp.estimate">
-<code class="sig-name descname">estimate</code><span class="sig-paren">(</span><em class="sig-param">edp: ml.rl.evaluation.evaluation_data_page.EvaluationDataPage</em>, <em class="sig-param">hp: Optional[dict] = None</em><span class="sig-paren">)</span> &#x2192; Tuple[ml.rl.evaluation.cpe.CpeEstimate, ml.rl.evaluation.cpe.CpeEstimate, ml.rl.evaluation.cpe.CpeEstimate]<a class="headerlink" href="#ml.rl.evaluation.doubly_robust_estimator.DoublyRobustEstimatorEstProp.estimate" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">estimate</code><span class="sig-paren">(</span><em class="sig-param">edp: ml.rl.evaluation.evaluation_data_page.EvaluationDataPage</em>, <em class="sig-param">hp: Optional[ml.rl.evaluation.doubly_robust_estimator.DoublyRobustHP] = None</em><span class="sig-paren">)</span> &#x2192; Tuple[ml.rl.evaluation.cpe.CpeEstimate, ml.rl.evaluation.cpe.CpeEstimate, ml.rl.evaluation.cpe.CpeEstimate]<a class="headerlink" href="#ml.rl.evaluation.doubly_robust_estimator.DoublyRobustEstimatorEstProp.estimate" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ml.rl.evaluation.doubly_robust_estimator.DoublyRobustHP">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.evaluation.doubly_robust_estimator.</code><code class="sig-name descname">DoublyRobustHP</code><span class="sig-paren">(</span><em class="sig-param">frac_train</em>, <em class="sig-param">frac_valid</em>, <em class="sig-param">bootstrap_num_samples</em>, <em class="sig-param">bootstrap_sample_percent</em>, <em class="sig-param">xgb_params</em>, <em class="sig-param">bope_mode</em>, <em class="sig-param">bope_num_samples</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.evaluation.doubly_robust_estimator.DoublyRobustHP" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></p>
+<dl class="method">
+<dt id="ml.rl.evaluation.doubly_robust_estimator.DoublyRobustHP.bootstrap_num_samples">
+<em class="property">property </em><code class="sig-name descname">bootstrap_num_samples</code><a class="headerlink" href="#ml.rl.evaluation.doubly_robust_estimator.DoublyRobustHP.bootstrap_num_samples" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 2</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.evaluation.doubly_robust_estimator.DoublyRobustHP.bootstrap_sample_percent">
+<em class="property">property </em><code class="sig-name descname">bootstrap_sample_percent</code><a class="headerlink" href="#ml.rl.evaluation.doubly_robust_estimator.DoublyRobustHP.bootstrap_sample_percent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 3</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.evaluation.doubly_robust_estimator.DoublyRobustHP.bope_mode">
+<em class="property">property </em><code class="sig-name descname">bope_mode</code><a class="headerlink" href="#ml.rl.evaluation.doubly_robust_estimator.DoublyRobustHP.bope_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 5</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.evaluation.doubly_robust_estimator.DoublyRobustHP.bope_num_samples">
+<em class="property">property </em><code class="sig-name descname">bope_num_samples</code><a class="headerlink" href="#ml.rl.evaluation.doubly_robust_estimator.DoublyRobustHP.bope_num_samples" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 6</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.evaluation.doubly_robust_estimator.DoublyRobustHP.frac_train">
+<em class="property">property </em><code class="sig-name descname">frac_train</code><a class="headerlink" href="#ml.rl.evaluation.doubly_robust_estimator.DoublyRobustHP.frac_train" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.evaluation.doubly_robust_estimator.DoublyRobustHP.frac_valid">
+<em class="property">property </em><code class="sig-name descname">frac_valid</code><a class="headerlink" href="#ml.rl.evaluation.doubly_robust_estimator.DoublyRobustHP.frac_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.evaluation.doubly_robust_estimator.DoublyRobustHP.xgb_params">
+<em class="property">property </em><code class="sig-name descname">xgb_params</code><a class="headerlink" href="#ml.rl.evaluation.doubly_robust_estimator.DoublyRobustHP.xgb_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 4</p>
+</dd></dl>
 
 </dd></dl>
 
@@ -640,8 +688,17 @@ are used to sample the actions for the classifier training data.</p>
 <dd></dd></dl>
 
 <dl class="method">
+<dt id="ml.rl.evaluation.evaluation_data_page.EvaluationDataPage.create_from_tensors_seq2slate">
+<em class="property">classmethod </em><code class="sig-name descname">create_from_tensors_seq2slate</code><span class="sig-paren">(</span><em class="sig-param">trainer: ml.rl.training.ranking.seq2slate_trainer.Seq2SlateTrainer</em>, <em class="sig-param">reward_network: torch.nn.Module</em>, <em class="sig-param">mdp_ids: numpy.ndarray</em>, <em class="sig-param">sequence_numbers: torch.Tensor</em>, <em class="sig-param">training_input: ml.rl.types.PreprocessedRankingInput</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.evaluation.evaluation_data_page.EvaluationDataPage.create_from_tensors_seq2slate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluating on a non-greedy serving ranking model is too expensive because
+we would need to compute propensities of all possible output sequences.
+Hence we assume the ranking model has a greedy policy that always picks
+the most probable output sequence.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="ml.rl.evaluation.evaluation_data_page.EvaluationDataPage.create_from_training_batch">
-<em class="property">classmethod </em><code class="sig-name descname">create_from_training_batch</code><span class="sig-paren">(</span><em class="sig-param">tdb: ml.rl.types.PreprocessedTrainingBatch</em>, <em class="sig-param">trainer: ml.rl.training.dqn_trainer.DQNTrainer</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.evaluation.evaluation_data_page.EvaluationDataPage.create_from_training_batch" title="Permalink to this definition">¶</a></dt>
+<em class="property">classmethod </em><code class="sig-name descname">create_from_training_batch</code><span class="sig-paren">(</span><em class="sig-param">tdb: ml.rl.types.PreprocessedTrainingBatch</em>, <em class="sig-param">trainer: ml.rl.training.trainer.Trainer</em>, <em class="sig-param">reward_network: Optional[torch.nn.Module] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.evaluation.evaluation_data_page.EvaluationDataPage.create_from_training_batch" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -847,7 +904,7 @@ If type is provides the output Tensor will have that type</p>
 <span id="ml-rl-evaluation-ranking-evaluator-module"></span><h2>ml.rl.evaluation.ranking_evaluator module<a class="headerlink" href="#module-ml.rl.evaluation.ranking_evaluator" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="ml.rl.evaluation.ranking_evaluator.RankingEvaluator">
-<em class="property">class </em><code class="sig-prename descclassname">ml.rl.evaluation.ranking_evaluator.</code><code class="sig-name descname">RankingEvaluator</code><span class="sig-paren">(</span><em class="sig-param">trainer: ml.rl.training.ranking.seq2slate_trainer.Seq2SlateTrainer</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.evaluation.ranking_evaluator.RankingEvaluator" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.evaluation.ranking_evaluator.</code><code class="sig-name descname">RankingEvaluator</code><span class="sig-paren">(</span><em class="sig-param">trainer: ml.rl.training.ranking.seq2slate_trainer.Seq2SlateTrainer</em>, <em class="sig-param">calc_cpe: bool</em>, <em class="sig-param">reward_network: Optional[torch.nn.Module] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.evaluation.ranking_evaluator.RankingEvaluator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Evaluate ranking models</p>
 <dl class="method">
@@ -858,6 +915,26 @@ If type is provides the output Tensor will have that type</p>
 <dl class="method">
 <dt id="ml.rl.evaluation.ranking_evaluator.RankingEvaluator.evaluate_post_training">
 <code class="sig-name descname">evaluate_post_training</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.evaluation.ranking_evaluator.RankingEvaluator.evaluate_post_training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ml.rl.evaluation.reward_net_evaluator">
+<span id="ml-rl-evaluation-reward-net-evaluator-module"></span><h2>ml.rl.evaluation.reward_net_evaluator module<a class="headerlink" href="#module-ml.rl.evaluation.reward_net_evaluator" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ml.rl.evaluation.reward_net_evaluator.RewardNetEvaluator">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.evaluation.reward_net_evaluator.</code><code class="sig-name descname">RewardNetEvaluator</code><span class="sig-paren">(</span><em class="sig-param">trainer: ml.rl.training.reward_network_trainer.RewardNetTrainer</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.evaluation.reward_net_evaluator.RewardNetEvaluator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Evaluate reward networks</p>
+<dl class="method">
+<dt id="ml.rl.evaluation.reward_net_evaluator.RewardNetEvaluator.evaluate">
+<code class="sig-name descname">evaluate</code><span class="sig-paren">(</span><em class="sig-param">eval_tdp: ml.rl.types.PreprocessedTrainingBatch</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.evaluation.reward_net_evaluator.RewardNetEvaluator.evaluate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.evaluation.reward_net_evaluator.RewardNetEvaluator.evaluate_post_training">
+<code class="sig-name descname">evaluate_post_training</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.evaluation.reward_net_evaluator.RewardNetEvaluator.evaluate_post_training" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>

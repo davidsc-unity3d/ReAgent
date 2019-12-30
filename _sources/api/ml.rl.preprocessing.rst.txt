@@ -12,14 +12,6 @@ ml.rl.preprocessing.batch\_preprocessor module
    :undoc-members:
    :show-inheritance:
 
-ml.rl.preprocessing.feature\_extractor module
----------------------------------------------
-
-.. automodule:: ml.rl.preprocessing.feature_extractor
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 ml.rl.preprocessing.identify\_types module
 ------------------------------------------
 
@@ -48,14 +40,6 @@ ml.rl.preprocessing.preprocessor module
 ---------------------------------------
 
 .. automodule:: ml.rl.preprocessing.preprocessor
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-ml.rl.preprocessing.preprocessor\_net module
---------------------------------------------
-
-.. automodule:: ml.rl.preprocessing.preprocessor_net
    :members:
    :undoc-members:
    :show-inheritance:

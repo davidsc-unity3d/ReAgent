@@ -132,6 +132,14 @@ ml.rl.models.seq2slate module
    :undoc-members:
    :show-inheritance:
 
+ml.rl.models.seq2slate\_reward module
+-------------------------------------
+
+.. automodule:: ml.rl.models.seq2slate_reward
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 ml.rl.models.world\_model module
 --------------------------------
 

@@ -98,7 +98,6 @@
 <li class="toctree-l1"><a class="reference internal" href="api/ml.rl.preprocessing.html">Preprocessing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api/ml.rl.readers.html">Readers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api/ml.rl.simulators.html">Simulators</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api/ml.rl.thrift.html">Thrift</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api/ml.rl.training.html">Training</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api/ml.rl.workflow.html">Workflow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api/modules.html">All Modules</a></li>
@@ -183,7 +182,6 @@
  | <a href="#H"><strong>H</strong></a>
  | <a href="#I"><strong>I</strong></a>
  | <a href="#J"><strong>J</strong></a>
- | <a href="#K"><strong>K</strong></a>
  | <a href="#L"><strong>L</strong></a>
  | <a href="#M"><strong>M</strong></a>
  | <a href="#N"><strong>N</strong></a>
@@ -196,6 +194,7 @@
  | <a href="#U"><strong>U</strong></a>
  | <a href="#V"><strong>V</strong></a>
  | <a href="#W"><strong>W</strong></a>
+ | <a href="#X"><strong>X</strong></a>
  
 </div>
 <h2 id="A">A</h2>
@@ -205,15 +204,13 @@
 </li>
       <li><a href="api/ml.rl.models.html#ml.rl.models.cem_planner.CEMPlannerNetwork.acc_rewards_of_one_solution">acc_rewards_of_one_solution() (ml.rl.models.cem_planner.CEMPlannerNetwork method)</a>
 </li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.InputColumn.ACTION">ACTION (ml.rl.preprocessing.feature_extractor.InputColumn attribute)</a>
-</li>
       <li><a href="api/ml.rl.models.html#ml.rl.models.mdn_rnn.MDNRNNMemorySample.action">action() (ml.rl.models.mdn_rnn.MDNRNNMemorySample property)</a>
 </li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.SACTrainingParameters.action_embedding_kld_weight">action_embedding_kld_weight (ml.rl.parameters.SACTrainingParameters attribute)</a>
+      <li><a href="api/ml.rl.training.html#ml.rl.training.sac_trainer.SACTrainerParameters.action_embedding_kld_weight">action_embedding_kld_weight (ml.rl.training.sac_trainer.SACTrainerParameters attribute)</a>
 </li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.SACTrainingParameters.action_embedding_mean">action_embedding_mean (ml.rl.parameters.SACTrainingParameters attribute)</a>
+      <li><a href="api/ml.rl.training.html#ml.rl.training.sac_trainer.SACTrainerParameters.action_embedding_mean">action_embedding_mean (ml.rl.training.sac_trainer.SACTrainerParameters attribute)</a>
 </li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.SACTrainingParameters.action_embedding_variance">action_embedding_variance (ml.rl.parameters.SACTrainingParameters attribute)</a>
+      <li><a href="api/ml.rl.training.html#ml.rl.training.sac_trainer.SACTrainerParameters.action_embedding_variance">action_embedding_variance (ml.rl.training.sac_trainer.SACTrainerParameters attribute)</a>
 </li>
       <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.evaluation_data_page.EvaluationDataPage.action_mask">action_mask() (ml.rl.evaluation.evaluation_data_page.EvaluationDataPage property)</a>
 </li>
@@ -221,11 +218,9 @@
 </li>
       <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.doubly_robust_estimator.EstimationData.action_mask_eval">action_mask_eval() (ml.rl.evaluation.doubly_robust_estimator.EstimationData property)</a>
 </li>
+      <li><a href="api/ml.rl.html#ml.rl.types.ActorOutput.action_mean">action_mean (ml.rl.types.ActorOutput attribute)</a>
+</li>
       <li><a href="api/ml.rl.training.html#ml.rl.training.rl_trainer_pytorch.RLTrainer.ACTION_NOT_POSSIBLE_VAL">ACTION_NOT_POSSIBLE_VAL (ml.rl.training.rl_trainer_pytorch.RLTrainer attribute)</a>
-</li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.InputColumn.ACTION_PRESENCE">ACTION_PRESENCE (ml.rl.preprocessing.feature_extractor.InputColumn attribute)</a>
-</li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.InputColumn.ACTION_PROBABILITY">ACTION_PROBABILITY (ml.rl.preprocessing.feature_extractor.InputColumn attribute)</a>
 </li>
       <li><a href="api/ml.rl.html#ml.rl.types.ExtraData.action_probability">action_probability (ml.rl.types.ExtraData attribute)</a>
 </li>
@@ -245,24 +240,16 @@
 </li>
       <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.doubly_robust_estimator.EstimationData.actions_logged_valid">actions_logged_valid() (ml.rl.evaluation.doubly_robust_estimator.EstimationData property)</a>
 </li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.SACModelParameters.actor_network">actor_network (ml.rl.parameters.SACModelParameters attribute)</a>
+      <li><a href="api/ml.rl.html#ml.rl.parameters.TD3TrainingParameters.actor_network_optimizer">actor_network_optimizer (ml.rl.parameters.TD3TrainingParameters attribute)</a>
 </li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.SACTrainingParameters.actor_network_optimizer">actor_network_optimizer (ml.rl.parameters.SACTrainingParameters attribute)</a>
-
-      <ul>
-        <li><a href="api/ml.rl.html#ml.rl.parameters.TD3TrainingParameters.actor_network_optimizer">(ml.rl.parameters.TD3TrainingParameters attribute)</a>
-</li>
-      </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/ml.rl.prediction.html#ml.rl.prediction.dqn_torch_predictor.ActorTorchPredictor.actor_prediction">actor_prediction() (ml.rl.prediction.dqn_torch_predictor.ActorTorchPredictor method)</a>
-</li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.OpenAiGymParameters.actor_training">actor_training (ml.rl.parameters.OpenAiGymParameters attribute)</a>
 </li>
       <li><a href="api/ml.rl.html#ml.rl.types.ActorOutput">ActorOutput (class in ml.rl.types)</a>
 </li>
       <li><a href="api/ml.rl.prediction.html#ml.rl.prediction.predictor_wrapper.ActorPredictorWrapper">ActorPredictorWrapper (class in ml.rl.prediction.predictor_wrapper)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/ml.rl.prediction.html#ml.rl.prediction.dqn_torch_predictor.ActorTorchPredictor">ActorTorchPredictor (class in ml.rl.prediction.dqn_torch_predictor)</a>
 </li>
       <li><a href="api/ml.rl.prediction.html#ml.rl.prediction.predictor_wrapper.ActorWithPreprocessor">ActorWithPreprocessor (class in ml.rl.prediction.predictor_wrapper)</a>
@@ -281,10 +268,6 @@
 </li>
       <li><a href="api/ml.rl.html#ml.rl.parameters.CEMParameters.alpha">alpha (ml.rl.parameters.CEMParameters attribute)</a>
 </li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.SACTrainingParameters.alpha_optimizer">alpha_optimizer (ml.rl.parameters.SACTrainingParameters attribute)</a>
-</li>
-      <li><a href="api/ml.rl.training.html#ml.rl.training.off_policy_predictor.RLPredictor.analyze">analyze() (ml.rl.training.off_policy_predictor.RLPredictor method)</a>
-</li>
       <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.evaluation_data_page.EvaluationDataPage.append">append() (ml.rl.evaluation.evaluation_data_page.EvaluationDataPage method)</a>
 
       <ul>
@@ -292,6 +275,8 @@
 </li>
       </ul></li>
       <li><a href="api/ml.rl.training.gradient_free.html#ml.rl.training.gradient_free.evolution_pool.EvolutionPool.apply_global_reward">apply_global_reward() (ml.rl.training.gradient_free.evolution_pool.EvolutionPool method)</a>
+</li>
+      <li><a href="api/ml.rl.training.html#ml.rl.training.sac_trainer.SACTrainerParameters.apply_kld_on_mean">apply_kld_on_mean (ml.rl.training.sac_trainer.SACTrainerParameters attribute)</a>
 </li>
       <li><a href="api/ml.rl.training.html#ml.rl.training.c51_trainer.C51Trainer.argmax_with_mask">argmax_with_mask() (ml.rl.training.c51_trainer.C51Trainer method)</a>
 
@@ -307,9 +292,17 @@
 </li>
       <li><a href="api/ml.rl.training.html#ml.rl.training.training_data_page.TrainingDataPage.as_policy_network_training_batch">as_policy_network_training_batch() (ml.rl.training.training_data_page.TrainingDataPage method)</a>
 </li>
-      <li><a href="api/ml.rl.models.html#ml.rl.models.seq2slate.attention">attention() (in module ml.rl.models.seq2slate)</a>
+      <li><a href="api/ml.rl.html#ml.rl.types.PreprocessedSlateFeatureVector.as_preprocessed_feature_vector">as_preprocessed_feature_vector() (ml.rl.types.PreprocessedSlateFeatureVector method)</a>
+
+      <ul>
+        <li><a href="api/ml.rl.html#ml.rl.types.PreprocessedTiledFeatureVector.as_preprocessed_feature_vector">(ml.rl.types.PreprocessedTiledFeatureVector method)</a>
 </li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.OpenAiRunDetails.avg_over_num_episodes">avg_over_num_episodes (ml.rl.parameters.OpenAiRunDetails attribute)</a>
+      </ul></li>
+      <li><a href="api/ml.rl.training.html#ml.rl.training.training_data_page.TrainingDataPage.as_slate_q_training_batch">as_slate_q_training_batch() (ml.rl.training.training_data_page.TrainingDataPage method)</a>
+</li>
+      <li><a href="api/ml.rl.simulators.html#ml.rl.simulators.recsim.DocumentFeature.as_vector">as_vector() (ml.rl.simulators.recsim.DocumentFeature method)</a>
+</li>
+      <li><a href="api/ml.rl.models.html#ml.rl.models.seq2slate.attention">attention() (in module ml.rl.models.seq2slate)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -339,10 +332,10 @@
 </li>
       <li><a href="api/ml.rl.html#ml.rl.parameters.RainbowDQNParameters.bcq">bcq (ml.rl.parameters.RainbowDQNParameters attribute)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/ml.rl.html#ml.rl.parameters.RainbowDQNParameters.bcq_drop_threshold">bcq_drop_threshold (ml.rl.parameters.RainbowDQNParameters attribute)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/ml.rl.simulators.html#ml.rl.simulators.recsim.RecSim.bonus">bonus() (ml.rl.simulators.recsim.RecSim method)</a>
 </li>
       <li><a href="api/ml.rl.training.html#ml.rl.training.c51_trainer.C51Trainer.boost_rewards">boost_rewards() (ml.rl.training.c51_trainer.C51Trainer method)</a>
@@ -353,15 +346,21 @@
         <li><a href="api/ml.rl.training.html#ml.rl.training.qrdqn_trainer.QRDQNTrainer.boost_rewards">(ml.rl.training.qrdqn_trainer.QRDQNTrainer method)</a>
 </li>
       </ul></li>
+      <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.doubly_robust_estimator.DoublyRobustHP.bootstrap_num_samples">bootstrap_num_samples() (ml.rl.evaluation.doubly_robust_estimator.DoublyRobustHP property)</a>
+</li>
       <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.weighted_sequential_doubly_robust_estimator.WeightedSequentialDoublyRobustEstimator.BOOTSTRAP_SAMPLE_PCT">BOOTSTRAP_SAMPLE_PCT (ml.rl.evaluation.weighted_sequential_doubly_robust_estimator.WeightedSequentialDoublyRobustEstimator attribute)</a>
 </li>
+      <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.doubly_robust_estimator.DoublyRobustHP.bootstrap_sample_percent">bootstrap_sample_percent() (ml.rl.evaluation.doubly_robust_estimator.DoublyRobustHP property)</a>
+</li>
       <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.cpe.bootstrapped_std_error_of_mean">bootstrapped_std_error_of_mean() (in module ml.rl.evaluation.cpe)</a>
+</li>
+      <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.doubly_robust_estimator.DoublyRobustHP.bope_mode">bope_mode() (ml.rl.evaluation.doubly_robust_estimator.DoublyRobustHP property)</a>
+</li>
+      <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.doubly_robust_estimator.DoublyRobustHP.bope_num_samples">bope_num_samples() (ml.rl.evaluation.doubly_robust_estimator.DoublyRobustHP property)</a>
 </li>
       <li><a href="api/ml.rl.html#ml.rl.parameters.NormalizationParameters.boxcox_lambda">boxcox_lambda (ml.rl.parameters.NormalizationParameters attribute)</a>
 </li>
       <li><a href="api/ml.rl.html#ml.rl.parameters.NormalizationParameters.boxcox_shift">boxcox_shift (ml.rl.parameters.NormalizationParameters attribute)</a>
-</li>
-      <li><a href="api/ml.rl.html#ml.rl.caffe_utils.PytorchCaffe2Converter.buffer_to_caffe2_netdef">buffer_to_caffe2_netdef() (ml.rl.caffe_utils.PytorchCaffe2Converter static method)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -376,8 +375,6 @@
       <li><a href="api/ml.rl.html#ml.rl.parameters.RainbowDQNParameters.c51_l2_decay">c51_l2_decay (ml.rl.parameters.RainbowDQNParameters attribute)</a>
 </li>
       <li><a href="api/ml.rl.training.html#ml.rl.training.c51_trainer.C51Trainer">C51Trainer (class in ml.rl.training.c51_trainer)</a>
-</li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.sparse_to_dense.Caffe2SparseToDenseProcessor">Caffe2SparseToDenseProcessor (class in ml.rl.preprocessing.sparse_to_dense)</a>
 </li>
       <li><a href="api/ml.rl.html#ml.rl.parameters.EvaluationParameters.calc_cpe_in_training">calc_cpe_in_training (ml.rl.parameters.EvaluationParameters attribute)</a>
 </li>
@@ -394,8 +391,6 @@
       <li><a href="api/ml.rl.html#ml.rl.parameters.RainbowDQNParameters.categorical">categorical (ml.rl.parameters.RainbowDQNParameters attribute)</a>
 </li>
       <li><a href="api/ml.rl.models.html#ml.rl.models.categorical_dqn.CategoricalDQN">CategoricalDQN (class in ml.rl.models.categorical_dqn)</a>
-</li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.OpenAiGymParameters.cem">cem (ml.rl.parameters.OpenAiGymParameters attribute)</a>
 </li>
       <li><a href="api/ml.rl.html#ml.rl.parameters.CEMParameters.cem_num_iterations">cem_num_iterations (ml.rl.parameters.CEMParameters attribute)</a>
 </li>
@@ -441,15 +436,13 @@
 </li>
       <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.evaluation_data_page.EvaluationDataPage.compute_values_for_mdps">compute_values_for_mdps() (ml.rl.evaluation.evaluation_data_page.EvaluationDataPage static method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.weighted_sequential_doubly_robust_estimator.WeightedSequentialDoublyRobustEstimator.compute_weighted_doubly_robust_point_estimate">compute_weighted_doubly_robust_point_estimate() (ml.rl.evaluation.weighted_sequential_doubly_robust_estimator.WeightedSequentialDoublyRobustEstimator method)</a>
 </li>
       <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.weighted_sequential_doubly_robust_estimator.WeightedSequentialDoublyRobustEstimator.confidence_bounds">confidence_bounds() (ml.rl.evaluation.weighted_sequential_doubly_robust_estimator.WeightedSequentialDoublyRobustEstimator static method)</a>
 </li>
       <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.weighted_sequential_doubly_robust_estimator.WeightedSequentialDoublyRobustEstimator.CONFIDENCE_INTERVAL">CONFIDENCE_INTERVAL (ml.rl.evaluation.weighted_sequential_doubly_robust_estimator.WeightedSequentialDoublyRobustEstimator attribute)</a>
-</li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.SACModelParameters.constrain_action_sum">constrain_action_sum (ml.rl.parameters.SACModelParameters attribute)</a>
 </li>
       <li><a href="api/ml.rl.models.html#ml.rl.models.cem_planner.CEMPlannerNetwork.constrained_variance">constrained_variance() (ml.rl.models.cem_planner.CEMPlannerNetwork method)</a>
 </li>
@@ -491,39 +484,21 @@
 </li>
       <li><a href="api/ml.rl.models.html#ml.rl.models.base.ModelBase.cpu_model">cpu_model() (ml.rl.models.base.ModelBase method)</a>
 </li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.FeatureExtractorBase.create_const">create_const() (ml.rl.preprocessing.feature_extractor.FeatureExtractorBase method)</a>
-</li>
       <li><a href="api/ml.rl.workflow.html#ml.rl.workflow.transitional.create_dqn_trainer_from_params">create_dqn_trainer_from_params() (in module ml.rl.workflow.transitional)</a>
-</li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.FeatureExtractorBase.create_empty_range">create_empty_range() (ml.rl.preprocessing.feature_extractor.FeatureExtractorBase method)</a>
 </li>
       <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.evaluation_data_page.EvaluationDataPage.create_from_tensors_dqn">create_from_tensors_dqn() (ml.rl.evaluation.evaluation_data_page.EvaluationDataPage class method)</a>
 </li>
       <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.evaluation_data_page.EvaluationDataPage.create_from_tensors_parametric_dqn">create_from_tensors_parametric_dqn() (ml.rl.evaluation.evaluation_data_page.EvaluationDataPage class method)</a>
 </li>
+      <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.evaluation_data_page.EvaluationDataPage.create_from_tensors_seq2slate">create_from_tensors_seq2slate() (ml.rl.evaluation.evaluation_data_page.EvaluationDataPage class method)</a>
+</li>
       <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.evaluation_data_page.EvaluationDataPage.create_from_training_batch">create_from_training_batch() (ml.rl.evaluation.evaluation_data_page.EvaluationDataPage class method)</a>
 </li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.FeatureExtractorBase.create_id_mapping">create_id_mapping() (ml.rl.preprocessing.feature_extractor.FeatureExtractorBase method)</a>
-</li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.FeatureExtractorBase.create_id_mappings">create_id_mappings() (ml.rl.preprocessing.feature_extractor.FeatureExtractorBase method)</a>
-</li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.FeatureExtractorBase.create_net">create_net() (ml.rl.preprocessing.feature_extractor.FeatureExtractorBase method)</a>
-
-      <ul>
-        <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.PredictorFeatureExtractor.create_net">(ml.rl.preprocessing.feature_extractor.PredictorFeatureExtractor method)</a>
-</li>
-        <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.TrainingFeatureExtractor.create_net">(ml.rl.preprocessing.feature_extractor.TrainingFeatureExtractor method)</a>
-</li>
-        <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.WorldModelFeatureExtractor.create_net">(ml.rl.preprocessing.feature_extractor.WorldModelFeatureExtractor method)</a>
-</li>
-      </ul></li>
       <li><a href="api/ml.rl.workflow.html#ml.rl.workflow.create_normalization_metadata.create_norm_table">create_norm_table() (in module ml.rl.workflow.create_normalization_metadata)</a>
 </li>
       <li><a href="api/ml.rl.workflow.html#ml.rl.workflow.transitional.create_parametric_dqn_trainer_from_params">create_parametric_dqn_trainer_from_params() (in module ml.rl.workflow.transitional)</a>
 </li>
       <li><a href="api/ml.rl.workflow.html#ml.rl.workflow.transitional.create_world_model_trainer">create_world_model_trainer() (in module ml.rl.workflow.transitional)</a>
-</li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.OpenAiGymParameters.critic_training">critic_training (ml.rl.parameters.OpenAiGymParameters attribute)</a>
 </li>
       <li><a href="api/ml.rl.html#ml.rl.types.BaseDataClass.cuda">cuda() (ml.rl.types.BaseDataClass method)</a>
 </li>
@@ -535,13 +510,13 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/ml.rl.readers.html#ml.rl.readers.data_streamer.DataStreamer">DataStreamer (class in ml.rl.readers.data_streamer)</a>
 </li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.DDPGModelParameters">DDPGModelParameters (class in ml.rl.parameters)</a>
-</li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.DDPGNetworkParameters">DDPGNetworkParameters (class in ml.rl.parameters)</a>
-</li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.DDPGTrainingParameters">DDPGTrainingParameters (class in ml.rl.parameters)</a>
-</li>
       <li><a href="api/ml.rl.models.html#ml.rl.models.seq2slate.Seq2SlateTransformerModel.decode">decode() (ml.rl.models.seq2slate.Seq2SlateTransformerModel method)</a>
+
+      <ul>
+        <li><a href="api/ml.rl.models.html#ml.rl.models.seq2slate_reward.Seq2SlateRewardNet.decode">(ml.rl.models.seq2slate_reward.Seq2SlateRewardNet method)</a>
+</li>
+      </ul></li>
+      <li><a href="api/ml.rl.models.html#ml.rl.models.seq2slate.Seq2SlateMode.DECODE_ONE_STEP_MODE">DECODE_ONE_STEP_MODE (ml.rl.models.seq2slate.Seq2SlateMode attribute)</a>
 </li>
       <li><a href="api/ml.rl.models.html#ml.rl.models.seq2slate.Decoder">Decoder (class in ml.rl.models.seq2slate)</a>
 </li>
@@ -581,10 +556,10 @@
 </li>
       <li><a href="api/ml.rl.training.html#ml.rl.training.on_policy_predictor.DiscreteDQNOnPolicyPredictor">DiscreteDQNOnPolicyPredictor (class in ml.rl.training.on_policy_predictor)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/ml.rl.prediction.html#ml.rl.prediction.predictor_wrapper.DiscreteDqnPredictorWrapper">DiscreteDqnPredictorWrapper (class in ml.rl.prediction.predictor_wrapper)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/ml.rl.workflow.html#ml.rl.workflow.preprocess_handler.DiscreteDqnPreprocessHandler">DiscreteDqnPreprocessHandler (class in ml.rl.workflow.preprocess_handler)</a>
 </li>
       <li><a href="api/ml.rl.prediction.html#ml.rl.prediction.dqn_torch_predictor.DiscreteDqnTorchPredictor">DiscreteDqnTorchPredictor (class in ml.rl.prediction.dqn_torch_predictor)</a>
@@ -603,12 +578,16 @@
         <li><a href="api/ml.rl.readers.html#ml.rl.readers.nparray_reader.NpArrayReader.do_get_shard">(ml.rl.readers.nparray_reader.NpArrayReader method)</a>
 </li>
       </ul></li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.SACModelParameters.do_not_preprocess_action">do_not_preprocess_action (ml.rl.parameters.SACModelParameters attribute)</a>
+      <li><a href="api/ml.rl.html#ml.rl.parameters.TrainingParameters.do_not_warm_start_optimizer">do_not_warm_start_optimizer (ml.rl.parameters.TrainingParameters attribute)</a>
 </li>
       <li><a href="api/ml.rl.simulators.html#ml.rl.simulators.recsim.DocumentFeature">DocumentFeature (class in ml.rl.simulators.recsim)</a>
 </li>
       <li><a href="api/ml.rl.html#ml.rl.parameters.RainbowDQNParameters.double_q_learning">double_q_learning (ml.rl.parameters.RainbowDQNParameters attribute)</a>
+
+      <ul>
+        <li><a href="api/ml.rl.training.html#ml.rl.training.parametric_dqn_trainer.ParametricDQNTrainerParameters.double_q_learning">(ml.rl.training.parametric_dqn_trainer.ParametricDQNTrainerParameters attribute)</a>
 </li>
+      </ul></li>
       <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.cpe.CpeEstimateSet.doubly_robust">doubly_robust() (ml.rl.evaluation.cpe.CpeEstimateSet property)</a>
 </li>
       <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.doubly_robust_estimator.DoublyRobustEstimator">DoublyRobustEstimator (class in ml.rl.evaluation.doubly_robust_estimator)</a>
@@ -617,9 +596,9 @@
 </li>
       <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.doubly_robust_estimator.DoublyRobustEstimatorEstProp">DoublyRobustEstimatorEstProp (class in ml.rl.evaluation.doubly_robust_estimator)</a>
 </li>
-      <li><a href="api/ml.rl.html#ml.rl.types.DqnPolicyActionSet">DqnPolicyActionSet (class in ml.rl.types)</a>
+      <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.doubly_robust_estimator.DoublyRobustHP">DoublyRobustHP (class in ml.rl.evaluation.doubly_robust_estimator)</a>
 </li>
-      <li><a href="api/ml.rl.training.html#ml.rl.training.dqn_predictor.DQNPredictor">DQNPredictor (class in ml.rl.training.dqn_predictor)</a>
+      <li><a href="api/ml.rl.html#ml.rl.types.DqnPolicyActionSet">DqnPolicyActionSet (class in ml.rl.types)</a>
 </li>
       <li><a href="api/ml.rl.training.html#ml.rl.training.dqn_trainer.DQNTrainer">DQNTrainer (class in ml.rl.training.dqn_trainer)</a>
 </li>
@@ -641,19 +620,21 @@
 <h2 id="E">E</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.OpenAiRunDetails.early_stopping_patience">early_stopping_patience (ml.rl.parameters.OpenAiRunDetails attribute)</a>
-</li>
       <li><a href="api/ml.rl.models.html#ml.rl.models.seq2slate.Embedder">Embedder (class in ml.rl.models.seq2slate)</a>
 </li>
       <li><a href="api/ml.rl.models.html#ml.rl.models.seq2slate.Seq2SlateTransformerModel.encode">encode() (ml.rl.models.seq2slate.Seq2SlateTransformerModel method)</a>
+
+      <ul>
+        <li><a href="api/ml.rl.models.html#ml.rl.models.seq2slate_reward.Seq2SlateRewardNet.encode">(ml.rl.models.seq2slate_reward.Seq2SlateRewardNet method)</a>
 </li>
+      </ul></li>
       <li><a href="api/ml.rl.models.html#ml.rl.models.seq2slate.Encoder">Encoder (class in ml.rl.models.seq2slate)</a>
 </li>
       <li><a href="api/ml.rl.models.html#ml.rl.models.seq2slate.EncoderLayer">EncoderLayer (class in ml.rl.models.seq2slate)</a>
 </li>
       <li><a href="api/ml.rl.html#ml.rl.parameters.CEMParameters.ensemble_population_size">ensemble_population_size (ml.rl.parameters.CEMParameters attribute)</a>
 </li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.SACTrainingParameters.entropy_temperature">entropy_temperature (ml.rl.parameters.SACTrainingParameters attribute)</a>
+      <li><a href="api/ml.rl.training.html#ml.rl.training.sac_trainer.SACTrainerParameters.entropy_temperature">entropy_temperature (ml.rl.training.sac_trainer.SACTrainerParameters attribute)</a>
 </li>
       <li><a href="api/ml.rl.models.html#ml.rl.models.actor.DirichletFullyConnectedActor.EPSILON">EPSILON (ml.rl.models.actor.DirichletFullyConnectedActor attribute)</a>
 </li>
@@ -663,8 +644,6 @@
         <li><a href="api/ml.rl.html#ml.rl.parameters.RLParameters.epsilon">(ml.rl.parameters.RLParameters attribute)</a>
 </li>
       </ul></li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.OpenAiRunDetails.epsilon_decay">epsilon_decay (ml.rl.parameters.OpenAiRunDetails attribute)</a>
-</li>
       <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.doubly_robust_estimator.DoublyRobustEstimator.estimate">estimate() (ml.rl.evaluation.doubly_robust_estimator.DoublyRobustEstimator method)</a>
 
       <ul>
@@ -692,6 +671,8 @@
       <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.ranking_evaluator.RankingEvaluator.evaluate">evaluate() (ml.rl.evaluation.ranking_evaluator.RankingEvaluator method)</a>
 
       <ul>
+        <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.reward_net_evaluator.RewardNetEvaluator.evaluate">(ml.rl.evaluation.reward_net_evaluator.RewardNetEvaluator method)</a>
+</li>
         <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.world_model_evaluator.FeatureImportanceEvaluator.evaluate">(ml.rl.evaluation.world_model_evaluator.FeatureImportanceEvaluator method)</a>
 </li>
         <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.world_model_evaluator.FeatureSensitivityEvaluator.evaluate">(ml.rl.evaluation.world_model_evaluator.FeatureSensitivityEvaluator method)</a>
@@ -699,10 +680,14 @@
         <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.world_model_evaluator.LossEvaluator.evaluate">(ml.rl.evaluation.world_model_evaluator.LossEvaluator method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.evaluator.Evaluator.evaluate_post_training">evaluate_post_training() (ml.rl.evaluation.evaluator.Evaluator method)</a>
 
       <ul>
         <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.ranking_evaluator.RankingEvaluator.evaluate_post_training">(ml.rl.evaluation.ranking_evaluator.RankingEvaluator method)</a>
+</li>
+        <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.reward_net_evaluator.RewardNetEvaluator.evaluate_post_training">(ml.rl.evaluation.reward_net_evaluator.RewardNetEvaluator method)</a>
 </li>
       </ul></li>
       <li><a href="api/ml.rl.html#ml.rl.parameters.CEMParameters.evaluation">evaluation (ml.rl.parameters.CEMParameters attribute)</a>
@@ -710,23 +695,11 @@
       <ul>
         <li><a href="api/ml.rl.html#ml.rl.parameters.ContinuousActionModelParameters.evaluation">(ml.rl.parameters.ContinuousActionModelParameters attribute)</a>
 </li>
-        <li><a href="api/ml.rl.html#ml.rl.parameters.DDPGModelParameters.evaluation">(ml.rl.parameters.DDPGModelParameters attribute)</a>
-</li>
         <li><a href="api/ml.rl.html#ml.rl.parameters.DiscreteActionModelParameters.evaluation">(ml.rl.parameters.DiscreteActionModelParameters attribute)</a>
-</li>
-        <li><a href="api/ml.rl.html#ml.rl.parameters.KNNDQNModelParameters.evaluation">(ml.rl.parameters.KNNDQNModelParameters attribute)</a>
-</li>
-        <li><a href="api/ml.rl.html#ml.rl.parameters.OpenAiGymParameters.evaluation">(ml.rl.parameters.OpenAiGymParameters attribute)</a>
-</li>
-        <li><a href="api/ml.rl.html#ml.rl.parameters.RankingParameters.evaluation">(ml.rl.parameters.RankingParameters attribute)</a>
-</li>
-        <li><a href="api/ml.rl.html#ml.rl.parameters.SACModelParameters.evaluation">(ml.rl.parameters.SACModelParameters attribute)</a>
 </li>
         <li><a href="api/ml.rl.html#ml.rl.parameters.TD3ModelParameters.evaluation">(ml.rl.parameters.TD3ModelParameters attribute)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.evaluation_data_page.EvaluationDataPage">EvaluationDataPage (class in ml.rl.evaluation.evaluation_data_page)</a>
 </li>
       <li><a href="api/ml.rl.workflow.html#ml.rl.workflow.page_handler.EvaluationPageHandler">EvaluationPageHandler (class in ml.rl.workflow.page_handler)</a>
@@ -747,26 +720,6 @@
 </li>
       <li><a href="api/ml.rl.html#ml.rl.torch_utils.export_module_to_buffer">export_module_to_buffer() (in module ml.rl.torch_utils)</a>
 </li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.FeatureExtractorBase.extract">extract() (ml.rl.preprocessing.feature_extractor.FeatureExtractorBase method)</a>
-
-      <ul>
-        <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.PredictorFeatureExtractor.extract">(ml.rl.preprocessing.feature_extractor.PredictorFeatureExtractor method)</a>
-</li>
-        <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.TrainingFeatureExtractor.extract">(ml.rl.preprocessing.feature_extractor.TrainingFeatureExtractor method)</a>
-</li>
-        <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.WorldModelFeatureExtractor.extract">(ml.rl.preprocessing.feature_extractor.WorldModelFeatureExtractor method)</a>
-</li>
-      </ul></li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.FeatureExtractorBase.extract_float_features">extract_float_features() (ml.rl.preprocessing.feature_extractor.FeatureExtractorBase method)</a>
-</li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.FeatureExtractorBase.extract_id_list_features_ranges">extract_id_list_features_ranges() (ml.rl.preprocessing.feature_extractor.FeatureExtractorBase method)</a>
-</li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.FeatureExtractorBase.extract_id_score_list_features_ranges">extract_id_score_list_features_ranges() (ml.rl.preprocessing.feature_extractor.FeatureExtractorBase method)</a>
-</li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.FeatureExtractorBase.extract_sequence_float_features">extract_sequence_float_features() (ml.rl.preprocessing.feature_extractor.FeatureExtractorBase method)</a>
-</li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.FeatureExtractorBase.extract_sequence_id_features">extract_sequence_id_features() (ml.rl.preprocessing.feature_extractor.FeatureExtractorBase method)</a>
-</li>
       <li><a href="api/ml.rl.html#ml.rl.types.ExtraData">ExtraData (class in ml.rl.types)</a>
 </li>
   </ul></td>
@@ -775,20 +728,12 @@
 <h2 id="F">F</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.TrainingParameters.factorization_parameters">factorization_parameters (ml.rl.parameters.TrainingParameters attribute)</a>
-</li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.FactorizationParameters">FactorizationParameters (class in ml.rl.parameters)</a>
-</li>
       <li><a href="api/ml.rl.models.html#ml.rl.models.base.ModelBase.feature_config">feature_config() (ml.rl.models.base.ModelBase method)</a>
 
       <ul>
         <li><a href="api/ml.rl.models.html#ml.rl.models.example_sequence_model.ExampleSequenceModel.feature_config">(ml.rl.models.example_sequence_model.ExampleSequenceModel method)</a>
 </li>
       </ul></li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.FeatureExtractorBase">FeatureExtractorBase (class in ml.rl.preprocessing.feature_extractor)</a>
-</li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.FeatureExtractorNet">FeatureExtractorNet (class in ml.rl.preprocessing.feature_extractor)</a>
-</li>
       <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.world_model_evaluator.FeatureImportanceEvaluator">FeatureImportanceEvaluator (class in ml.rl.evaluation.world_model_evaluator)</a>
 </li>
       <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.world_model_evaluator.FeatureSensitivityEvaluator">FeatureSensitivityEvaluator (class in ml.rl.evaluation.world_model_evaluator)</a>
@@ -799,13 +744,7 @@
 </li>
       <li><a href="api/ml.rl.html#ml.rl.parameters.FeedForwardParameters">FeedForwardParameters (class in ml.rl.parameters)</a>
 </li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.FeatureExtractorBase.fetch">fetch() (ml.rl.preprocessing.feature_extractor.FeatureExtractorBase static method)</a>
-</li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.FeatureExtractorBase.fetch_state_sequence_features">fetch_state_sequence_features() (ml.rl.preprocessing.feature_extractor.FeatureExtractorBase method)</a>
-</li>
       <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.cpe.CpeEstimateSet.fill_empty_with_zero">fill_empty_with_zero() (ml.rl.evaluation.cpe.CpeEstimateSet method)</a>
-</li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.DDPGTrainingParameters.final_layer_init">final_layer_init (ml.rl.parameters.DDPGTrainingParameters attribute)</a>
 </li>
       <li><a href="api/ml.rl.training.html#ml.rl.training.rl_trainer_pytorch.RLTrainer.FINGERPRINT">FINGERPRINT (ml.rl.training.rl_trainer_pytorch.RLTrainer attribute)</a>
 </li>
@@ -815,6 +754,10 @@
         <li><a href="api/ml.rl.workflow.html#ml.rl.workflow.page_handler.PageHandler.finish">(ml.rl.workflow.page_handler.PageHandler method)</a>
 </li>
         <li><a href="api/ml.rl.workflow.html#ml.rl.workflow.page_handler.RankingEvaluationPageHandler.finish">(ml.rl.workflow.page_handler.RankingEvaluationPageHandler method)</a>
+</li>
+        <li><a href="api/ml.rl.workflow.html#ml.rl.workflow.page_handler.RankingTrainingPageHandler.finish">(ml.rl.workflow.page_handler.RankingTrainingPageHandler method)</a>
+</li>
+        <li><a href="api/ml.rl.workflow.html#ml.rl.workflow.page_handler.RewardNetTrainingPageHandler.finish">(ml.rl.workflow.page_handler.RewardNetTrainingPageHandler method)</a>
 </li>
         <li><a href="api/ml.rl.workflow.html#ml.rl.workflow.page_handler.TrainingPageHandler.finish">(ml.rl.workflow.page_handler.TrainingPageHandler method)</a>
 </li>
@@ -886,6 +829,10 @@
 </li>
         <li><a href="api/ml.rl.models.html#ml.rl.models.seq2slate.SublayerConnection.forward">(ml.rl.models.seq2slate.SublayerConnection method)</a>
 </li>
+        <li><a href="api/ml.rl.models.html#ml.rl.models.seq2slate_reward.Seq2SlateRewardNet.forward">(ml.rl.models.seq2slate_reward.Seq2SlateRewardNet method)</a>
+</li>
+        <li><a href="api/ml.rl.models.html#ml.rl.models.seq2slate_reward.Seq2SlateRewardNetJITWrapper.forward">(ml.rl.models.seq2slate_reward.Seq2SlateRewardNetJITWrapper method)</a>
+</li>
         <li><a href="api/ml.rl.models.html#ml.rl.models.world_model.MemoryNetwork.forward">(ml.rl.models.world_model.MemoryNetwork method)</a>
 </li>
         <li><a href="api/ml.rl.prediction.html#ml.rl.prediction.predictor_wrapper.ActorPredictorWrapper.forward">(ml.rl.prediction.predictor_wrapper.ActorPredictorWrapper method)</a>
@@ -911,11 +858,11 @@
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/ml.rl.html#ml.rl.caffe_utils.StackedAssociativeArray.from_dict_list">from_dict_list() (ml.rl.caffe_utils.StackedAssociativeArray class method)</a>
+      <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.doubly_robust_estimator.DoublyRobustHP.frac_train">frac_train() (ml.rl.evaluation.doubly_robust_estimator.DoublyRobustHP property)</a>
+</li>
+      <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.doubly_robust_estimator.DoublyRobustHP.frac_valid">frac_valid() (ml.rl.evaluation.doubly_robust_estimator.DoublyRobustHP property)</a>
 </li>
       <li><a href="api/ml.rl.html#ml.rl.json_serialize.from_json">from_json() (in module ml.rl.json_serialize)</a>
-</li>
-      <li><a href="api/ml.rl.html#ml.rl.caffe_utils.StackedArray.from_list_list">from_list_list() (ml.rl.caffe_utils.StackedArray class method)</a>
 </li>
       <li><a href="api/ml.rl.html#ml.rl.types.PreprocessedState.from_tensor">from_tensor() (ml.rl.types.PreprocessedState class method)</a>
 </li>
@@ -961,6 +908,8 @@
         <li><a href="api/ml.rl.training.html#ml.rl.training.qrdqn_trainer.QRDQNTrainer.get_detached_q_values">(ml.rl.training.qrdqn_trainer.QRDQNTrainer method)</a>
 </li>
       </ul></li>
+      <li><a href="api/ml.rl.training.html#ml.rl.training.slate_q_trainer.SlateQTrainer.get_detached_q_values_target">get_detached_q_values_target() (ml.rl.training.slate_q_trainer.SlateQTrainer method)</a>
+</li>
       <li><a href="api/ml.rl.models.html#ml.rl.models.base.ModelBase.get_distributed_data_parallel_model">get_distributed_data_parallel_model() (ml.rl.models.base.ModelBase method)</a>
 
       <ul>
@@ -1001,10 +950,10 @@
         <li><a href="api/ml.rl.models.html#ml.rl.models.actor.GaussianFullyConnectedActor.get_log_prob">(ml.rl.models.actor.GaussianFullyConnectedActor method)</a>
 </li>
       </ul></li>
-      <li><a href="api/ml.rl.training.html#ml.rl.training.loss_reporter.LossReporter.get_logged_action_distribution">get_logged_action_distribution() (ml.rl.training.loss_reporter.LossReporter method)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/ml.rl.training.html#ml.rl.training.loss_reporter.LossReporter.get_logged_action_distribution">get_logged_action_distribution() (ml.rl.training.loss_reporter.LossReporter method)</a>
+</li>
       <li><a href="api/ml.rl.training.world_model.html#ml.rl.training.world_model.mdnrnn_trainer.MDNRNNTrainer.get_loss">get_loss() (ml.rl.training.world_model.mdnrnn_trainer.MDNRNNTrainer method)</a>
 
       <ul>
@@ -1033,8 +982,6 @@
 </li>
       <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.normalization.get_num_output_features">get_num_output_features() (in module ml.rl.preprocessing.normalization)</a>
 </li>
-      <li><a href="api/ml.rl.training.html#ml.rl.training.off_policy_predictor.RLPredictor.get_predictor_export_meta">get_predictor_export_meta() (ml.rl.training.off_policy_predictor.RLPredictor method)</a>
-</li>
       <li><a href="api/ml.rl.training.html#ml.rl.training.loss_reporter.LossReporter.get_recent_imitator_loss">get_recent_imitator_loss() (ml.rl.training.loss_reporter.LossReporter method)</a>
 </li>
       <li><a href="api/ml.rl.training.html#ml.rl.training.loss_reporter.LossReporter.get_recent_reward_loss">get_recent_reward_loss() (ml.rl.training.loss_reporter.LossReporter method)</a>
@@ -1043,11 +990,9 @@
 </li>
       <li><a href="api/ml.rl.training.html#ml.rl.training.loss_reporter.LossReporter.get_recent_td_loss">get_recent_td_loss() (ml.rl.training.loss_reporter.LossReporter method)</a>
 </li>
-      <li><a href="api/ml.rl.workflow.html#ml.rl.workflow.transitional.get_sac_trainer">get_sac_trainer() (in module ml.rl.workflow.transitional)</a>
-</li>
       <li><a href="api/ml.rl.readers.html#ml.rl.readers.base.ReaderBase.get_shard">get_shard() (ml.rl.readers.base.ReaderBase method)</a>
 </li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.FeatureExtractorBase.get_state_sequence_features_schema">get_state_sequence_features_schema() (ml.rl.preprocessing.feature_extractor.FeatureExtractorBase method)</a>
+      <li><a href="api/ml.rl.training.html#ml.rl.training.slate_q_trainer.SlateQTrainer.get_slate_q_value">get_slate_q_value() (ml.rl.training.slate_q_trainer.SlateQTrainer method)</a>
 </li>
       <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.evaluator.Evaluator.get_target_distribution_error">get_target_distribution_error() (ml.rl.evaluation.evaluator.Evaluator method)</a>
 </li>
@@ -1082,6 +1027,8 @@
 </li>
         <li><a href="api/ml.rl.workflow.html#ml.rl.workflow.page_handler.RankingTrainingPageHandler.handle">(ml.rl.workflow.page_handler.RankingTrainingPageHandler method)</a>
 </li>
+        <li><a href="api/ml.rl.workflow.html#ml.rl.workflow.page_handler.RewardNetTrainingPageHandler.handle">(ml.rl.workflow.page_handler.RewardNetTrainingPageHandler method)</a>
+</li>
         <li><a href="api/ml.rl.workflow.html#ml.rl.workflow.page_handler.TrainingPageHandler.handle">(ml.rl.workflow.page_handler.TrainingPageHandler method)</a>
 </li>
         <li><a href="api/ml.rl.workflow.html#ml.rl.workflow.page_handler.WorldModelEvaluationPageHandler.handle">(ml.rl.workflow.page_handler.WorldModelEvaluationPageHandler method)</a>
@@ -1105,10 +1052,6 @@
 <h2 id="I">I</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.id_list_schema">id_list_schema() (in module ml.rl.preprocessing.feature_extractor)</a>
-</li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.id_score_list_schema">id_score_list_schema() (in module ml.rl.preprocessing.feature_extractor)</a>
-</li>
       <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.normalization.identify_parameter">identify_parameter() (in module ml.rl.preprocessing.normalization)</a>
 </li>
       <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.identify_types.identify_type">identify_type() (in module ml.rl.preprocessing.identify_types)</a>
@@ -1129,18 +1072,12 @@
 </li>
       <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.doubly_robust_estimator.ImportanceSamplingData">ImportanceSamplingData (class in ml.rl.evaluation.doubly_robust_estimator)</a>
 </li>
-      <li><a href="api/ml.rl.training.html#ml.rl.training.off_policy_predictor.RLPredictor.in_order_dense_to_sparse">in_order_dense_to_sparse() (ml.rl.training.off_policy_predictor.RLPredictor method)</a>
-</li>
       <li><a href="api/ml.rl.html#ml.rl.tensorboardX.SummaryWriterContext.increase_global_step">increase_global_step() (ml.rl.tensorboardX.SummaryWriterContext class method)</a>
 </li>
       <li><a href="api/ml.rl.workflow.html#ml.rl.workflow.base_workflow.BaseWorkflow.init_multiprocessing">init_multiprocessing() (ml.rl.workflow.base_workflow.BaseWorkflow static method)</a>
 </li>
       <li><a href="api/ml.rl.html#ml.rl.caffe_utils.C2.init_net">init_net() (ml.rl.caffe_utils.C2 static method)</a>
-
-      <ul>
-        <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.FeatureExtractorNet.init_net">(ml.rl.preprocessing.feature_extractor.FeatureExtractorNet property)</a>
 </li>
-      </ul></li>
       <li><a href="api/ml.rl.html#ml.rl.parameters.TD3TrainingParameters.initial_exploration_ts">initial_exploration_ts (ml.rl.parameters.TD3TrainingParameters attribute)</a>
 </li>
       <li><a href="api/ml.rl.models.html#ml.rl.models.actor.DirichletFullyConnectedActor.input_prototype">input_prototype() (ml.rl.models.actor.DirichletFullyConnectedActor method)</a>
@@ -1174,6 +1111,10 @@
 </li>
         <li><a href="api/ml.rl.models.html#ml.rl.models.seq2slate.Seq2SlateTransformerNet.input_prototype">(ml.rl.models.seq2slate.Seq2SlateTransformerNet method)</a>
 </li>
+        <li><a href="api/ml.rl.models.html#ml.rl.models.seq2slate_reward.Seq2SlateRewardNet.input_prototype">(ml.rl.models.seq2slate_reward.Seq2SlateRewardNet method)</a>
+</li>
+        <li><a href="api/ml.rl.models.html#ml.rl.models.seq2slate_reward.Seq2SlateRewardNetJITWrapper.input_prototype">(ml.rl.models.seq2slate_reward.Seq2SlateRewardNetJITWrapper method)</a>
+</li>
         <li><a href="api/ml.rl.models.html#ml.rl.models.world_model.MemoryNetwork.input_prototype">(ml.rl.models.world_model.MemoryNetwork method)</a>
 </li>
         <li><a href="api/ml.rl.prediction.html#ml.rl.prediction.predictor_wrapper.ActorWithPreprocessor.input_prototype">(ml.rl.prediction.predictor_wrapper.ActorWithPreprocessor method)</a>
@@ -1191,8 +1132,6 @@
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.InputColumn">InputColumn (class in ml.rl.preprocessing.feature_extractor)</a>
-</li>
       <li><a href="api/ml.rl.training.html#ml.rl.training.rl_dataset.RLDataset.insert">insert() (ml.rl.training.rl_dataset.RLDataset method)</a>
 </li>
       <li><a href="api/ml.rl.models.html#ml.rl.models.mdn_rnn.MDNRNNMemoryPool.insert_into_memory">insert_into_memory() (ml.rl.models.mdn_rnn.MDNRNNMemoryPool method)</a>
@@ -1254,55 +1193,35 @@
   </ul></td>
 </tr></table>
 
-<h2 id="K">K</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.KNNDQNModelParameters">KNNDQNModelParameters (class in ml.rl.parameters)</a>
-</li>
-  </ul></td>
-</tr></table>
-
 <h2 id="L">L</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.DDPGNetworkParameters.l2_decay">l2_decay (ml.rl.parameters.DDPGNetworkParameters attribute)</a>
+      <li><a href="api/ml.rl.html#ml.rl.parameters.OptimizerParameters.l2_decay">l2_decay (ml.rl.parameters.OptimizerParameters attribute)</a>
 
       <ul>
-        <li><a href="api/ml.rl.html#ml.rl.parameters.OptimizerParameters.l2_decay">(ml.rl.parameters.OptimizerParameters attribute)</a>
-</li>
         <li><a href="api/ml.rl.html#ml.rl.parameters.TrainingParameters.l2_decay">(ml.rl.parameters.TrainingParameters attribute)</a>
 </li>
       </ul></li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.DDPGNetworkParameters.learning_rate">learning_rate (ml.rl.parameters.DDPGNetworkParameters attribute)</a>
+      <li><a href="api/ml.rl.html#ml.rl.parameters.EvolutionParameters.learning_rate">learning_rate (ml.rl.parameters.EvolutionParameters attribute)</a>
 
       <ul>
-        <li><a href="api/ml.rl.html#ml.rl.parameters.EvolutionParameters.learning_rate">(ml.rl.parameters.EvolutionParameters attribute)</a>
-</li>
         <li><a href="api/ml.rl.html#ml.rl.parameters.MDNRNNParameters.learning_rate">(ml.rl.parameters.MDNRNNParameters attribute)</a>
 </li>
         <li><a href="api/ml.rl.html#ml.rl.parameters.OptimizerParameters.learning_rate">(ml.rl.parameters.OptimizerParameters attribute)</a>
 </li>
         <li><a href="api/ml.rl.html#ml.rl.parameters.TrainingParameters.learning_rate">(ml.rl.parameters.TrainingParameters attribute)</a>
 </li>
+        <li><a href="api/ml.rl.training.html#ml.rl.training.slate_q_trainer.SlateQTrainerParameters.learning_rate">(ml.rl.training.slate_q_trainer.SlateQTrainerParameters attribute)</a>
+</li>
       </ul></li>
       <li><a href="api/ml.rl.simulators.html#ml.rl.simulators.recsim.DocumentFeature.length">length() (ml.rl.simulators.recsim.DocumentFeature property)</a>
 </li>
       <li><a href="api/ml.rl.readers.html#ml.rl.readers.json_dataset_reader.JSONDatasetReader.line_count">line_count() (ml.rl.readers.json_dataset_reader.JSONDatasetReader method)</a>
 </li>
-      <li><a href="api/ml.rl.training.html#ml.rl.training.off_policy_predictor.RLPredictor.load">load() (ml.rl.training.off_policy_predictor.RLPredictor class method)</a>
-
-      <ul>
-        <li><a href="api/ml.rl.training.html#ml.rl.training.rl_dataset.RLDataset.load">(ml.rl.training.rl_dataset.RLDataset method)</a>
+      <li><a href="api/ml.rl.training.html#ml.rl.training.rl_dataset.RLDataset.load">load() (ml.rl.training.rl_dataset.RLDataset method)</a>
 </li>
-        <li><a href="api/ml.rl.training.html#ml.rl.training.sandboxed_predictor.SandboxedRLPredictor.load">(ml.rl.training.sandboxed_predictor.SandboxedRLPredictor class method)</a>
+      <li><a href="api/ml.rl.training.html#ml.rl.training.trainer.Trainer.load_state_dict">load_state_dict() (ml.rl.training.trainer.Trainer method)</a>
 </li>
-      </ul></li>
-      <li><a href="api/ml.rl.training.ranking.html#ml.rl.training.ranking.ranking_trainer.RankingTrainer.load_state_dict">load_state_dict() (ml.rl.training.ranking.ranking_trainer.RankingTrainer method)</a>
-
-      <ul>
-        <li><a href="api/ml.rl.training.html#ml.rl.training.rl_trainer_pytorch.RLTrainer.load_state_dict">(ml.rl.training.rl_trainer_pytorch.RLTrainer method)</a>
-</li>
-      </ul></li>
       <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.cpe.CpeDetails.log">log() (ml.rl.evaluation.cpe.CpeDetails method)</a>
 
       <ul>
@@ -1325,7 +1244,7 @@
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.SACTrainingParameters.logged_action_uniform_prior">logged_action_uniform_prior (ml.rl.parameters.SACTrainingParameters attribute)</a>
+      <li><a href="api/ml.rl.training.html#ml.rl.training.sac_trainer.SACTrainerParameters.logged_action_uniform_prior">logged_action_uniform_prior (ml.rl.training.sac_trainer.SACTrainerParameters attribute)</a>
 </li>
       <li><a href="api/ml.rl.training.html#ml.rl.training.loss_reporter.BatchStats.logged_actions">logged_actions() (ml.rl.training.loss_reporter.BatchStats property)</a>
 </li>
@@ -1383,15 +1302,7 @@
         <li><a href="api/ml.rl.workflow.html#ml.rl.workflow.parametric_dqn_workflow.main">(in module ml.rl.workflow.parametric_dqn_workflow)</a>
 </li>
       </ul></li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.FeatureExtractorBase.map_ids">map_ids() (ml.rl.preprocessing.feature_extractor.FeatureExtractorBase method)</a>
-</li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.map_schema">map_schema() (in module ml.rl.preprocessing.feature_extractor)</a>
-</li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.FeatureExtractorBase.map_sequence_id_features">map_sequence_id_features() (ml.rl.preprocessing.feature_extractor.FeatureExtractorBase method)</a>
-</li>
-      <li><a href="api/ml.rl.html#ml.rl.caffe_utils.masked_softmax">masked_softmax() (in module ml.rl.caffe_utils)</a>
-</li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.OpenAiRunDetails.max_episodes_to_run_after_solved">max_episodes_to_run_after_solved (ml.rl.parameters.OpenAiRunDetails attribute)</a>
+      <li><a href="api/ml.rl.html#ml.rl.torch_utils.masked_softmax">masked_softmax() (in module ml.rl.torch_utils)</a>
 </li>
       <li><a href="api/ml.rl.training.html#ml.rl.training.training_data_page.TrainingDataPage.max_num_actions">max_num_actions (ml.rl.training.training_data_page.TrainingDataPage attribute)</a>
 
@@ -1399,10 +1310,6 @@
         <li><a href="api/ml.rl.html#ml.rl.types.ExtraData.max_num_actions">(ml.rl.types.ExtraData attribute)</a>
 </li>
       </ul></li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.OpenAiGymParameters.max_replay_memory_size">max_replay_memory_size (ml.rl.parameters.OpenAiGymParameters attribute)</a>
-</li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.OpenAiRunDetails.max_steps">max_steps (ml.rl.parameters.OpenAiRunDetails attribute)</a>
-</li>
       <li><a href="api/ml.rl.html#ml.rl.parameters.NormalizationParameters.max_value">max_value (ml.rl.parameters.NormalizationParameters attribute)</a>
 </li>
       <li><a href="api/ml.rl.html#ml.rl.parameters.RLParameters.maxq_learning">maxq_learning (ml.rl.parameters.RLParameters attribute)</a>
@@ -1410,11 +1317,7 @@
       <li><a href="api/ml.rl.models.html#ml.rl.models.mdn_rnn.MDNRNN">MDNRNN (class in ml.rl.models.mdn_rnn)</a>
 </li>
       <li><a href="api/ml.rl.html#ml.rl.parameters.CEMParameters.mdnrnn">mdnrnn (ml.rl.parameters.CEMParameters attribute)</a>
-
-      <ul>
-        <li><a href="api/ml.rl.html#ml.rl.parameters.OpenAiGymParameters.mdnrnn">(ml.rl.parameters.OpenAiGymParameters attribute)</a>
 </li>
-      </ul></li>
       <li><a href="api/ml.rl.models.html#ml.rl.models.mdn_rnn.MDNRNNMemoryPool">MDNRNNMemoryPool (class in ml.rl.models.mdn_rnn)</a>
 </li>
       <li><a href="api/ml.rl.models.html#ml.rl.models.mdn_rnn.MDNRNNMemorySample">MDNRNNMemorySample (class in ml.rl.models.mdn_rnn)</a>
@@ -1422,8 +1325,6 @@
       <li><a href="api/ml.rl.html#ml.rl.parameters.MDNRNNParameters">MDNRNNParameters (class in ml.rl.parameters)</a>
 </li>
       <li><a href="api/ml.rl.training.world_model.html#ml.rl.training.world_model.mdnrnn_trainer.MDNRNNTrainer">MDNRNNTrainer (class in ml.rl.training.world_model.mdnrnn_trainer)</a>
-</li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.InputColumn.MDP_ID">MDP_ID (ml.rl.preprocessing.feature_extractor.InputColumn attribute)</a>
 </li>
       <li><a href="api/ml.rl.html#ml.rl.types.ExtraData.mdp_id">mdp_id (ml.rl.types.ExtraData attribute)</a>
 </li>
@@ -1441,8 +1342,6 @@
 </li>
       <li><a href="api/ml.rl.training.html#ml.rl.training.loss_reporter.merge_tensor_namedtuple_list">merge_tensor_namedtuple_list() (in module ml.rl.training.loss_reporter)</a>
 </li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.InputColumn.METRICS">METRICS (ml.rl.preprocessing.feature_extractor.InputColumn attribute)</a>
-</li>
       <li><a href="api/ml.rl.training.html#ml.rl.training.training_data_page.TrainingDataPage.metrics">metrics (ml.rl.training.training_data_page.TrainingDataPage attribute)</a>
 
       <ul>
@@ -1451,32 +1350,30 @@
       </ul></li>
       <li><a href="api/ml.rl.html#ml.rl.parameters.NormalizationParameters.min_value">min_value (ml.rl.parameters.NormalizationParameters attribute)</a>
 </li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.DDPGTrainingParameters.minibatch_size">minibatch_size (ml.rl.parameters.DDPGTrainingParameters attribute)</a>
+      <li><a href="api/ml.rl.html#ml.rl.parameters.MDNRNNParameters.minibatch_size">minibatch_size (ml.rl.parameters.MDNRNNParameters attribute)</a>
 
       <ul>
-        <li><a href="api/ml.rl.html#ml.rl.parameters.MDNRNNParameters.minibatch_size">(ml.rl.parameters.MDNRNNParameters attribute)</a>
-</li>
-        <li><a href="api/ml.rl.html#ml.rl.parameters.SACTrainingParameters.minibatch_size">(ml.rl.parameters.SACTrainingParameters attribute)</a>
-</li>
         <li><a href="api/ml.rl.html#ml.rl.parameters.TD3TrainingParameters.minibatch_size">(ml.rl.parameters.TD3TrainingParameters attribute)</a>
 </li>
         <li><a href="api/ml.rl.html#ml.rl.parameters.TrainingParameters.minibatch_size">(ml.rl.parameters.TrainingParameters attribute)</a>
 </li>
+        <li><a href="api/ml.rl.training.html#ml.rl.training.parametric_dqn_trainer.ParametricDQNTrainerParameters.minibatch_size">(ml.rl.training.parametric_dqn_trainer.ParametricDQNTrainerParameters attribute)</a>
+</li>
+        <li><a href="api/ml.rl.training.html#ml.rl.training.sac_trainer.SACTrainerParameters.minibatch_size">(ml.rl.training.sac_trainer.SACTrainerParameters attribute)</a>
+</li>
+        <li><a href="api/ml.rl.training.html#ml.rl.training.slate_q_trainer.SlateQTrainerParameters.minibatch_size">(ml.rl.training.slate_q_trainer.SlateQTrainerParameters attribute)</a>
+</li>
       </ul></li>
       <li><a href="api/ml.rl.workflow.html#ml.rl.workflow.helpers.minibatch_size_multiplier">minibatch_size_multiplier() (in module ml.rl.workflow.helpers)</a>
 </li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.DDPGTrainingParameters.minibatches_per_step">minibatches_per_step (ml.rl.parameters.DDPGTrainingParameters attribute)</a>
+      <li><a href="api/ml.rl.html#ml.rl.parameters.TD3TrainingParameters.minibatches_per_step">minibatches_per_step (ml.rl.parameters.TD3TrainingParameters attribute)</a>
 
       <ul>
-        <li><a href="api/ml.rl.html#ml.rl.parameters.SACTrainingParameters.minibatches_per_step">(ml.rl.parameters.SACTrainingParameters attribute)</a>
-</li>
-        <li><a href="api/ml.rl.html#ml.rl.parameters.TD3TrainingParameters.minibatches_per_step">(ml.rl.parameters.TD3TrainingParameters attribute)</a>
-</li>
         <li><a href="api/ml.rl.html#ml.rl.parameters.TrainingParameters.minibatches_per_step">(ml.rl.parameters.TrainingParameters attribute)</a>
 </li>
-      </ul></li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.OpenAiRunDetails.minimum_epsilon">minimum_epsilon (ml.rl.parameters.OpenAiRunDetails attribute)</a>
+        <li><a href="api/ml.rl.training.html#ml.rl.training.parametric_dqn_trainer.ParametricDQNTrainerParameters.minibatches_per_step">(ml.rl.training.parametric_dqn_trainer.ParametricDQNTrainerParameters attribute)</a>
 </li>
+      </ul></li>
       <li><a href="api/ml.html#module-ml">ml (module)</a>
 </li>
       <li><a href="api/ml.rl.html#module-ml.rl">ml.rl (module)</a>
@@ -1496,6 +1393,8 @@
       <li><a href="api/ml.rl.evaluation.html#module-ml.rl.evaluation.evaluator">ml.rl.evaluation.evaluator (module)</a>
 </li>
       <li><a href="api/ml.rl.evaluation.html#module-ml.rl.evaluation.ranking_evaluator">ml.rl.evaluation.ranking_evaluator (module)</a>
+</li>
+      <li><a href="api/ml.rl.evaluation.html#module-ml.rl.evaluation.reward_net_evaluator">ml.rl.evaluation.reward_net_evaluator (module)</a>
 </li>
       <li><a href="api/ml.rl.evaluation.html#module-ml.rl.evaluation.sequential_doubly_robust_estimator">ml.rl.evaluation.sequential_doubly_robust_estimator (module)</a>
 </li>
@@ -1539,6 +1438,8 @@
 </li>
       <li><a href="api/ml.rl.models.html#module-ml.rl.models.seq2slate">ml.rl.models.seq2slate (module)</a>
 </li>
+      <li><a href="api/ml.rl.models.html#module-ml.rl.models.seq2slate_reward">ml.rl.models.seq2slate_reward (module)</a>
+</li>
       <li><a href="api/ml.rl.models.html#module-ml.rl.models.world_model">ml.rl.models.world_model (module)</a>
 </li>
       <li><a href="api/ml.rl.html#module-ml.rl.parameters">ml.rl.parameters (module)</a>
@@ -1553,19 +1454,15 @@
 </li>
       <li><a href="api/ml.rl.preprocessing.html#module-ml.rl.preprocessing.batch_preprocessor">ml.rl.preprocessing.batch_preprocessor (module)</a>
 </li>
-      <li><a href="api/ml.rl.preprocessing.html#module-ml.rl.preprocessing.feature_extractor">ml.rl.preprocessing.feature_extractor (module)</a>
-</li>
       <li><a href="api/ml.rl.preprocessing.html#module-ml.rl.preprocessing.identify_types">ml.rl.preprocessing.identify_types (module)</a>
+</li>
+      <li><a href="api/ml.rl.preprocessing.html#module-ml.rl.preprocessing.normalization">ml.rl.preprocessing.normalization (module)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/ml.rl.preprocessing.html#module-ml.rl.preprocessing.normalization">ml.rl.preprocessing.normalization (module)</a>
-</li>
       <li><a href="api/ml.rl.preprocessing.html#module-ml.rl.preprocessing.postprocessor">ml.rl.preprocessing.postprocessor (module)</a>
 </li>
       <li><a href="api/ml.rl.preprocessing.html#module-ml.rl.preprocessing.preprocessor">ml.rl.preprocessing.preprocessor (module)</a>
-</li>
-      <li><a href="api/ml.rl.preprocessing.html#module-ml.rl.preprocessing.preprocessor_net">ml.rl.preprocessing.preprocessor_net (module)</a>
 </li>
       <li><a href="api/ml.rl.preprocessing.html#module-ml.rl.preprocessing.sparse_to_dense">ml.rl.preprocessing.sparse_to_dense (module)</a>
 </li>
@@ -1585,14 +1482,6 @@
 </li>
       <li><a href="api/ml.rl.html#module-ml.rl.tensorboardX">ml.rl.tensorboardX (module)</a>
 </li>
-      <li><a href="api/ml.rl.thrift.html#module-ml.rl.thrift">ml.rl.thrift (module)</a>
-</li>
-      <li><a href="api/ml.rl.thrift.core.html#module-ml.rl.thrift.core">ml.rl.thrift.core (module)</a>
-</li>
-      <li><a href="api/ml.rl.thrift.core.html#module-ml.rl.thrift.core.constants">ml.rl.thrift.core.constants (module)</a>
-</li>
-      <li><a href="api/ml.rl.thrift.core.html#module-ml.rl.thrift.core.ttypes">ml.rl.thrift.core.ttypes (module)</a>
-</li>
       <li><a href="api/ml.rl.html#module-ml.rl.torch_utils">ml.rl.torch_utils (module)</a>
 </li>
       <li><a href="api/ml.rl.training.html#module-ml.rl.training">ml.rl.training (module)</a>
@@ -1600,8 +1489,6 @@
       <li><a href="api/ml.rl.training.html#module-ml.rl.training.c51_trainer">ml.rl.training.c51_trainer (module)</a>
 </li>
       <li><a href="api/ml.rl.training.html#module-ml.rl.training.cem_trainer">ml.rl.training.cem_trainer (module)</a>
-</li>
-      <li><a href="api/ml.rl.training.html#module-ml.rl.training.dqn_predictor">ml.rl.training.dqn_predictor (module)</a>
 </li>
       <li><a href="api/ml.rl.training.html#module-ml.rl.training.dqn_trainer">ml.rl.training.dqn_trainer (module)</a>
 </li>
@@ -1617,8 +1504,6 @@
 </li>
       <li><a href="api/ml.rl.training.html#module-ml.rl.training.loss_reporter">ml.rl.training.loss_reporter (module)</a>
 </li>
-      <li><a href="api/ml.rl.training.html#module-ml.rl.training.off_policy_predictor">ml.rl.training.off_policy_predictor (module)</a>
-</li>
       <li><a href="api/ml.rl.training.html#module-ml.rl.training.on_policy_predictor">ml.rl.training.on_policy_predictor (module)</a>
 </li>
       <li><a href="api/ml.rl.training.html#module-ml.rl.training.parametric_dqn_trainer">ml.rl.training.parametric_dqn_trainer (module)</a>
@@ -1627,9 +1512,11 @@
 </li>
       <li><a href="api/ml.rl.training.ranking.html#module-ml.rl.training.ranking">ml.rl.training.ranking (module)</a>
 </li>
-      <li><a href="api/ml.rl.training.ranking.html#module-ml.rl.training.ranking.ranking_trainer">ml.rl.training.ranking.ranking_trainer (module)</a>
+      <li><a href="api/ml.rl.training.ranking.html#module-ml.rl.training.ranking.seq2slate_tf_trainer">ml.rl.training.ranking.seq2slate_tf_trainer (module)</a>
 </li>
       <li><a href="api/ml.rl.training.ranking.html#module-ml.rl.training.ranking.seq2slate_trainer">ml.rl.training.ranking.seq2slate_trainer (module)</a>
+</li>
+      <li><a href="api/ml.rl.training.html#module-ml.rl.training.reward_network_trainer">ml.rl.training.reward_network_trainer (module)</a>
 </li>
       <li><a href="api/ml.rl.training.html#module-ml.rl.training.rl_dataset">ml.rl.training.rl_dataset (module)</a>
 </li>
@@ -1637,9 +1524,11 @@
 </li>
       <li><a href="api/ml.rl.training.html#module-ml.rl.training.sac_trainer">ml.rl.training.sac_trainer (module)</a>
 </li>
-      <li><a href="api/ml.rl.training.html#module-ml.rl.training.sandboxed_predictor">ml.rl.training.sandboxed_predictor (module)</a>
+      <li><a href="api/ml.rl.training.html#module-ml.rl.training.slate_q_trainer">ml.rl.training.slate_q_trainer (module)</a>
 </li>
       <li><a href="api/ml.rl.training.html#module-ml.rl.training.td3_trainer">ml.rl.training.td3_trainer (module)</a>
+</li>
+      <li><a href="api/ml.rl.training.html#module-ml.rl.training.trainer">ml.rl.training.trainer (module)</a>
 </li>
       <li><a href="api/ml.rl.training.html#module-ml.rl.training.training_data_page">ml.rl.training.training_data_page (module)</a>
 </li>
@@ -1713,8 +1602,6 @@
 </li>
       <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.doubly_robust_estimator.EstimationData.model_rewards_for_logged_action_eval">model_rewards_for_logged_action_eval() (ml.rl.evaluation.doubly_robust_estimator.EstimationData property)</a>
 </li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.OpenAiGymParameters.model_type">model_type (ml.rl.parameters.OpenAiGymParameters attribute)</a>
-</li>
       <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.evaluation_data_page.EvaluationDataPage.model_values">model_values() (ml.rl.evaluation.evaluation_data_page.EvaluationDataPage property)</a>
 
       <ul>
@@ -1744,14 +1631,6 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/ml.rl.html#ml.rl.caffe_utils.C2.net">net() (ml.rl.caffe_utils.C2 static method)</a>
-
-      <ul>
-        <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.FeatureExtractorNet.net">(ml.rl.preprocessing.feature_extractor.FeatureExtractorNet property)</a>
-</li>
-      </ul></li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.InputColumn.NEXT_ACTION">NEXT_ACTION (ml.rl.preprocessing.feature_extractor.InputColumn attribute)</a>
-</li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.InputColumn.NEXT_ACTION_PRESENCE">NEXT_ACTION_PRESENCE (ml.rl.preprocessing.feature_extractor.InputColumn attribute)</a>
 </li>
       <li><a href="api/ml.rl.training.html#ml.rl.training.training_data_page.TrainingDataPage.next_actions">next_actions (ml.rl.training.training_data_page.TrainingDataPage attribute)</a>
 </li>
@@ -1761,15 +1640,9 @@
 </li>
       <li><a href="api/ml.rl.html#ml.rl.types.PlanningPolicyOutput.next_best_discrete_action_one_hot">next_best_discrete_action_one_hot (ml.rl.types.PlanningPolicyOutput attribute)</a>
 </li>
+      <li><a href="api/ml.rl.training.html#ml.rl.training.training_data_page.TrainingDataPage.next_propensities">next_propensities (ml.rl.training.training_data_page.TrainingDataPage attribute)</a>
+</li>
       <li><a href="api/ml.rl.models.html#ml.rl.models.mdn_rnn.MDNRNNMemorySample.next_state">next_state() (ml.rl.models.mdn_rnn.MDNRNNMemorySample property)</a>
-</li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.InputColumn.NEXT_STATE_FEATURES">NEXT_STATE_FEATURES (ml.rl.preprocessing.feature_extractor.InputColumn attribute)</a>
-</li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.InputColumn.NEXT_STATE_FEATURES_PRESENCE">NEXT_STATE_FEATURES_PRESENCE (ml.rl.preprocessing.feature_extractor.InputColumn attribute)</a>
-</li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.InputColumn.NEXT_STATE_ID_LIST_FEATURES">NEXT_STATE_ID_LIST_FEATURES (ml.rl.preprocessing.feature_extractor.InputColumn attribute)</a>
-</li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.InputColumn.NEXT_STATE_ID_SCORE_LIST_FEATURES">NEXT_STATE_ID_SCORE_LIST_FEATURES (ml.rl.preprocessing.feature_extractor.InputColumn attribute)</a>
 </li>
       <li><a href="api/ml.rl.html#ml.rl.parameters.MDNRNNParameters.next_state_loss_weight">next_state_loss_weight (ml.rl.parameters.MDNRNNParameters attribute)</a>
 </li>
@@ -1783,20 +1656,16 @@
 </li>
       <li><a href="api/ml.rl.html#ml.rl.parameters.NormalizationParameters">NormalizationParameters (class in ml.rl.parameters)</a>
 </li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.preprocessor_net.PreprocessorNet.normalize_dense_matrix">normalize_dense_matrix() (ml.rl.preprocessing.preprocessor_net.PreprocessorNet method)</a>
-</li>
       <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.weighted_sequential_doubly_robust_estimator.WeightedSequentialDoublyRobustEstimator.normalize_importance_weights">normalize_importance_weights() (ml.rl.evaluation.weighted_sequential_doubly_robust_estimator.WeightedSequentialDoublyRobustEstimator static method)</a>
 </li>
       <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.cpe.CpeEstimate.normalized">normalized() (ml.rl.evaluation.cpe.CpeEstimate property)</a>
 </li>
       <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.cpe.CpeEstimate.normalized_std_error">normalized_std_error() (ml.rl.evaluation.cpe.CpeEstimate property)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/ml.rl.models.html#ml.rl.models.no_soft_update_embedding.NoSoftUpdateEmbedding">NoSoftUpdateEmbedding (class in ml.rl.models.no_soft_update_embedding)</a>
 </li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.InputColumn.NOT_TERMINAL">NOT_TERMINAL (ml.rl.preprocessing.feature_extractor.InputColumn attribute)</a>
-</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/ml.rl.training.html#ml.rl.training.training_data_page.TrainingDataPage.not_terminal">not_terminal (ml.rl.training.training_data_page.TrainingDataPage attribute)</a>
 </li>
       <li><a href="api/ml.rl.models.html#ml.rl.models.mdn_rnn.MDNRNNMemorySample.not_terminal">not_terminal() (ml.rl.models.mdn_rnn.MDNRNNMemorySample property)</a>
@@ -1817,8 +1686,6 @@
 </li>
       <li><a href="api/ml.rl.html#ml.rl.parameters.CEMParameters.num_elites">num_elites (ml.rl.parameters.CEMParameters attribute)</a>
 </li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.OpenAiRunDetails.num_episodes">num_episodes (ml.rl.parameters.OpenAiRunDetails attribute)</a>
-</li>
       <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.doubly_robust_estimator.TrainValidEvalData.num_examples_dict">num_examples_dict() (ml.rl.evaluation.doubly_robust_estimator.TrainValidEvalData property)</a>
 </li>
       <li><a href="api/ml.rl.html#ml.rl.parameters.MDNRNNParameters.num_gaussians">num_gaussians (ml.rl.parameters.MDNRNNParameters attribute)</a>
@@ -1827,15 +1694,7 @@
 </li>
       <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.evaluator.Evaluator.NUM_J_STEPS_FOR_MAGIC_ESTIMATOR">NUM_J_STEPS_FOR_MAGIC_ESTIMATOR (ml.rl.evaluation.evaluator.Evaluator attribute)</a>
 </li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.OpenAiRunDetails.num_state_embed_episodes">num_state_embed_episodes (ml.rl.parameters.OpenAiRunDetails attribute)</a>
-</li>
       <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.weighted_sequential_doubly_robust_estimator.WeightedSequentialDoublyRobustEstimator.NUM_SUBSETS_FOR_CB_ESTIMATES">NUM_SUBSETS_FOR_CB_ESTIMATES (ml.rl.evaluation.weighted_sequential_doubly_robust_estimator.WeightedSequentialDoublyRobustEstimator attribute)</a>
-</li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.OpenAiRunDetails.num_test_episodes">num_test_episodes (ml.rl.parameters.OpenAiRunDetails attribute)</a>
-</li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.OpenAiRunDetails.num_train_batches">num_train_batches (ml.rl.parameters.OpenAiRunDetails attribute)</a>
-</li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.OpenAiRunDetails.num_train_episodes">num_train_episodes (ml.rl.parameters.OpenAiRunDetails attribute)</a>
 </li>
       <li><a href="api/ml.rl.html#ml.rl.parameters.CEMParameters.num_world_models">num_world_models (ml.rl.parameters.CEMParameters attribute)</a>
 </li>
@@ -1851,32 +1710,28 @@
 </li>
       <li><a href="api/ml.rl.simulators.html#ml.rl.simulators.recsim.RecSim.obs">obs() (ml.rl.simulators.recsim.RecSim method)</a>
 </li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.OpenAiRunDetails.offline_num_batches_per_epoch">offline_num_batches_per_epoch (ml.rl.parameters.OpenAiRunDetails attribute)</a>
-</li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.OpenAiRunDetails.offline_score_bar">offline_score_bar (ml.rl.parameters.OpenAiRunDetails attribute)</a>
-</li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.OpenAiRunDetails.offline_train_epochs">offline_train_epochs (ml.rl.parameters.OpenAiRunDetails attribute)</a>
-</li>
       <li><a href="api/ml.rl.training.gradient_free.html#ml.rl.training.gradient_free.evolution_pool.OneMaxEvolutionPool">OneMaxEvolutionPool (class in ml.rl.training.gradient_free.evolution_pool)</a>
 </li>
       <li><a href="api/ml.rl.training.html#ml.rl.training.on_policy_predictor.OnPolicyPredictor">OnPolicyPredictor (class in ml.rl.training.on_policy_predictor)</a>
 </li>
+      <li><a href="api/ml.rl.html#ml.rl.types.PreprocessedRankingInput.optim_tgt_in_idx">optim_tgt_in_idx (ml.rl.types.PreprocessedRankingInput attribute)</a>
+</li>
+      <li><a href="api/ml.rl.html#ml.rl.types.PreprocessedRankingInput.optim_tgt_in_seq">optim_tgt_in_seq (ml.rl.types.PreprocessedRankingInput attribute)</a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.OpenAiGymParameters">OpenAiGymParameters (class in ml.rl.parameters)</a>
-</li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.OpenAiRunDetails">OpenAiRunDetails (class in ml.rl.parameters)</a>
-</li>
       <li><a href="api/ml.rl.html#ml.rl.types.PreprocessedRankingInput.optim_tgt_out_idx">optim_tgt_out_idx (ml.rl.types.PreprocessedRankingInput attribute)</a>
+</li>
+      <li><a href="api/ml.rl.html#ml.rl.types.PreprocessedRankingInput.optim_tgt_out_seq">optim_tgt_out_seq (ml.rl.types.PreprocessedRankingInput attribute)</a>
 </li>
       <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.evaluation_data_page.EvaluationDataPage.optimal_q_values">optimal_q_values() (ml.rl.evaluation.evaluation_data_page.EvaluationDataPage property)</a>
 </li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.DDPGTrainingParameters.optimizer">optimizer (ml.rl.parameters.DDPGTrainingParameters attribute)</a>
+      <li><a href="api/ml.rl.html#ml.rl.parameters.OptimizerParameters.optimizer">optimizer (ml.rl.parameters.OptimizerParameters attribute)</a>
 
       <ul>
-        <li><a href="api/ml.rl.html#ml.rl.parameters.OptimizerParameters.optimizer">(ml.rl.parameters.OptimizerParameters attribute)</a>
-</li>
         <li><a href="api/ml.rl.html#ml.rl.parameters.TrainingParameters.optimizer">(ml.rl.parameters.TrainingParameters attribute)</a>
+</li>
+        <li><a href="api/ml.rl.training.html#ml.rl.training.slate_q_trainer.SlateQTrainerParameters.optimizer">(ml.rl.training.slate_q_trainer.SlateQTrainerParameters attribute)</a>
 </li>
       </ul></li>
       <li><a href="api/ml.rl.html#ml.rl.parameters.OptimizerParameters">OptimizerParameters (class in ml.rl.parameters)</a>
@@ -1891,6 +1746,8 @@
 </li>
       <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.sparse_to_dense.PandasSparseToDenseProcessor">PandasSparseToDenseProcessor (class in ml.rl.preprocessing.sparse_to_dense)</a>
 </li>
+      <li><a href="api/ml.rl.html#ml.rl.parameters.param_hash">param_hash() (in module ml.rl.parameters)</a>
+</li>
       <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.batch_preprocessor.ParametricDqnBatchPreprocessor">ParametricDqnBatchPreprocessor (class in ml.rl.preprocessing.batch_preprocessor)</a>
 </li>
       <li><a href="api/ml.rl.training.html#ml.rl.training.on_policy_predictor.ParametricDQNOnPolicyPredictor">ParametricDQNOnPolicyPredictor (class in ml.rl.training.on_policy_predictor)</a>
@@ -1903,6 +1760,8 @@
 </li>
       <li><a href="api/ml.rl.training.html#ml.rl.training.parametric_dqn_trainer.ParametricDQNTrainer">ParametricDQNTrainer (class in ml.rl.training.parametric_dqn_trainer)</a>
 </li>
+      <li><a href="api/ml.rl.training.html#ml.rl.training.parametric_dqn_trainer.ParametricDQNTrainerParameters">ParametricDQNTrainerParameters (class in ml.rl.training.parametric_dqn_trainer)</a>
+</li>
       <li><a href="api/ml.rl.models.html#ml.rl.models.parametric_dqn.ParametricDQNWithPreprocessing">ParametricDQNWithPreprocessing (class in ml.rl.models.parametric_dqn)</a>
 </li>
       <li><a href="api/ml.rl.prediction.html#ml.rl.prediction.predictor_wrapper.ParametricDqnWithPreprocessor">ParametricDqnWithPreprocessor (class in ml.rl.prediction.predictor_wrapper)</a>
@@ -1910,6 +1769,10 @@
       <li><a href="api/ml.rl.workflow.html#ml.rl.workflow.parametric_dqn_workflow.ParametricDqnWorkflow">ParametricDqnWorkflow (class in ml.rl.workflow.parametric_dqn_workflow)</a>
 </li>
       <li><a href="api/ml.rl.workflow.html#ml.rl.workflow.helpers.parse_args">parse_args() (in module ml.rl.workflow.helpers)</a>
+</li>
+      <li><a href="api/ml.rl.models.html#ml.rl.models.seq2slate.Seq2SlateMode.PER_SEQ_LOG_PROB_MODE">PER_SEQ_LOG_PROB_MODE (ml.rl.models.seq2slate.Seq2SlateMode attribute)</a>
+</li>
+      <li><a href="api/ml.rl.models.html#ml.rl.models.seq2slate.Seq2SlateMode.PER_SYMBOL_LOG_PROB_DIST_MODE">PER_SYMBOL_LOG_PROB_DIST_MODE (ml.rl.models.seq2slate.Seq2SlateMode attribute)</a>
 </li>
       <li><a href="api/ml.rl.readers.html#ml.rl.readers.data_streamer.pin_memory">pin_memory() (in module ml.rl.readers.data_streamer)</a>
 
@@ -1921,9 +1784,11 @@
 </li>
       <li><a href="api/ml.rl.html#ml.rl.types.PlanningPolicyOutput">PlanningPolicyOutput (class in ml.rl.types)</a>
 </li>
-      <li><a href="api/ml.rl.prediction.html#ml.rl.prediction.dqn_torch_predictor.DiscreteDqnTorchPredictor.policy">policy() (ml.rl.prediction.dqn_torch_predictor.DiscreteDqnTorchPredictor method)</a>
+      <li><a href="api/ml.rl.prediction.html#ml.rl.prediction.dqn_torch_predictor.ActorTorchPredictor.policy">policy() (ml.rl.prediction.dqn_torch_predictor.ActorTorchPredictor method)</a>
 
       <ul>
+        <li><a href="api/ml.rl.prediction.html#ml.rl.prediction.dqn_torch_predictor.DiscreteDqnTorchPredictor.policy">(ml.rl.prediction.dqn_torch_predictor.DiscreteDqnTorchPredictor method)</a>
+</li>
         <li><a href="api/ml.rl.prediction.html#ml.rl.prediction.dqn_torch_predictor.ParametricDqnTorchPredictor.policy">(ml.rl.prediction.dqn_torch_predictor.ParametricDqnTorchPredictor method)</a>
 </li>
         <li><a href="api/ml.rl.training.html#ml.rl.training.on_policy_predictor.CEMPlanningPredictor.policy">(ml.rl.training.on_policy_predictor.CEMPlanningPredictor method)</a>
@@ -1945,9 +1810,11 @@
 </li>
       <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.doubly_robust_estimator.EstimationData.policy_indicators_valid">policy_indicators_valid() (ml.rl.evaluation.doubly_robust_estimator.EstimationData property)</a>
 </li>
-      <li><a href="api/ml.rl.prediction.html#ml.rl.prediction.dqn_torch_predictor.DiscreteDqnTorchPredictor.policy_net">policy_net() (ml.rl.prediction.dqn_torch_predictor.DiscreteDqnTorchPredictor method)</a>
+      <li><a href="api/ml.rl.prediction.html#ml.rl.prediction.dqn_torch_predictor.ActorTorchPredictor.policy_net">policy_net() (ml.rl.prediction.dqn_torch_predictor.ActorTorchPredictor method)</a>
 
       <ul>
+        <li><a href="api/ml.rl.prediction.html#ml.rl.prediction.dqn_torch_predictor.DiscreteDqnTorchPredictor.policy_net">(ml.rl.prediction.dqn_torch_predictor.DiscreteDqnTorchPredictor method)</a>
+</li>
         <li><a href="api/ml.rl.prediction.html#ml.rl.prediction.dqn_torch_predictor.ParametricDqnTorchPredictor.policy_net">(ml.rl.prediction.dqn_torch_predictor.ParametricDqnTorchPredictor method)</a>
 </li>
         <li><a href="api/ml.rl.training.html#ml.rl.training.on_policy_predictor.CEMPlanningPredictor.policy_net">(ml.rl.training.on_policy_predictor.CEMPlanningPredictor method)</a>
@@ -1973,34 +1840,22 @@
 </li>
       <li><a href="api/ml.rl.models.html#ml.rl.models.seq2slate.PositionwiseFeedForward">PositionwiseFeedForward (class in ml.rl.models.seq2slate)</a>
 </li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.InputColumn.POSSIBLE_ACTIONS">POSSIBLE_ACTIONS (ml.rl.preprocessing.feature_extractor.InputColumn attribute)</a>
-</li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.InputColumn.POSSIBLE_ACTIONS_MASK">POSSIBLE_ACTIONS_MASK (ml.rl.preprocessing.feature_extractor.InputColumn attribute)</a>
-</li>
       <li><a href="api/ml.rl.training.html#ml.rl.training.training_data_page.TrainingDataPage.possible_actions_mask">possible_actions_mask (ml.rl.training.training_data_page.TrainingDataPage attribute)</a>
 </li>
       <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.evaluation_data_page.EvaluationDataPage.possible_actions_mask">possible_actions_mask() (ml.rl.evaluation.evaluation_data_page.EvaluationDataPage property)</a>
 </li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.InputColumn.POSSIBLE_ACTIONS_PRESENCE">POSSIBLE_ACTIONS_PRESENCE (ml.rl.preprocessing.feature_extractor.InputColumn attribute)</a>
-</li>
       <li><a href="api/ml.rl.training.html#ml.rl.training.training_data_page.TrainingDataPage.possible_actions_state_concat">possible_actions_state_concat (ml.rl.training.training_data_page.TrainingDataPage attribute)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.evaluation_data_page.EvaluationDataPage.possible_actions_state_concat">possible_actions_state_concat() (ml.rl.evaluation.evaluation_data_page.EvaluationDataPage property)</a>
 </li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.InputColumn.POSSIBLE_NEXT_ACTIONS">POSSIBLE_NEXT_ACTIONS (ml.rl.preprocessing.feature_extractor.InputColumn attribute)</a>
-</li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.InputColumn.POSSIBLE_NEXT_ACTIONS_MASK">POSSIBLE_NEXT_ACTIONS_MASK (ml.rl.preprocessing.feature_extractor.InputColumn attribute)</a>
-</li>
       <li><a href="api/ml.rl.training.html#ml.rl.training.training_data_page.TrainingDataPage.possible_next_actions_mask">possible_next_actions_mask (ml.rl.training.training_data_page.TrainingDataPage attribute)</a>
-</li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.InputColumn.POSSIBLE_NEXT_ACTIONS_PRESENCE">POSSIBLE_NEXT_ACTIONS_PRESENCE (ml.rl.preprocessing.feature_extractor.InputColumn attribute)</a>
 </li>
       <li><a href="api/ml.rl.training.html#ml.rl.training.training_data_page.TrainingDataPage.possible_next_actions_state_concat">possible_next_actions_state_concat (ml.rl.training.training_data_page.TrainingDataPage attribute)</a>
 </li>
       <li><a href="api/ml.rl.html#ml.rl.parameters.NormalizationParameters.possible_values">possible_values (ml.rl.parameters.NormalizationParameters attribute)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.postprocessor.Postprocessor">Postprocessor (class in ml.rl.preprocessing.postprocessor)</a>
 </li>
       <li><a href="api/ml.rl.prediction.html#ml.rl.prediction.dqn_torch_predictor.ActorTorchPredictor.predict">predict() (ml.rl.prediction.dqn_torch_predictor.ActorTorchPredictor method)</a>
@@ -2010,26 +1865,14 @@
 </li>
         <li><a href="api/ml.rl.prediction.html#ml.rl.prediction.dqn_torch_predictor.ParametricDqnTorchPredictor.predict">(ml.rl.prediction.dqn_torch_predictor.ParametricDqnTorchPredictor method)</a>
 </li>
-        <li><a href="api/ml.rl.training.html#ml.rl.training.dqn_predictor.DQNPredictor.predict">(ml.rl.training.dqn_predictor.DQNPredictor method)</a>
-</li>
-        <li><a href="api/ml.rl.training.html#ml.rl.training.off_policy_predictor.RLPredictor.predict">(ml.rl.training.off_policy_predictor.RLPredictor method)</a>
-</li>
         <li><a href="api/ml.rl.training.html#ml.rl.training.on_policy_predictor.DiscreteDQNOnPolicyPredictor.predict">(ml.rl.training.on_policy_predictor.DiscreteDQNOnPolicyPredictor method)</a>
 </li>
         <li><a href="api/ml.rl.training.html#ml.rl.training.on_policy_predictor.ParametricDQNOnPolicyPredictor.predict">(ml.rl.training.on_policy_predictor.ParametricDQNOnPolicyPredictor method)</a>
 </li>
       </ul></li>
-      <li><a href="api/ml.rl.training.html#ml.rl.training.off_policy_predictor.RLPredictor.predict_net">predict_net() (ml.rl.training.off_policy_predictor.RLPredictor property)</a>
-
-      <ul>
-        <li><a href="api/ml.rl.training.html#ml.rl.training.sandboxed_predictor.SandboxedRLPredictor.predict_net">(ml.rl.training.sandboxed_predictor.SandboxedRLPredictor property)</a>
-</li>
-      </ul></li>
       <li><a href="api/ml.rl.html#ml.rl.parameters.RLParameters.predictor_atol_check">predictor_atol_check (ml.rl.parameters.RLParameters attribute)</a>
 </li>
       <li><a href="api/ml.rl.html#ml.rl.parameters.RLParameters.predictor_rtol_check">predictor_rtol_check (ml.rl.parameters.RLParameters attribute)</a>
-</li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.PredictorFeatureExtractor">PredictorFeatureExtractor (class in ml.rl.preprocessing.feature_extractor)</a>
 </li>
       <li><a href="api/ml.rl.html#ml.rl.json_serialize.prepare_for_json">prepare_for_json() (in module ml.rl.json_serialize)</a>
 </li>
@@ -2053,8 +1896,6 @@
         <li><a href="api/ml.rl.workflow.html#ml.rl.workflow.preprocess_handler.PreprocessHandler.preprocess">(ml.rl.workflow.preprocess_handler.PreprocessHandler method)</a>
 </li>
       </ul></li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.preprocessor_net.PreprocessorNet.preprocess_blob">preprocess_blob() (ml.rl.preprocessing.preprocessor_net.PreprocessorNet method)</a>
-</li>
       <li><a href="api/ml.rl.html#ml.rl.types.RawDiscreteDqnInput.preprocess_tensors">preprocess_tensors() (ml.rl.types.RawDiscreteDqnInput method)</a>
 
       <ul>
@@ -2079,9 +1920,15 @@
 </li>
       <li><a href="api/ml.rl.html#ml.rl.types.PreprocessedRankingInput">PreprocessedRankingInput (class in ml.rl.types)</a>
 </li>
+      <li><a href="api/ml.rl.html#ml.rl.types.PreprocessedSlateFeatureVector">PreprocessedSlateFeatureVector (class in ml.rl.types)</a>
+</li>
+      <li><a href="api/ml.rl.html#ml.rl.types.PreprocessedSlateQInput">PreprocessedSlateQInput (class in ml.rl.types)</a>
+</li>
       <li><a href="api/ml.rl.html#ml.rl.types.PreprocessedState">PreprocessedState (class in ml.rl.types)</a>
 </li>
       <li><a href="api/ml.rl.html#ml.rl.types.PreprocessedStateAction">PreprocessedStateAction (class in ml.rl.types)</a>
+</li>
+      <li><a href="api/ml.rl.html#ml.rl.types.PreprocessedTiledFeatureVector">PreprocessedTiledFeatureVector (class in ml.rl.types)</a>
 </li>
       <li><a href="api/ml.rl.html#ml.rl.types.PreprocessedTrainingBatch">PreprocessedTrainingBatch (class in ml.rl.types)</a>
 </li>
@@ -2089,13 +1936,9 @@
 </li>
       <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.preprocessor.Preprocessor">Preprocessor (class in ml.rl.preprocessing.preprocessor)</a>
 </li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.preprocessor_net.PreprocessorNet">PreprocessorNet (class in ml.rl.preprocessing.preprocessor_net)</a>
-</li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.sparse_to_dense.Caffe2SparseToDenseProcessor.process">process() (ml.rl.preprocessing.sparse_to_dense.Caffe2SparseToDenseProcessor method)</a>
+      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.sparse_to_dense.PandasSparseToDenseProcessor.process">process() (ml.rl.preprocessing.sparse_to_dense.PandasSparseToDenseProcessor method)</a>
 
       <ul>
-        <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.sparse_to_dense.PandasSparseToDenseProcessor.process">(ml.rl.preprocessing.sparse_to_dense.PandasSparseToDenseProcessor method)</a>
-</li>
         <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.sparse_to_dense.PythonSparseToDenseProcessor.process">(ml.rl.preprocessing.sparse_to_dense.PythonSparseToDenseProcessor method)</a>
 </li>
       </ul></li>
@@ -2111,34 +1954,22 @@
 </li>
       <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.sparse_to_dense.PythonSparseToDenseProcessor">PythonSparseToDenseProcessor (class in ml.rl.preprocessing.sparse_to_dense)</a>
 </li>
-      <li><a href="api/ml.rl.html#ml.rl.caffe_utils.PytorchCaffe2Converter.pytorch_net_to_buffer">pytorch_net_to_buffer() (ml.rl.caffe_utils.PytorchCaffe2Converter static method)</a>
-</li>
-      <li><a href="api/ml.rl.html#ml.rl.caffe_utils.PytorchCaffe2Converter.pytorch_net_to_caffe2_netdef">pytorch_net_to_caffe2_netdef() (ml.rl.caffe_utils.PytorchCaffe2Converter static method)</a>
-</li>
-      <li><a href="api/ml.rl.html#ml.rl.caffe_utils.PytorchCaffe2Converter">PytorchCaffe2Converter (class in ml.rl.caffe_utils)</a>
-</li>
   </ul></td>
 </tr></table>
 
 <h2 id="Q">Q</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.SACModelParameters.q_network">q_network (ml.rl.parameters.SACModelParameters attribute)</a>
-</li>
       <li><a href="api/ml.rl.html#ml.rl.parameters.RLParameters.q_network_loss">q_network_loss (ml.rl.parameters.RLParameters attribute)</a>
 </li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.SACTrainingParameters.q_network_optimizer">q_network_optimizer (ml.rl.parameters.SACTrainingParameters attribute)</a>
-
-      <ul>
-        <li><a href="api/ml.rl.html#ml.rl.parameters.TD3TrainingParameters.q_network_optimizer">(ml.rl.parameters.TD3TrainingParameters attribute)</a>
+      <li><a href="api/ml.rl.html#ml.rl.parameters.TD3TrainingParameters.q_network_optimizer">q_network_optimizer (ml.rl.parameters.TD3TrainingParameters attribute)</a>
 </li>
-      </ul></li>
       <li><a href="api/ml.rl.html#ml.rl.parameters.RainbowDQNParameters.qmax">qmax (ml.rl.parameters.RainbowDQNParameters attribute)</a>
+</li>
+      <li><a href="api/ml.rl.html#ml.rl.parameters.RainbowDQNParameters.qmin">qmin (ml.rl.parameters.RainbowDQNParameters attribute)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.RainbowDQNParameters.qmin">qmin (ml.rl.parameters.RainbowDQNParameters attribute)</a>
-</li>
       <li><a href="api/ml.rl.training.html#ml.rl.training.qrdqn_trainer.QRDQNTrainer">QRDQNTrainer (class in ml.rl.training.qrdqn_trainer)</a>
 </li>
       <li><a href="api/ml.rl.simulators.html#ml.rl.simulators.recsim.DocumentFeature.quality">quality() (ml.rl.simulators.recsim.DocumentFeature property)</a>
@@ -2156,14 +1987,12 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/ml.rl.html#ml.rl.parameters.DiscreteActionModelParameters.rainbow">rainbow (ml.rl.parameters.DiscreteActionModelParameters attribute)</a>
-
-      <ul>
-        <li><a href="api/ml.rl.html#ml.rl.parameters.OpenAiGymParameters.rainbow">(ml.rl.parameters.OpenAiGymParameters attribute)</a>
 </li>
-      </ul></li>
       <li><a href="api/ml.rl.html#ml.rl.parameters.RainbowDQNParameters">RainbowDQNParameters (class in ml.rl.parameters)</a>
 </li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.FeatureExtractorBase.range_to_dense">range_to_dense() (ml.rl.preprocessing.feature_extractor.FeatureExtractorBase method)</a>
+      <li><a href="api/ml.rl.simulators.html#ml.rl.simulators.recsim.random_policy">random_policy() (in module ml.rl.simulators.recsim)</a>
+</li>
+      <li><a href="api/ml.rl.models.html#ml.rl.models.seq2slate.Seq2SlateMode.RANK_MODE">RANK_MODE (ml.rl.models.seq2slate.Seq2SlateMode attribute)</a>
 </li>
       <li><a href="api/ml.rl.html#ml.rl.types.RankingOutput.ranked_tgt_out_idx">ranked_tgt_out_idx (ml.rl.types.RankingOutput attribute)</a>
 </li>
@@ -2176,8 +2005,6 @@
       <li><a href="api/ml.rl.html#ml.rl.types.RankingOutput">RankingOutput (class in ml.rl.types)</a>
 </li>
       <li><a href="api/ml.rl.html#ml.rl.parameters.RankingParameters">RankingParameters (class in ml.rl.parameters)</a>
-</li>
-      <li><a href="api/ml.rl.training.ranking.html#ml.rl.training.ranking.ranking_trainer.RankingTrainer">RankingTrainer (class in ml.rl.training.ranking.ranking_trainer)</a>
 </li>
       <li><a href="api/ml.rl.workflow.html#ml.rl.workflow.page_handler.RankingTrainingPageHandler">RankingTrainingPageHandler (class in ml.rl.workflow.page_handler)</a>
 </li>
@@ -2202,8 +2029,6 @@
       <li><a href="api/ml.rl.html#ml.rl.types.RawTrainingBatch">RawTrainingBatch (class in ml.rl.types)</a>
 </li>
       <li><a href="api/ml.rl.workflow.html#ml.rl.workflow.preprocess_handler.DiscreteDqnPreprocessHandler.read_actions">read_actions() (ml.rl.workflow.preprocess_handler.DiscreteDqnPreprocessHandler method)</a>
-</li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.FeatureExtractorBase.read_actions_to_mask">read_actions_to_mask() (ml.rl.preprocessing.feature_extractor.FeatureExtractorBase method)</a>
 </li>
       <li><a href="api/ml.rl.readers.html#ml.rl.readers.json_dataset_reader.JSONDatasetReader.read_all">read_all() (ml.rl.readers.json_dataset_reader.JSONDatasetReader method)</a>
 </li>
@@ -2231,10 +2056,6 @@
 </li>
       <li><a href="api/ml.rl.workflow.html#ml.rl.workflow.page_handler.PageHandler.refresh_results">refresh_results() (ml.rl.workflow.page_handler.PageHandler method)</a>
 </li>
-      <li><a href="api/ml.rl.html#ml.rl.caffe_utils.PytorchCaffe2Converter.remap_blobs">remap_blobs() (ml.rl.caffe_utils.PytorchCaffe2Converter static method)</a>
-</li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.OpenAiRunDetails.render">render (ml.rl.parameters.OpenAiRunDetails attribute)</a>
-</li>
       <li><a href="api/ml.rl.training.html#ml.rl.training.loss_reporter.LossReporter.report">report() (ml.rl.training.loss_reporter.LossReporter method)</a>
 
       <ul>
@@ -2247,8 +2068,6 @@
 </li>
       <li><a href="api/ml.rl.readers.html#ml.rl.readers.json_dataset_reader.JSONDatasetReader.reset_iterator">reset_iterator() (ml.rl.readers.json_dataset_reader.JSONDatasetReader method)</a>
 </li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.InputColumn.REWARD">REWARD (ml.rl.preprocessing.feature_extractor.InputColumn attribute)</a>
-</li>
       <li><a href="api/ml.rl.models.html#ml.rl.models.mdn_rnn.MDNRNNMemorySample.reward">reward() (ml.rl.models.mdn_rnn.MDNRNNMemorySample property)</a>
 </li>
       <li><a href="api/ml.rl.html#ml.rl.parameters.RLParameters.reward_boost">reward_boost (ml.rl.parameters.RLParameters attribute)</a>
@@ -2257,25 +2076,31 @@
 </li>
       <li><a href="api/ml.rl.html#ml.rl.parameters.MDNRNNParameters.reward_loss_weight">reward_loss_weight (ml.rl.parameters.MDNRNNParameters attribute)</a>
 </li>
+      <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.reward_net_evaluator.RewardNetEvaluator">RewardNetEvaluator (class in ml.rl.evaluation.reward_net_evaluator)</a>
+</li>
+      <li><a href="api/ml.rl.training.html#ml.rl.training.reward_network_trainer.RewardNetTrainer">RewardNetTrainer (class in ml.rl.training.reward_network_trainer)</a>
+</li>
+      <li><a href="api/ml.rl.workflow.html#ml.rl.workflow.page_handler.RewardNetTrainingPageHandler">RewardNetTrainingPageHandler (class in ml.rl.workflow.page_handler)</a>
+</li>
+      <li><a href="api/ml.rl.html#ml.rl.types.RewardNetworkOutput">RewardNetworkOutput (class in ml.rl.types)</a>
+</li>
       <li><a href="api/ml.rl.training.html#ml.rl.training.training_data_page.TrainingDataPage.rewards">rewards (ml.rl.training.training_data_page.TrainingDataPage attribute)</a>
+</li>
+      <li><a href="api/ml.rl.training.html#ml.rl.training.training_data_page.TrainingDataPage.rewards_mask">rewards_mask (ml.rl.training.training_data_page.TrainingDataPage attribute)</a>
 </li>
       <li><a href="api/ml.rl.html#ml.rl.parameters.CEMParameters.rl">rl (ml.rl.parameters.CEMParameters attribute)</a>
 
       <ul>
         <li><a href="api/ml.rl.html#ml.rl.parameters.DiscreteActionModelParameters.rl">(ml.rl.parameters.DiscreteActionModelParameters attribute)</a>
 </li>
-        <li><a href="api/ml.rl.html#ml.rl.parameters.OpenAiGymParameters.rl">(ml.rl.parameters.OpenAiGymParameters attribute)</a>
-</li>
-        <li><a href="api/ml.rl.html#ml.rl.parameters.SACModelParameters.rl">(ml.rl.parameters.SACModelParameters attribute)</a>
-</li>
       </ul></li>
       <li><a href="api/ml.rl.training.html#ml.rl.training.rl_dataset.RLDataset">RLDataset (class in ml.rl.training.rl_dataset)</a>
 </li>
       <li><a href="api/ml.rl.html#ml.rl.parameters.RLParameters">RLParameters (class in ml.rl.parameters)</a>
 </li>
-      <li><a href="api/ml.rl.training.html#ml.rl.training.off_policy_predictor.RLPredictor">RLPredictor (class in ml.rl.training.off_policy_predictor)</a>
-</li>
       <li><a href="api/ml.rl.training.html#ml.rl.training.rl_trainer_pytorch.RLTrainer">RLTrainer (class in ml.rl.training.rl_trainer_pytorch)</a>
+</li>
+      <li><a href="api/ml.rl.simulators.html#ml.rl.simulators.recsim.RecSim.rollout_policy">rollout_policy() (ml.rl.simulators.recsim.RecSim method)</a>
 </li>
       <li><a href="api/ml.rl.training.gradient_free.html#ml.rl.training.gradient_free.es_worker.EsWorker.run_epoch">run_epoch() (ml.rl.training.gradient_free.es_worker.EsWorker method)</a>
 </li>
@@ -2285,17 +2110,11 @@
 <h2 id="S">S</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.OpenAiGymParameters.sac_training">sac_training (ml.rl.parameters.OpenAiGymParameters attribute)</a>
-</li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.OpenAiGymParameters.sac_value_training">sac_value_training (ml.rl.parameters.OpenAiGymParameters attribute)</a>
-</li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.SACModelParameters">SACModelParameters (class in ml.rl.parameters)</a>
-</li>
       <li><a href="api/ml.rl.html#ml.rl.types.SacPolicyActionSet">SacPolicyActionSet (class in ml.rl.types)</a>
 </li>
       <li><a href="api/ml.rl.training.html#ml.rl.training.sac_trainer.SACTrainer">SACTrainer (class in ml.rl.training.sac_trainer)</a>
 </li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.SACTrainingParameters">SACTrainingParameters (class in ml.rl.parameters)</a>
+      <li><a href="api/ml.rl.training.html#ml.rl.training.sac_trainer.SACTrainerParameters">SACTrainerParameters (class in ml.rl.training.sac_trainer)</a>
 </li>
       <li><a href="api/ml.rl.simulators.html#ml.rl.simulators.recsim.RecSim.sample_documents">sample_documents() (ml.rl.simulators.recsim.RecSim method)</a>
 </li>
@@ -2305,18 +2124,10 @@
 </li>
       <li><a href="api/ml.rl.simulators.html#ml.rl.simulators.recsim.RecSim.sample_users">sample_users() (ml.rl.simulators.recsim.RecSim method)</a>
 </li>
-      <li><a href="api/ml.rl.training.html#ml.rl.training.sandboxed_predictor.SandboxedRLPredictor">SandboxedRLPredictor (class in ml.rl.training.sandboxed_predictor)</a>
-</li>
       <li><a href="api/ml.rl.simulators.html#ml.rl.simulators.recsim.RecSim.satisfactory">satisfactory() (ml.rl.simulators.recsim.RecSim method)</a>
 </li>
-      <li><a href="api/ml.rl.training.html#ml.rl.training.off_policy_predictor.RLPredictor.save">save() (ml.rl.training.off_policy_predictor.RLPredictor method)</a>
-
-      <ul>
-        <li><a href="api/ml.rl.training.html#ml.rl.training.rl_dataset.RLDataset.save">(ml.rl.training.rl_dataset.RLDataset method)</a>
+      <li><a href="api/ml.rl.training.html#ml.rl.training.rl_dataset.RLDataset.save">save() (ml.rl.training.rl_dataset.RLDataset method)</a>
 </li>
-        <li><a href="api/ml.rl.training.html#ml.rl.training.sandboxed_predictor.SandboxedRLPredictor.save">(ml.rl.training.sandboxed_predictor.SandboxedRLPredictor method)</a>
-</li>
-      </ul></li>
       <li><a href="api/ml.rl.workflow.html#ml.rl.workflow.helpers.save_model_to_file">save_model_to_file() (in module ml.rl.workflow.helpers)</a>
 </li>
       <li><a href="api/ml.rl.workflow.html#ml.rl.workflow.base_workflow.BaseWorkflow.save_models">save_models() (ml.rl.workflow.base_workflow.BaseWorkflow method)</a>
@@ -2333,7 +2144,15 @@
 </li>
       <li><a href="api/ml.rl.simulators.html#ml.rl.simulators.recsim.RecSim.select">select() (ml.rl.simulators.recsim.RecSim method)</a>
 </li>
+      <li><a href="api/ml.rl.models.html#ml.rl.models.seq2slate.Seq2SlateMode">Seq2SlateMode (class in ml.rl.models.seq2slate)</a>
+</li>
       <li><a href="api/ml.rl.prediction.html#ml.rl.prediction.predictor_wrapper.Seq2SlatePredictorWrapper">Seq2SlatePredictorWrapper (class in ml.rl.prediction.predictor_wrapper)</a>
+</li>
+      <li><a href="api/ml.rl.models.html#ml.rl.models.seq2slate_reward.Seq2SlateRewardNet">Seq2SlateRewardNet (class in ml.rl.models.seq2slate_reward)</a>
+</li>
+      <li><a href="api/ml.rl.models.html#ml.rl.models.seq2slate_reward.Seq2SlateRewardNetJITWrapper">Seq2SlateRewardNetJITWrapper (class in ml.rl.models.seq2slate_reward)</a>
+</li>
+      <li><a href="api/ml.rl.training.ranking.html#ml.rl.training.ranking.seq2slate_tf_trainer.Seq2SlateTeacherForcingTrainer">Seq2SlateTeacherForcingTrainer (class in ml.rl.training.ranking.seq2slate_tf_trainer)</a>
 </li>
       <li><a href="api/ml.rl.training.ranking.html#ml.rl.training.ranking.seq2slate_trainer.Seq2SlateTrainer">Seq2SlateTrainer (class in ml.rl.training.ranking.seq2slate_trainer)</a>
 </li>
@@ -2345,11 +2164,9 @@
 </li>
       <li><a href="api/ml.rl.prediction.html#ml.rl.prediction.predictor_wrapper.Seq2SlateWithPreprocessor">Seq2SlateWithPreprocessor (class in ml.rl.prediction.predictor_wrapper)</a>
 </li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.OpenAiRunDetails.seq_len">seq_len (ml.rl.parameters.OpenAiRunDetails attribute)</a>
-</li>
       <li><a href="api/ml.rl.html#ml.rl.types.FeatureVector.sequence_features">sequence_features (ml.rl.types.FeatureVector attribute)</a>
 </li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.InputColumn.SEQUENCE_NUMBER">SEQUENCE_NUMBER (ml.rl.preprocessing.feature_extractor.InputColumn attribute)</a>
+      <li><a href="api/ml.rl.html#ml.rl.types.ModelFeatureConfig.sequence_features_type">sequence_features_type (ml.rl.types.ModelFeatureConfig attribute)</a>
 </li>
       <li><a href="api/ml.rl.html#ml.rl.types.ExtraData.sequence_number">sequence_number (ml.rl.types.ExtraData attribute)</a>
 </li>
@@ -2389,14 +2206,14 @@
 </li>
       <li><a href="api/ml.rl.html#ml.rl.caffe_utils.C2.set_model">set_model() (ml.rl.caffe_utils.C2 static method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/ml.rl.html#ml.rl.caffe_utils.C2.set_net">set_net() (ml.rl.caffe_utils.C2 static method)</a>
 </li>
       <li><a href="api/ml.rl.html#ml.rl.caffe_utils.C2.set_net_and_init_net">set_net_and_init_net() (ml.rl.caffe_utils.C2 static method)</a>
 </li>
       <li><a href="api/ml.rl.training.html#ml.rl.training.training_data_page.TrainingDataPage.set_type">set_type() (ml.rl.training.training_data_page.TrainingDataPage method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/ml.rl.workflow.html#ml.rl.workflow.dqn_workflow.single_process_main">single_process_main() (in module ml.rl.workflow.dqn_workflow)</a>
 
       <ul>
@@ -2409,15 +2226,19 @@
 </li>
       <li><a href="api/ml.rl.html#ml.rl.types.PreprocessedRankingInput.slate_reward">slate_reward (ml.rl.types.PreprocessedRankingInput attribute)</a>
 </li>
+      <li><a href="api/ml.rl.training.html#ml.rl.training.slate_q_trainer.SlateQTrainer">SlateQTrainer (class in ml.rl.training.slate_q_trainer)</a>
+</li>
+      <li><a href="api/ml.rl.training.html#ml.rl.training.slate_q_trainer.SlateQTrainerParameters">SlateQTrainerParameters (class in ml.rl.training.slate_q_trainer)</a>
+</li>
       <li><a href="api/ml.rl.html#ml.rl.types.DqnPolicyActionSet.softmax">softmax (ml.rl.types.DqnPolicyActionSet attribute)</a>
 </li>
-      <li><a href="api/ml.rl.html#ml.rl.caffe_utils.softmax">softmax() (in module ml.rl.caffe_utils)</a>
+      <li><a href="api/ml.rl.html#ml.rl.torch_utils.softmax">softmax() (in module ml.rl.torch_utils)</a>
 </li>
       <li><a href="api/ml.rl.html#ml.rl.types.DqnPolicyActionSet.softmax_act_name">softmax_act_name (ml.rl.types.DqnPolicyActionSet attribute)</a>
 </li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.RLParameters.softmax_policy">softmax_policy (ml.rl.parameters.RLParameters attribute)</a>
+      <li><a href="api/ml.rl.html#ml.rl.types.DqnPolicyActionSet.softmax_act_prob">softmax_act_prob (ml.rl.types.DqnPolicyActionSet attribute)</a>
 </li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.OpenAiRunDetails.solved_reward_threshold">solved_reward_threshold (ml.rl.parameters.OpenAiRunDetails attribute)</a>
+      <li><a href="api/ml.rl.html#ml.rl.parameters.RLParameters.softmax_policy">softmax_policy (ml.rl.parameters.RLParameters attribute)</a>
 </li>
       <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.evaluation_data_page.EvaluationDataPage.sort">sort() (ml.rl.evaluation.evaluation_data_page.EvaluationDataPage method)</a>
 </li>
@@ -2435,42 +2256,20 @@
 </li>
       <li><a href="api/ml.rl.html#ml.rl.torch_utils.stack">stack() (in module ml.rl.torch_utils)</a>
 </li>
-      <li><a href="api/ml.rl.html#ml.rl.caffe_utils.StackedArray">StackedArray (class in ml.rl.caffe_utils)</a>
-</li>
-      <li><a href="api/ml.rl.html#ml.rl.caffe_utils.StackedAssociativeArray">StackedAssociativeArray (class in ml.rl.caffe_utils)</a>
-</li>
-      <li><a href="api/ml.rl.html#ml.rl.caffe_utils.StackedTwoLevelAssociativeArray">StackedTwoLevelAssociativeArray (class in ml.rl.caffe_utils)</a>
-</li>
       <li><a href="api/ml.rl.html#ml.rl.debug_on_error.start">start() (in module ml.rl.debug_on_error)</a>
 </li>
       <li><a href="api/ml.rl.models.html#ml.rl.models.mdn_rnn.MDNRNNMemorySample.state">state() (ml.rl.models.mdn_rnn.MDNRNNMemorySample property)</a>
 </li>
-      <li><a href="api/ml.rl.training.ranking.html#ml.rl.training.ranking.ranking_trainer.RankingTrainer.state_dict">state_dict() (ml.rl.training.ranking.ranking_trainer.RankingTrainer method)</a>
-
-      <ul>
-        <li><a href="api/ml.rl.training.html#ml.rl.training.rl_trainer_pytorch.RLTrainer.state_dict">(ml.rl.training.rl_trainer_pytorch.RLTrainer method)</a>
+      <li><a href="api/ml.rl.training.html#ml.rl.training.trainer.Trainer.state_dict">state_dict() (ml.rl.training.trainer.Trainer method)</a>
 </li>
-      </ul></li>
       <li><a href="api/ml.rl.html#ml.rl.parameters.ContinuousActionModelParameters.state_feature_params">state_feature_params (ml.rl.parameters.ContinuousActionModelParameters attribute)</a>
 
       <ul>
-        <li><a href="api/ml.rl.html#ml.rl.parameters.DDPGModelParameters.state_feature_params">(ml.rl.parameters.DDPGModelParameters attribute)</a>
-</li>
         <li><a href="api/ml.rl.html#ml.rl.parameters.DiscreteActionModelParameters.state_feature_params">(ml.rl.parameters.DiscreteActionModelParameters attribute)</a>
-</li>
-        <li><a href="api/ml.rl.html#ml.rl.parameters.SACModelParameters.state_feature_params">(ml.rl.parameters.SACModelParameters attribute)</a>
 </li>
         <li><a href="api/ml.rl.html#ml.rl.parameters.TD3ModelParameters.state_feature_params">(ml.rl.parameters.TD3ModelParameters attribute)</a>
 </li>
       </ul></li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.InputColumn.STATE_FEATURES">STATE_FEATURES (ml.rl.preprocessing.feature_extractor.InputColumn attribute)</a>
-</li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.InputColumn.STATE_FEATURES_PRESENCE">STATE_FEATURES_PRESENCE (ml.rl.preprocessing.feature_extractor.InputColumn attribute)</a>
-</li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.InputColumn.STATE_ID_LIST_FEATURES">STATE_ID_LIST_FEATURES (ml.rl.preprocessing.feature_extractor.InputColumn attribute)</a>
-</li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.InputColumn.STATE_ID_SCORE_LIST_FEATURES">STATE_ID_SCORE_LIST_FEATURES (ml.rl.preprocessing.feature_extractor.InputColumn attribute)</a>
-</li>
       <li><a href="api/ml.rl.prediction.html#ml.rl.prediction.predictor_wrapper.ActorPredictorWrapper.state_sorted_features">state_sorted_features() (ml.rl.prediction.predictor_wrapper.ActorPredictorWrapper method)</a>
 
       <ul>
@@ -2493,13 +2292,9 @@
 </li>
       <li><a href="api/ml.rl.html#ml.rl.parameters.NormalizationParameters.stddev">stddev (ml.rl.parameters.NormalizationParameters attribute)</a>
 </li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.InputColumn.STEP">STEP (ml.rl.preprocessing.feature_extractor.InputColumn attribute)</a>
-</li>
       <li><a href="api/ml.rl.training.html#ml.rl.training.training_data_page.TrainingDataPage.step">step (ml.rl.training.training_data_page.TrainingDataPage attribute)</a>
 </li>
       <li><a href="api/ml.rl.simulators.html#ml.rl.simulators.recsim.RecSim.step">step() (ml.rl.simulators.recsim.RecSim method)</a>
-</li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.OpenAiRunDetails.stop_training_after_solved">stop_training_after_solved (ml.rl.parameters.OpenAiRunDetails attribute)</a>
 </li>
       <li><a href="api/ml.rl.models.html#ml.rl.models.seq2slate.SublayerConnection">SublayerConnection (class in ml.rl.models.seq2slate)</a>
 </li>
@@ -2521,13 +2316,11 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/ml.rl.html#ml.rl.parameters.DiscreteActionModelParameters.target_action_distribution">target_action_distribution (ml.rl.parameters.DiscreteActionModelParameters attribute)</a>
 </li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.SACTrainingParameters.target_entropy">target_entropy (ml.rl.parameters.SACTrainingParameters attribute)</a>
+      <li><a href="api/ml.rl.training.html#ml.rl.training.sac_trainer.SACTrainerParameters.target_entropy">target_entropy (ml.rl.training.sac_trainer.SACTrainerParameters attribute)</a>
 </li>
       <li><a href="api/ml.rl.html#ml.rl.parameters.TD3TrainingParameters.target_policy_smoothing">target_policy_smoothing (ml.rl.parameters.TD3TrainingParameters attribute)</a>
 </li>
       <li><a href="api/ml.rl.html#ml.rl.parameters.RLParameters.target_update_rate">target_update_rate (ml.rl.parameters.RLParameters attribute)</a>
-</li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.OpenAiGymParameters.td3_training">td3_training (ml.rl.parameters.OpenAiGymParameters attribute)</a>
 </li>
       <li><a href="api/ml.rl.html#ml.rl.parameters.TD3ModelParameters">TD3ModelParameters (class in ml.rl.parameters)</a>
 </li>
@@ -2541,29 +2334,23 @@
 </li>
       <li><a href="api/ml.rl.html#ml.rl.parameters.RLParameters.tensorboard_logging_freq">tensorboard_logging_freq (ml.rl.parameters.RLParameters attribute)</a>
 </li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.OpenAiRunDetails.test_after_ts">test_after_ts (ml.rl.parameters.OpenAiRunDetails attribute)</a>
-</li>
       <li><a href="api/ml.rl.html#ml.rl.parameters.MDNRNNParameters.test_data_percentage">test_data_percentage (ml.rl.parameters.MDNRNNParameters attribute)</a>
 </li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.OpenAiRunDetails.test_every_ts">test_every_ts (ml.rl.parameters.OpenAiRunDetails attribute)</a>
-</li>
       <li><a href="api/ml.rl.html#ml.rl.types.PreprocessedRankingInput.tgt_in_idx">tgt_in_idx (ml.rl.types.PreprocessedRankingInput attribute)</a>
+</li>
+      <li><a href="api/ml.rl.html#ml.rl.types.PreprocessedRankingInput.tgt_in_seq">tgt_in_seq (ml.rl.types.PreprocessedRankingInput attribute)</a>
 </li>
       <li><a href="api/ml.rl.html#ml.rl.types.PreprocessedRankingInput.tgt_out_idx">tgt_out_idx (ml.rl.types.PreprocessedRankingInput attribute)</a>
 </li>
       <li><a href="api/ml.rl.html#ml.rl.types.PreprocessedRankingInput.tgt_out_probs">tgt_out_probs (ml.rl.types.PreprocessedRankingInput attribute)</a>
 </li>
-      <li><a href="api/ml.rl.html#ml.rl.types.PreprocessedRankingInput.tgt_seq">tgt_seq (ml.rl.types.PreprocessedRankingInput attribute)</a>
+      <li><a href="api/ml.rl.html#ml.rl.types.PreprocessedRankingInput.tgt_out_seq">tgt_out_seq (ml.rl.types.PreprocessedRankingInput attribute)</a>
 </li>
       <li><a href="api/ml.rl.html#ml.rl.types.PreprocessedRankingInput.tgt_tgt_mask">tgt_tgt_mask (ml.rl.types.PreprocessedRankingInput attribute)</a>
-</li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.InputColumn.TIME_DIFF">TIME_DIFF (ml.rl.preprocessing.feature_extractor.InputColumn attribute)</a>
 </li>
       <li><a href="api/ml.rl.html#ml.rl.parameters.RLParameters.time_diff_unit_length">time_diff_unit_length (ml.rl.parameters.RLParameters attribute)</a>
 </li>
       <li><a href="api/ml.rl.training.html#ml.rl.training.training_data_page.TrainingDataPage.time_diffs">time_diffs (ml.rl.training.training_data_page.TrainingDataPage attribute)</a>
-</li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.InputColumn.TIME_SINCE_FIRST">TIME_SINCE_FIRST (ml.rl.preprocessing.feature_extractor.InputColumn attribute)</a>
 </li>
       <li><a href="api/ml.rl.html#ml.rl.types.FeatureVector.time_since_first">time_since_first (ml.rl.types.FeatureVector attribute)</a>
 
@@ -2571,16 +2358,10 @@
         <li><a href="api/ml.rl.html#ml.rl.types.PreprocessedFeatureVector.time_since_first">(ml.rl.types.PreprocessedFeatureVector attribute)</a>
 </li>
       </ul></li>
-      <li><a href="api/ml.rl.html#ml.rl.caffe_utils.StackedAssociativeArray.to_python">to_python() (ml.rl.caffe_utils.StackedAssociativeArray method)</a>
-
-      <ul>
-        <li><a href="api/ml.rl.html#ml.rl.caffe_utils.StackedTwoLevelAssociativeArray.to_python">(ml.rl.caffe_utils.StackedTwoLevelAssociativeArray method)</a>
+      <li><a href="api/ml.rl.simulators.html#ml.rl.simulators.recsim.top_k_policy">top_k_policy() (in module ml.rl.simulators.recsim)</a>
 </li>
-      </ul></li>
       <li><a href="api/ml.rl.simulators.html#ml.rl.simulators.recsim.DocumentFeature.topic">topic() (ml.rl.simulators.recsim.DocumentFeature property)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/ml.rl.training.html#ml.rl.training.c51_trainer.C51Trainer.train">train() (ml.rl.training.c51_trainer.C51Trainer method)</a>
 
       <ul>
@@ -2594,40 +2375,34 @@
 </li>
         <li><a href="api/ml.rl.training.html#ml.rl.training.qrdqn_trainer.QRDQNTrainer.train">(ml.rl.training.qrdqn_trainer.QRDQNTrainer method)</a>
 </li>
-        <li><a href="api/ml.rl.training.ranking.html#ml.rl.training.ranking.ranking_trainer.RankingTrainer.train">(ml.rl.training.ranking.ranking_trainer.RankingTrainer method)</a>
+        <li><a href="api/ml.rl.training.ranking.html#ml.rl.training.ranking.seq2slate_tf_trainer.Seq2SlateTeacherForcingTrainer.train">(ml.rl.training.ranking.seq2slate_tf_trainer.Seq2SlateTeacherForcingTrainer method)</a>
 </li>
         <li><a href="api/ml.rl.training.ranking.html#ml.rl.training.ranking.seq2slate_trainer.Seq2SlateTrainer.train">(ml.rl.training.ranking.seq2slate_trainer.Seq2SlateTrainer method)</a>
 </li>
-        <li><a href="api/ml.rl.training.html#ml.rl.training.rl_trainer_pytorch.RLTrainer.train">(ml.rl.training.rl_trainer_pytorch.RLTrainer method)</a>
+        <li><a href="api/ml.rl.training.html#ml.rl.training.reward_network_trainer.RewardNetTrainer.train">(ml.rl.training.reward_network_trainer.RewardNetTrainer method)</a>
 </li>
         <li><a href="api/ml.rl.training.html#ml.rl.training.sac_trainer.SACTrainer.train">(ml.rl.training.sac_trainer.SACTrainer method)</a>
 </li>
+        <li><a href="api/ml.rl.training.html#ml.rl.training.slate_q_trainer.SlateQTrainer.train">(ml.rl.training.slate_q_trainer.SlateQTrainer method)</a>
+</li>
         <li><a href="api/ml.rl.training.html#ml.rl.training.td3_trainer.TD3Trainer.train">(ml.rl.training.td3_trainer.TD3Trainer method)</a>
+</li>
+        <li><a href="api/ml.rl.training.html#ml.rl.training.trainer.Trainer.train">(ml.rl.training.trainer.Trainer method)</a>
 </li>
         <li><a href="api/ml.rl.training.world_model.html#ml.rl.training.world_model.mdnrnn_trainer.MDNRNNTrainer.train">(ml.rl.training.world_model.mdnrnn_trainer.MDNRNNTrainer method)</a>
 </li>
       </ul></li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.OpenAiRunDetails.train_after_ts">train_after_ts (ml.rl.parameters.OpenAiRunDetails attribute)</a>
-</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/ml.rl.html#ml.rl.parameters.MDNRNNParameters.train_data_percentage">train_data_percentage (ml.rl.parameters.MDNRNNParameters attribute)</a>
-</li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.OpenAiRunDetails.train_epochs">train_epochs (ml.rl.parameters.OpenAiRunDetails attribute)</a>
-</li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.OpenAiRunDetails.train_every_ts">train_every_ts (ml.rl.parameters.OpenAiRunDetails attribute)</a>
 </li>
       <li><a href="api/ml.rl.workflow.html#ml.rl.workflow.base_workflow.BaseWorkflow.train_network">train_network() (ml.rl.workflow.base_workflow.BaseWorkflow method)</a>
 </li>
+      <li><a href="api/ml.rl.training.html#ml.rl.training.trainer.Trainer">Trainer (class in ml.rl.training.trainer)</a>
+</li>
       <li><a href="api/ml.rl.html#ml.rl.parameters.DiscreteActionModelParameters.training">training (ml.rl.parameters.DiscreteActionModelParameters attribute)</a>
-
-      <ul>
-        <li><a href="api/ml.rl.html#ml.rl.parameters.OpenAiGymParameters.training">(ml.rl.parameters.OpenAiGymParameters attribute)</a>
 </li>
-        <li><a href="api/ml.rl.html#ml.rl.parameters.SACModelParameters.training">(ml.rl.parameters.SACModelParameters attribute)</a>
-</li>
-      </ul></li>
       <li><a href="api/ml.rl.training.html#ml.rl.training.training_data_page.TrainingDataPage">TrainingDataPage (class in ml.rl.training.training_data_page)</a>
-</li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.TrainingFeatureExtractor">TrainingFeatureExtractor (class in ml.rl.preprocessing.feature_extractor)</a>
 </li>
       <li><a href="api/ml.rl.workflow.html#ml.rl.workflow.page_handler.TrainingPageHandler">TrainingPageHandler (class in ml.rl.workflow.page_handler)</a>
 </li>
@@ -2655,23 +2430,15 @@
 </li>
       <li><a href="api/ml.rl.simulators.html#ml.rl.simulators.recsim.RecSim.update_user_interest">update_user_interest() (ml.rl.simulators.recsim.RecSim method)</a>
 </li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.SACTrainingParameters.use_2_q_functions">use_2_q_functions (ml.rl.parameters.SACTrainingParameters attribute)</a>
-
-      <ul>
-        <li><a href="api/ml.rl.html#ml.rl.parameters.TD3TrainingParameters.use_2_q_functions">(ml.rl.parameters.TD3TrainingParameters attribute)</a>
-</li>
-      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.TrainingParameters.use_batch_norm">use_batch_norm (ml.rl.parameters.TrainingParameters attribute)</a>
+      <li><a href="api/ml.rl.html#ml.rl.parameters.TD3TrainingParameters.use_2_q_functions">use_2_q_functions (ml.rl.parameters.TD3TrainingParameters attribute)</a>
 </li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.OpenAiGymParameters.use_gpu">use_gpu (ml.rl.parameters.OpenAiGymParameters attribute)</a>
+      <li><a href="api/ml.rl.html#ml.rl.parameters.TrainingParameters.use_batch_norm">use_batch_norm (ml.rl.parameters.TrainingParameters attribute)</a>
 </li>
       <li><a href="api/ml.rl.html#ml.rl.parameters.FeedForwardParameters.use_layer_norm">use_layer_norm (ml.rl.parameters.FeedForwardParameters attribute)</a>
 </li>
       <li><a href="api/ml.rl.html#ml.rl.parameters.RLParameters.use_seq_num_diff_as_time_diff">use_seq_num_diff_as_time_diff (ml.rl.parameters.RLParameters attribute)</a>
-</li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.SACTrainingParameters.use_value_network">use_value_network (ml.rl.parameters.SACTrainingParameters attribute)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -2683,12 +2450,8 @@
 </li>
       <li><a href="api/ml.rl.html#ml.rl.parameters.MDNRNNParameters.validation_data_percentage">validation_data_percentage (ml.rl.parameters.MDNRNNParameters attribute)</a>
 </li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.SACModelParameters.value_network">value_network (ml.rl.parameters.SACModelParameters attribute)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.SACTrainingParameters.value_network_optimizer">value_network_optimizer (ml.rl.parameters.SACTrainingParameters attribute)</a>
-</li>
       <li><a href="api/ml.rl.html#ml.rl.types.ValuePresence">ValuePresence (class in ml.rl.types)</a>
 </li>
       <li><a href="api/ml.rl.models.html#ml.rl.models.example_sequence_model.VideoIDFeatures">VideoIDFeatures (class in ml.rl.models.example_sequence_model)</a>
@@ -2702,33 +2465,37 @@
       <li><a href="api/ml.rl.training.html#ml.rl.training.dqn_trainer.DQNTrainer.warm_start_components">warm_start_components() (ml.rl.training.dqn_trainer.DQNTrainer method)</a>
 
       <ul>
+        <li><a href="api/ml.rl.training.html#ml.rl.training.parametric_dqn_trainer.ParametricDQNTrainer.warm_start_components">(ml.rl.training.parametric_dqn_trainer.ParametricDQNTrainer method)</a>
+</li>
         <li><a href="api/ml.rl.training.html#ml.rl.training.qrdqn_trainer.QRDQNTrainer.warm_start_components">(ml.rl.training.qrdqn_trainer.QRDQNTrainer method)</a>
 </li>
-        <li><a href="api/ml.rl.training.ranking.html#ml.rl.training.ranking.ranking_trainer.RankingTrainer.warm_start_components">(ml.rl.training.ranking.ranking_trainer.RankingTrainer method)</a>
+        <li><a href="api/ml.rl.training.ranking.html#ml.rl.training.ranking.seq2slate_tf_trainer.Seq2SlateTeacherForcingTrainer.warm_start_components">(ml.rl.training.ranking.seq2slate_tf_trainer.Seq2SlateTeacherForcingTrainer method)</a>
 </li>
         <li><a href="api/ml.rl.training.ranking.html#ml.rl.training.ranking.seq2slate_trainer.Seq2SlateTrainer.warm_start_components">(ml.rl.training.ranking.seq2slate_trainer.Seq2SlateTrainer method)</a>
 </li>
-        <li><a href="api/ml.rl.training.html#ml.rl.training.rl_trainer_pytorch.RLTrainer.warm_start_components">(ml.rl.training.rl_trainer_pytorch.RLTrainer method)</a>
+        <li><a href="api/ml.rl.training.html#ml.rl.training.reward_network_trainer.RewardNetTrainer.warm_start_components">(ml.rl.training.reward_network_trainer.RewardNetTrainer method)</a>
 </li>
         <li><a href="api/ml.rl.training.html#ml.rl.training.sac_trainer.SACTrainer.warm_start_components">(ml.rl.training.sac_trainer.SACTrainer method)</a>
 </li>
+        <li><a href="api/ml.rl.training.html#ml.rl.training.slate_q_trainer.SlateQTrainer.warm_start_components">(ml.rl.training.slate_q_trainer.SlateQTrainer method)</a>
+</li>
         <li><a href="api/ml.rl.training.html#ml.rl.training.td3_trainer.TD3Trainer.warm_start_components">(ml.rl.training.td3_trainer.TD3Trainer method)</a>
 </li>
+        <li><a href="api/ml.rl.training.html#ml.rl.training.trainer.Trainer.warm_start_components">(ml.rl.training.trainer.Trainer method)</a>
+</li>
       </ul></li>
-      <li><a href="api/ml.rl.html#ml.rl.parameters.DDPGTrainingParameters.warm_start_model_path">warm_start_model_path (ml.rl.parameters.DDPGTrainingParameters attribute)</a>
+      <li><a href="api/ml.rl.html#ml.rl.parameters.TD3TrainingParameters.warm_start_model_path">warm_start_model_path (ml.rl.parameters.TD3TrainingParameters attribute)</a>
 
       <ul>
-        <li><a href="api/ml.rl.html#ml.rl.parameters.SACTrainingParameters.warm_start_model_path">(ml.rl.parameters.SACTrainingParameters attribute)</a>
-</li>
-        <li><a href="api/ml.rl.html#ml.rl.parameters.TD3TrainingParameters.warm_start_model_path">(ml.rl.parameters.TD3TrainingParameters attribute)</a>
-</li>
         <li><a href="api/ml.rl.html#ml.rl.parameters.TrainingParameters.warm_start_model_path">(ml.rl.parameters.TrainingParameters attribute)</a>
 </li>
-      </ul></li>
-      <li><a href="api/ml.rl.models.html#ml.rl.models.example_sequence_model.WatchedVideoSequence">WatchedVideoSequence (class in ml.rl.models.example_sequence_model)</a>
+        <li><a href="api/ml.rl.training.html#ml.rl.training.sac_trainer.SACTrainerParameters.warm_start_model_path">(ml.rl.training.sac_trainer.SACTrainerParameters attribute)</a>
 </li>
+      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/ml.rl.models.html#ml.rl.models.example_sequence_model.WatchedVideoSequence">WatchedVideoSequence (class in ml.rl.models.example_sequence_model)</a>
+</li>
       <li><a href="api/ml.rl.html#ml.rl.parameters.TrainingParameters.weight_init_min_std">weight_init_min_std (ml.rl.parameters.TrainingParameters attribute)</a>
 </li>
       <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.cpe.CpeEstimateSet.weighted_doubly_robust">weighted_doubly_robust() (ml.rl.evaluation.cpe.CpeEstimateSet property)</a>
@@ -2745,13 +2512,19 @@
 </li>
       <li><a href="api/ml.rl.workflow.html#ml.rl.workflow.page_handler.WorldModelEvaluationPageHandler">WorldModelEvaluationPageHandler (class in ml.rl.workflow.page_handler)</a>
 </li>
-      <li><a href="api/ml.rl.preprocessing.html#ml.rl.preprocessing.feature_extractor.WorldModelFeatureExtractor">WorldModelFeatureExtractor (class in ml.rl.preprocessing.feature_extractor)</a>
-</li>
       <li><a href="api/ml.rl.workflow.html#ml.rl.workflow.page_handler.WorldModelRandomTrainingPageHandler">WorldModelRandomTrainingPageHandler (class in ml.rl.workflow.page_handler)</a>
 </li>
       <li><a href="api/ml.rl.workflow.html#ml.rl.workflow.page_handler.WorldModelTrainingPageHandler">WorldModelTrainingPageHandler (class in ml.rl.workflow.page_handler)</a>
 </li>
       <li><a href="api/ml.rl.training.html#ml.rl.training.loss_reporter.BatchStats.write_summary">write_summary() (ml.rl.training.loss_reporter.BatchStats method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="X">X</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/ml.rl.evaluation.html#ml.rl.evaluation.doubly_robust_estimator.DoublyRobustHP.xgb_params">xgb_params() (ml.rl.evaluation.doubly_robust_estimator.DoublyRobustHP property)</a>
 </li>
   </ul></td>
 </tr></table>

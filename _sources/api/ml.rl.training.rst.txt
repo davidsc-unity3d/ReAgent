@@ -29,14 +29,6 @@ ml.rl.training.cem\_trainer module
    :undoc-members:
    :show-inheritance:
 
-ml.rl.training.dqn\_predictor module
-------------------------------------
-
-.. automodule:: ml.rl.training.dqn_predictor
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 ml.rl.training.dqn\_trainer module
 ----------------------------------
 
@@ -69,14 +61,6 @@ ml.rl.training.loss\_reporter module
    :undoc-members:
    :show-inheritance:
 
-ml.rl.training.off\_policy\_predictor module
---------------------------------------------
-
-.. automodule:: ml.rl.training.off_policy_predictor
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 ml.rl.training.on\_policy\_predictor module
 -------------------------------------------
 
@@ -97,6 +81,14 @@ ml.rl.training.qrdqn\_trainer module
 ------------------------------------
 
 .. automodule:: ml.rl.training.qrdqn_trainer
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+ml.rl.training.reward\_network\_trainer module
+----------------------------------------------
+
+.. automodule:: ml.rl.training.reward_network_trainer
    :members:
    :undoc-members:
    :show-inheritance:
@@ -125,10 +117,10 @@ ml.rl.training.sac\_trainer module
    :undoc-members:
    :show-inheritance:
 
-ml.rl.training.sandboxed\_predictor module
-------------------------------------------
+ml.rl.training.slate\_q\_trainer module
+---------------------------------------
 
-.. automodule:: ml.rl.training.sandboxed_predictor
+.. automodule:: ml.rl.training.slate_q_trainer
    :members:
    :undoc-members:
    :show-inheritance:
@@ -137,6 +129,14 @@ ml.rl.training.td3\_trainer module
 ----------------------------------
 
 .. automodule:: ml.rl.training.td3_trainer
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+ml.rl.training.trainer module
+-----------------------------
+
+.. automodule:: ml.rl.training.trainer
    :members:
    :undoc-members:
    :show-inheritance:

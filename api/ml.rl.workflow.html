@@ -99,7 +99,6 @@
 <li class="toctree-l1"><a class="reference internal" href="ml.rl.preprocessing.html">Preprocessing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ml.rl.readers.html">Readers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ml.rl.simulators.html">Simulators</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ml.rl.thrift.html">Thrift</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ml.rl.training.html">Training</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Workflow</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
@@ -430,11 +429,32 @@ to warm start it.</p>
 
 <dl class="class">
 <dt id="ml.rl.workflow.page_handler.RankingTrainingPageHandler">
-<em class="property">class </em><code class="sig-prename descclassname">ml.rl.workflow.page_handler.</code><code class="sig-name descname">RankingTrainingPageHandler</code><span class="sig-paren">(</span><em class="sig-param">trainer_or_evaluator</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.workflow.page_handler.RankingTrainingPageHandler" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.workflow.page_handler.</code><code class="sig-name descname">RankingTrainingPageHandler</code><span class="sig-paren">(</span><em class="sig-param">trainer</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.workflow.page_handler.RankingTrainingPageHandler" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#ml.rl.workflow.page_handler.PageHandler" title="ml.rl.workflow.page_handler.PageHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.workflow.page_handler.PageHandler</span></code></a></p>
+<dl class="method">
+<dt id="ml.rl.workflow.page_handler.RankingTrainingPageHandler.finish">
+<code class="sig-name descname">finish</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.workflow.page_handler.RankingTrainingPageHandler.finish" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="method">
 <dt id="ml.rl.workflow.page_handler.RankingTrainingPageHandler.handle">
 <code class="sig-name descname">handle</code><span class="sig-paren">(</span><em class="sig-param">tdp: ml.rl.types.PreprocessedTrainingBatch</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ml.rl.workflow.page_handler.RankingTrainingPageHandler.handle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ml.rl.workflow.page_handler.RewardNetTrainingPageHandler">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.workflow.page_handler.</code><code class="sig-name descname">RewardNetTrainingPageHandler</code><span class="sig-paren">(</span><em class="sig-param">trainer</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.workflow.page_handler.RewardNetTrainingPageHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ml.rl.workflow.page_handler.PageHandler" title="ml.rl.workflow.page_handler.PageHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.workflow.page_handler.PageHandler</span></code></a></p>
+<dl class="method">
+<dt id="ml.rl.workflow.page_handler.RewardNetTrainingPageHandler.finish">
+<code class="sig-name descname">finish</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.workflow.page_handler.RewardNetTrainingPageHandler.finish" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ml.rl.workflow.page_handler.RewardNetTrainingPageHandler.handle">
+<code class="sig-name descname">handle</code><span class="sig-paren">(</span><em class="sig-param">tdp: ml.rl.types.PreprocessedTrainingBatch</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ml.rl.workflow.page_handler.RewardNetTrainingPageHandler.handle" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -491,7 +511,7 @@ to warm start it.</p>
 
 <dl class="function">
 <dt id="ml.rl.workflow.page_handler.feed_pages">
-<code class="sig-prename descclassname">ml.rl.workflow.page_handler.</code><code class="sig-name descname">feed_pages</code><span class="sig-paren">(</span><em class="sig-param">data_streamer</em>, <em class="sig-param">dataset_num_rows</em>, <em class="sig-param">epoch</em>, <em class="sig-param">minibatch_size</em>, <em class="sig-param">use_gpu</em>, <em class="sig-param">page_handler</em>, <em class="sig-param">batch_preprocessor=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.workflow.page_handler.feed_pages" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">ml.rl.workflow.page_handler.</code><code class="sig-name descname">feed_pages</code><span class="sig-paren">(</span><em class="sig-param">data_loader</em>, <em class="sig-param">dataset_num_rows</em>, <em class="sig-param">epoch</em>, <em class="sig-param">minibatch_size</em>, <em class="sig-param">use_gpu</em>, <em class="sig-param">page_handler</em>, <em class="sig-param">batch_preprocessor=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.workflow.page_handler.feed_pages" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
@@ -596,11 +616,6 @@ to warm start it.</p>
 <dl class="function">
 <dt id="ml.rl.workflow.transitional.get_cem_trainer">
 <code class="sig-prename descclassname">ml.rl.workflow.transitional.</code><code class="sig-name descname">get_cem_trainer</code><span class="sig-paren">(</span><em class="sig-param">env: ml.rl.test.gym.open_ai_gym_environment.OpenAIGymEnvironment</em>, <em class="sig-param">params: ml.rl.parameters.CEMParameters</em>, <em class="sig-param">use_gpu: bool</em><span class="sig-paren">)</span> &#x2192; ml.rl.training.cem_trainer.CEMTrainer<a class="headerlink" href="#ml.rl.workflow.transitional.get_cem_trainer" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="ml.rl.workflow.transitional.get_sac_trainer">
-<code class="sig-prename descclassname">ml.rl.workflow.transitional.</code><code class="sig-name descname">get_sac_trainer</code><span class="sig-paren">(</span><em class="sig-param">env: ml.rl.test.gym.open_ai_gym_environment.OpenAIGymEnvironment</em>, <em class="sig-param">parameters: ml.rl.parameters.SACModelParameters</em>, <em class="sig-param">use_gpu: bool</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.workflow.transitional.get_sac_trainer" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">

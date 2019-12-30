@@ -98,7 +98,6 @@
 <li class="toctree-l1"><a class="reference internal" href="api/ml.rl.preprocessing.html">Preprocessing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api/ml.rl.readers.html">Readers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api/ml.rl.simulators.html">Simulators</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api/ml.rl.thrift.html">Thrift</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api/ml.rl.training.html">Training</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api/ml.rl.workflow.html">Workflow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api/modules.html">All Modules</a></li>
@@ -279,6 +278,7 @@ year={2018}</p>
 <li class="toctree-l2"><a class="reference internal" href="api/ml.rl.evaluation.html#module-ml.rl.evaluation.evaluation_data_page">ml.rl.evaluation.evaluation_data_page module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/ml.rl.evaluation.html#module-ml.rl.evaluation.evaluator">ml.rl.evaluation.evaluator module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/ml.rl.evaluation.html#module-ml.rl.evaluation.ranking_evaluator">ml.rl.evaluation.ranking_evaluator module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/ml.rl.evaluation.html#module-ml.rl.evaluation.reward_net_evaluator">ml.rl.evaluation.reward_net_evaluator module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/ml.rl.evaluation.html#module-ml.rl.evaluation.sequential_doubly_robust_estimator">ml.rl.evaluation.sequential_doubly_robust_estimator module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/ml.rl.evaluation.html#module-ml.rl.evaluation.weighted_sequential_doubly_robust_estimator">ml.rl.evaluation.weighted_sequential_doubly_robust_estimator module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/ml.rl.evaluation.html#module-ml.rl.evaluation.world_model_evaluator">ml.rl.evaluation.world_model_evaluator module</a></li>
@@ -303,6 +303,7 @@ year={2018}</p>
 <li class="toctree-l2"><a class="reference internal" href="api/ml.rl.models.html#module-ml.rl.models.parametric_dqn">ml.rl.models.parametric_dqn module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/ml.rl.models.html#module-ml.rl.models.quantile_dqn">ml.rl.models.quantile_dqn module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/ml.rl.models.html#module-ml.rl.models.seq2slate">ml.rl.models.seq2slate module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/ml.rl.models.html#module-ml.rl.models.seq2slate_reward">ml.rl.models.seq2slate_reward module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/ml.rl.models.html#module-ml.rl.models.world_model">ml.rl.models.world_model module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/ml.rl.models.html#module-ml.rl.models">Module contents</a></li>
 </ul>
@@ -317,12 +318,10 @@ year={2018}</p>
 <li class="toctree-l1"><a class="reference internal" href="api/ml.rl.preprocessing.html">Preprocessing</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="api/ml.rl.preprocessing.html#submodules">Submodules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/ml.rl.preprocessing.html#module-ml.rl.preprocessing.batch_preprocessor">ml.rl.preprocessing.batch_preprocessor module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/ml.rl.preprocessing.html#module-ml.rl.preprocessing.feature_extractor">ml.rl.preprocessing.feature_extractor module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/ml.rl.preprocessing.html#module-ml.rl.preprocessing.identify_types">ml.rl.preprocessing.identify_types module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/ml.rl.preprocessing.html#module-ml.rl.preprocessing.normalization">ml.rl.preprocessing.normalization module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/ml.rl.preprocessing.html#module-ml.rl.preprocessing.postprocessor">ml.rl.preprocessing.postprocessor module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/ml.rl.preprocessing.html#module-ml.rl.preprocessing.preprocessor">ml.rl.preprocessing.preprocessor module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/ml.rl.preprocessing.html#module-ml.rl.preprocessing.preprocessor_net">ml.rl.preprocessing.preprocessor_net module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/ml.rl.preprocessing.html#module-ml.rl.preprocessing.sparse_to_dense">ml.rl.preprocessing.sparse_to_dense module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/ml.rl.preprocessing.html#module-ml.rl.preprocessing">Module contents</a></li>
 </ul>
@@ -342,20 +341,6 @@ year={2018}</p>
 <li class="toctree-l2"><a class="reference internal" href="api/ml.rl.simulators.html#module-ml.rl.simulators">Module contents</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="api/ml.rl.thrift.html">Thrift</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="api/ml.rl.thrift.html#subpackages">Subpackages</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="api/ml.rl.thrift.core.html">ml.rl.thrift.core package</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="api/ml.rl.thrift.core.html#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/ml.rl.thrift.core.html#module-ml.rl.thrift.core.constants">ml.rl.thrift.core.constants module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/ml.rl.thrift.core.html#module-ml.rl.thrift.core.ttypes">ml.rl.thrift.core.ttypes module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/ml.rl.thrift.core.html#module-ml.rl.thrift.core">Module contents</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="api/ml.rl.thrift.html#module-ml.rl.thrift">Module contents</a></li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="api/ml.rl.training.html">Training</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="api/ml.rl.training.html#subpackages">Subpackages</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="api/ml.rl.training.gradient_free.html">ml.rl.training.gradient_free package</a><ul>
@@ -367,7 +352,7 @@ year={2018}</p>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="api/ml.rl.training.ranking.html">ml.rl.training.ranking package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="api/ml.rl.training.ranking.html#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/ml.rl.training.ranking.html#module-ml.rl.training.ranking.ranking_trainer">ml.rl.training.ranking.ranking_trainer module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/ml.rl.training.ranking.html#module-ml.rl.training.ranking.seq2slate_tf_trainer">ml.rl.training.ranking.seq2slate_tf_trainer module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/ml.rl.training.ranking.html#module-ml.rl.training.ranking.seq2slate_trainer">ml.rl.training.ranking.seq2slate_trainer module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/ml.rl.training.ranking.html#module-ml.rl.training.ranking">Module contents</a></li>
 </ul>
@@ -383,20 +368,20 @@ year={2018}</p>
 <li class="toctree-l2"><a class="reference internal" href="api/ml.rl.training.html#submodules">Submodules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/ml.rl.training.html#module-ml.rl.training.c51_trainer">ml.rl.training.c51_trainer module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/ml.rl.training.html#module-ml.rl.training.cem_trainer">ml.rl.training.cem_trainer module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/ml.rl.training.html#module-ml.rl.training.dqn_predictor">ml.rl.training.dqn_predictor module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/ml.rl.training.html#module-ml.rl.training.dqn_trainer">ml.rl.training.dqn_trainer module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/ml.rl.training.html#module-ml.rl.training.dqn_trainer_base">ml.rl.training.dqn_trainer_base module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/ml.rl.training.html#module-ml.rl.training.imitator_training">ml.rl.training.imitator_training module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/ml.rl.training.html#module-ml.rl.training.loss_reporter">ml.rl.training.loss_reporter module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/ml.rl.training.html#module-ml.rl.training.off_policy_predictor">ml.rl.training.off_policy_predictor module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/ml.rl.training.html#module-ml.rl.training.on_policy_predictor">ml.rl.training.on_policy_predictor module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/ml.rl.training.html#module-ml.rl.training.parametric_dqn_trainer">ml.rl.training.parametric_dqn_trainer module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/ml.rl.training.html#module-ml.rl.training.qrdqn_trainer">ml.rl.training.qrdqn_trainer module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/ml.rl.training.html#module-ml.rl.training.reward_network_trainer">ml.rl.training.reward_network_trainer module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/ml.rl.training.html#module-ml.rl.training.rl_dataset">ml.rl.training.rl_dataset module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/ml.rl.training.html#module-ml.rl.training.rl_trainer_pytorch">ml.rl.training.rl_trainer_pytorch module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/ml.rl.training.html#module-ml.rl.training.sac_trainer">ml.rl.training.sac_trainer module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/ml.rl.training.html#module-ml.rl.training.sandboxed_predictor">ml.rl.training.sandboxed_predictor module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/ml.rl.training.html#module-ml.rl.training.slate_q_trainer">ml.rl.training.slate_q_trainer module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/ml.rl.training.html#module-ml.rl.training.td3_trainer">ml.rl.training.td3_trainer module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/ml.rl.training.html#module-ml.rl.training.trainer">ml.rl.training.trainer module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/ml.rl.training.html#module-ml.rl.training.training_data_page">ml.rl.training.training_data_page module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/ml.rl.training.html#module-ml.rl.training">Module contents</a></li>
 </ul>
@@ -426,6 +411,7 @@ year={2018}</p>
 <li class="toctree-l7"><a class="reference internal" href="api/ml.rl.evaluation.html#module-ml.rl.evaluation.evaluation_data_page">ml.rl.evaluation.evaluation_data_page module</a></li>
 <li class="toctree-l7"><a class="reference internal" href="api/ml.rl.evaluation.html#module-ml.rl.evaluation.evaluator">ml.rl.evaluation.evaluator module</a></li>
 <li class="toctree-l7"><a class="reference internal" href="api/ml.rl.evaluation.html#module-ml.rl.evaluation.ranking_evaluator">ml.rl.evaluation.ranking_evaluator module</a></li>
+<li class="toctree-l7"><a class="reference internal" href="api/ml.rl.evaluation.html#module-ml.rl.evaluation.reward_net_evaluator">ml.rl.evaluation.reward_net_evaluator module</a></li>
 <li class="toctree-l7"><a class="reference internal" href="api/ml.rl.evaluation.html#module-ml.rl.evaluation.sequential_doubly_robust_estimator">ml.rl.evaluation.sequential_doubly_robust_estimator module</a></li>
 <li class="toctree-l7"><a class="reference internal" href="api/ml.rl.evaluation.html#module-ml.rl.evaluation.weighted_sequential_doubly_robust_estimator">ml.rl.evaluation.weighted_sequential_doubly_robust_estimator module</a></li>
 <li class="toctree-l7"><a class="reference internal" href="api/ml.rl.evaluation.html#module-ml.rl.evaluation.world_model_evaluator">ml.rl.evaluation.world_model_evaluator module</a></li>
@@ -450,6 +436,7 @@ year={2018}</p>
 <li class="toctree-l7"><a class="reference internal" href="api/ml.rl.models.html#module-ml.rl.models.parametric_dqn">ml.rl.models.parametric_dqn module</a></li>
 <li class="toctree-l7"><a class="reference internal" href="api/ml.rl.models.html#module-ml.rl.models.quantile_dqn">ml.rl.models.quantile_dqn module</a></li>
 <li class="toctree-l7"><a class="reference internal" href="api/ml.rl.models.html#module-ml.rl.models.seq2slate">ml.rl.models.seq2slate module</a></li>
+<li class="toctree-l7"><a class="reference internal" href="api/ml.rl.models.html#module-ml.rl.models.seq2slate_reward">ml.rl.models.seq2slate_reward module</a></li>
 <li class="toctree-l7"><a class="reference internal" href="api/ml.rl.models.html#module-ml.rl.models.world_model">ml.rl.models.world_model module</a></li>
 <li class="toctree-l7"><a class="reference internal" href="api/ml.rl.models.html#module-ml.rl.models">Module contents</a></li>
 </ul>
@@ -464,12 +451,10 @@ year={2018}</p>
 <li class="toctree-l6"><a class="reference internal" href="api/ml.rl.preprocessing.html">ml.rl.preprocessing package</a><ul>
 <li class="toctree-l7"><a class="reference internal" href="api/ml.rl.preprocessing.html#submodules">Submodules</a></li>
 <li class="toctree-l7"><a class="reference internal" href="api/ml.rl.preprocessing.html#module-ml.rl.preprocessing.batch_preprocessor">ml.rl.preprocessing.batch_preprocessor module</a></li>
-<li class="toctree-l7"><a class="reference internal" href="api/ml.rl.preprocessing.html#module-ml.rl.preprocessing.feature_extractor">ml.rl.preprocessing.feature_extractor module</a></li>
 <li class="toctree-l7"><a class="reference internal" href="api/ml.rl.preprocessing.html#module-ml.rl.preprocessing.identify_types">ml.rl.preprocessing.identify_types module</a></li>
 <li class="toctree-l7"><a class="reference internal" href="api/ml.rl.preprocessing.html#module-ml.rl.preprocessing.normalization">ml.rl.preprocessing.normalization module</a></li>
 <li class="toctree-l7"><a class="reference internal" href="api/ml.rl.preprocessing.html#module-ml.rl.preprocessing.postprocessor">ml.rl.preprocessing.postprocessor module</a></li>
 <li class="toctree-l7"><a class="reference internal" href="api/ml.rl.preprocessing.html#module-ml.rl.preprocessing.preprocessor">ml.rl.preprocessing.preprocessor module</a></li>
-<li class="toctree-l7"><a class="reference internal" href="api/ml.rl.preprocessing.html#module-ml.rl.preprocessing.preprocessor_net">ml.rl.preprocessing.preprocessor_net module</a></li>
 <li class="toctree-l7"><a class="reference internal" href="api/ml.rl.preprocessing.html#module-ml.rl.preprocessing.sparse_to_dense">ml.rl.preprocessing.sparse_to_dense module</a></li>
 <li class="toctree-l7"><a class="reference internal" href="api/ml.rl.preprocessing.html#module-ml.rl.preprocessing">Module contents</a></li>
 </ul>
@@ -500,7 +485,7 @@ year={2018}</p>
 </li>
 <li class="toctree-l8"><a class="reference internal" href="api/ml.rl.training.ranking.html">ml.rl.training.ranking package</a><ul>
 <li class="toctree-l9"><a class="reference internal" href="api/ml.rl.training.ranking.html#submodules">Submodules</a></li>
-<li class="toctree-l9"><a class="reference internal" href="api/ml.rl.training.ranking.html#module-ml.rl.training.ranking.ranking_trainer">ml.rl.training.ranking.ranking_trainer module</a></li>
+<li class="toctree-l9"><a class="reference internal" href="api/ml.rl.training.ranking.html#module-ml.rl.training.ranking.seq2slate_tf_trainer">ml.rl.training.ranking.seq2slate_tf_trainer module</a></li>
 <li class="toctree-l9"><a class="reference internal" href="api/ml.rl.training.ranking.html#module-ml.rl.training.ranking.seq2slate_trainer">ml.rl.training.ranking.seq2slate_trainer module</a></li>
 <li class="toctree-l9"><a class="reference internal" href="api/ml.rl.training.ranking.html#module-ml.rl.training.ranking">Module contents</a></li>
 </ul>
@@ -516,20 +501,20 @@ year={2018}</p>
 <li class="toctree-l7"><a class="reference internal" href="api/ml.rl.training.html#submodules">Submodules</a></li>
 <li class="toctree-l7"><a class="reference internal" href="api/ml.rl.training.html#module-ml.rl.training.c51_trainer">ml.rl.training.c51_trainer module</a></li>
 <li class="toctree-l7"><a class="reference internal" href="api/ml.rl.training.html#module-ml.rl.training.cem_trainer">ml.rl.training.cem_trainer module</a></li>
-<li class="toctree-l7"><a class="reference internal" href="api/ml.rl.training.html#module-ml.rl.training.dqn_predictor">ml.rl.training.dqn_predictor module</a></li>
 <li class="toctree-l7"><a class="reference internal" href="api/ml.rl.training.html#module-ml.rl.training.dqn_trainer">ml.rl.training.dqn_trainer module</a></li>
 <li class="toctree-l7"><a class="reference internal" href="api/ml.rl.training.html#module-ml.rl.training.dqn_trainer_base">ml.rl.training.dqn_trainer_base module</a></li>
 <li class="toctree-l7"><a class="reference internal" href="api/ml.rl.training.html#module-ml.rl.training.imitator_training">ml.rl.training.imitator_training module</a></li>
 <li class="toctree-l7"><a class="reference internal" href="api/ml.rl.training.html#module-ml.rl.training.loss_reporter">ml.rl.training.loss_reporter module</a></li>
-<li class="toctree-l7"><a class="reference internal" href="api/ml.rl.training.html#module-ml.rl.training.off_policy_predictor">ml.rl.training.off_policy_predictor module</a></li>
 <li class="toctree-l7"><a class="reference internal" href="api/ml.rl.training.html#module-ml.rl.training.on_policy_predictor">ml.rl.training.on_policy_predictor module</a></li>
 <li class="toctree-l7"><a class="reference internal" href="api/ml.rl.training.html#module-ml.rl.training.parametric_dqn_trainer">ml.rl.training.parametric_dqn_trainer module</a></li>
 <li class="toctree-l7"><a class="reference internal" href="api/ml.rl.training.html#module-ml.rl.training.qrdqn_trainer">ml.rl.training.qrdqn_trainer module</a></li>
+<li class="toctree-l7"><a class="reference internal" href="api/ml.rl.training.html#module-ml.rl.training.reward_network_trainer">ml.rl.training.reward_network_trainer module</a></li>
 <li class="toctree-l7"><a class="reference internal" href="api/ml.rl.training.html#module-ml.rl.training.rl_dataset">ml.rl.training.rl_dataset module</a></li>
 <li class="toctree-l7"><a class="reference internal" href="api/ml.rl.training.html#module-ml.rl.training.rl_trainer_pytorch">ml.rl.training.rl_trainer_pytorch module</a></li>
 <li class="toctree-l7"><a class="reference internal" href="api/ml.rl.training.html#module-ml.rl.training.sac_trainer">ml.rl.training.sac_trainer module</a></li>
-<li class="toctree-l7"><a class="reference internal" href="api/ml.rl.training.html#module-ml.rl.training.sandboxed_predictor">ml.rl.training.sandboxed_predictor module</a></li>
+<li class="toctree-l7"><a class="reference internal" href="api/ml.rl.training.html#module-ml.rl.training.slate_q_trainer">ml.rl.training.slate_q_trainer module</a></li>
 <li class="toctree-l7"><a class="reference internal" href="api/ml.rl.training.html#module-ml.rl.training.td3_trainer">ml.rl.training.td3_trainer module</a></li>
+<li class="toctree-l7"><a class="reference internal" href="api/ml.rl.training.html#module-ml.rl.training.trainer">ml.rl.training.trainer module</a></li>
 <li class="toctree-l7"><a class="reference internal" href="api/ml.rl.training.html#module-ml.rl.training.training_data_page">ml.rl.training.training_data_page module</a></li>
 <li class="toctree-l7"><a class="reference internal" href="api/ml.rl.training.html#module-ml.rl.training">Module contents</a></li>
 </ul>

@@ -99,13 +99,12 @@
 <li class="toctree-l1"><a class="reference internal" href="ml.rl.preprocessing.html">Preprocessing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ml.rl.readers.html">Readers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ml.rl.simulators.html">Simulators</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ml.rl.thrift.html">Thrift</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="ml.rl.training.html">Training</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="ml.rl.training.html#subpackages">Subpackages</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="ml.rl.training.gradient_free.html">ml.rl.training.gradient_free package</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">ml.rl.training.ranking package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ml.rl.training.ranking.ranking_trainer">ml.rl.training.ranking.ranking_trainer module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ml.rl.training.ranking.seq2slate_tf_trainer">ml.rl.training.ranking.seq2slate_tf_trainer module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-ml.rl.training.ranking.seq2slate_trainer">ml.rl.training.ranking.seq2slate_trainer module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-ml.rl.training.ranking">Module contents</a></li>
 </ul>
@@ -116,20 +115,20 @@
 <li class="toctree-l2"><a class="reference internal" href="ml.rl.training.html#submodules">Submodules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ml.rl.training.html#module-ml.rl.training.c51_trainer">ml.rl.training.c51_trainer module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ml.rl.training.html#module-ml.rl.training.cem_trainer">ml.rl.training.cem_trainer module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ml.rl.training.html#module-ml.rl.training.dqn_predictor">ml.rl.training.dqn_predictor module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ml.rl.training.html#module-ml.rl.training.dqn_trainer">ml.rl.training.dqn_trainer module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ml.rl.training.html#module-ml.rl.training.dqn_trainer_base">ml.rl.training.dqn_trainer_base module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ml.rl.training.html#module-ml.rl.training.imitator_training">ml.rl.training.imitator_training module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ml.rl.training.html#module-ml.rl.training.loss_reporter">ml.rl.training.loss_reporter module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ml.rl.training.html#module-ml.rl.training.off_policy_predictor">ml.rl.training.off_policy_predictor module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ml.rl.training.html#module-ml.rl.training.on_policy_predictor">ml.rl.training.on_policy_predictor module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ml.rl.training.html#module-ml.rl.training.parametric_dqn_trainer">ml.rl.training.parametric_dqn_trainer module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ml.rl.training.html#module-ml.rl.training.qrdqn_trainer">ml.rl.training.qrdqn_trainer module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.training.html#module-ml.rl.training.reward_network_trainer">ml.rl.training.reward_network_trainer module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ml.rl.training.html#module-ml.rl.training.rl_dataset">ml.rl.training.rl_dataset module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ml.rl.training.html#module-ml.rl.training.rl_trainer_pytorch">ml.rl.training.rl_trainer_pytorch module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ml.rl.training.html#module-ml.rl.training.sac_trainer">ml.rl.training.sac_trainer module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ml.rl.training.html#module-ml.rl.training.sandboxed_predictor">ml.rl.training.sandboxed_predictor module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.training.html#module-ml.rl.training.slate_q_trainer">ml.rl.training.slate_q_trainer module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ml.rl.training.html#module-ml.rl.training.td3_trainer">ml.rl.training.td3_trainer module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml.rl.training.html#module-ml.rl.training.trainer">ml.rl.training.trainer module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ml.rl.training.html#module-ml.rl.training.training_data_page">ml.rl.training.training_data_page module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ml.rl.training.html#module-ml.rl.training">Module contents</a></li>
 </ul>
@@ -212,30 +211,22 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-ml.rl.training.ranking.ranking_trainer">
-<span id="ml-rl-training-ranking-ranking-trainer-module"></span><h2>ml.rl.training.ranking.ranking_trainer module<a class="headerlink" href="#module-ml.rl.training.ranking.ranking_trainer" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-ml.rl.training.ranking.seq2slate_tf_trainer">
+<span id="ml-rl-training-ranking-seq2slate-tf-trainer-module"></span><h2>ml.rl.training.ranking.seq2slate_tf_trainer module<a class="headerlink" href="#module-ml.rl.training.ranking.seq2slate_tf_trainer" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
-<dt id="ml.rl.training.ranking.ranking_trainer.RankingTrainer">
-<em class="property">class </em><code class="sig-prename descclassname">ml.rl.training.ranking.ranking_trainer.</code><code class="sig-name descname">RankingTrainer</code><a class="headerlink" href="#ml.rl.training.ranking.ranking_trainer.RankingTrainer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dt id="ml.rl.training.ranking.seq2slate_tf_trainer.Seq2SlateTeacherForcingTrainer">
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.training.ranking.seq2slate_tf_trainer.</code><code class="sig-name descname">Seq2SlateTeacherForcingTrainer</code><span class="sig-paren">(</span><em class="sig-param">seq2slate_net: ml.rl.models.seq2slate.Seq2SlateTransformerNet</em>, <em class="sig-param">parameters: ml.rl.parameters.Seq2SlateTransformerParameters</em>, <em class="sig-param">minibatch_size: int</em>, <em class="sig-param">use_gpu: bool = False</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.training.ranking.seq2slate_tf_trainer.Seq2SlateTeacherForcingTrainer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="ml.rl.training.html#ml.rl.training.trainer.Trainer" title="ml.rl.training.trainer.Trainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.training.trainer.Trainer</span></code></a></p>
+<p>Seq2Slate learned in a teach-forcing fashion (only used if the
+the ground-truth sequences are available)</p>
 <dl class="method">
-<dt id="ml.rl.training.ranking.ranking_trainer.RankingTrainer.load_state_dict">
-<code class="sig-name descname">load_state_dict</code><span class="sig-paren">(</span><em class="sig-param">state_dict</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.training.ranking.ranking_trainer.RankingTrainer.load_state_dict" title="Permalink to this definition">¶</a></dt>
+<dt id="ml.rl.training.ranking.seq2slate_tf_trainer.Seq2SlateTeacherForcingTrainer.train">
+<code class="sig-name descname">train</code><span class="sig-paren">(</span><em class="sig-param">training_batch: ml.rl.types.PreprocessedTrainingBatch</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.training.ranking.seq2slate_tf_trainer.Seq2SlateTeacherForcingTrainer.train" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="ml.rl.training.ranking.ranking_trainer.RankingTrainer.state_dict">
-<code class="sig-name descname">state_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.training.ranking.ranking_trainer.RankingTrainer.state_dict" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="ml.rl.training.ranking.ranking_trainer.RankingTrainer.train">
-<code class="sig-name descname">train</code><span class="sig-paren">(</span><em class="sig-param">training_batch: ml.rl.types.PreprocessedTrainingBatch</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ml.rl.training.ranking.ranking_trainer.RankingTrainer.train" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="ml.rl.training.ranking.ranking_trainer.RankingTrainer.warm_start_components">
-<code class="sig-name descname">warm_start_components</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; List[str]<a class="headerlink" href="#ml.rl.training.ranking.ranking_trainer.RankingTrainer.warm_start_components" title="Permalink to this definition">¶</a></dt>
+<dt id="ml.rl.training.ranking.seq2slate_tf_trainer.Seq2SlateTeacherForcingTrainer.warm_start_components">
+<code class="sig-name descname">warm_start_components</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.training.ranking.seq2slate_tf_trainer.Seq2SlateTeacherForcingTrainer.warm_start_components" title="Permalink to this definition">¶</a></dt>
 <dd><p>The trainer should specify what members to save and load</p>
 </dd></dl>
 
@@ -246,8 +237,8 @@
 <span id="ml-rl-training-ranking-seq2slate-trainer-module"></span><h2>ml.rl.training.ranking.seq2slate_trainer module<a class="headerlink" href="#module-ml.rl.training.ranking.seq2slate_trainer" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="ml.rl.training.ranking.seq2slate_trainer.Seq2SlateTrainer">
-<em class="property">class </em><code class="sig-prename descclassname">ml.rl.training.ranking.seq2slate_trainer.</code><code class="sig-name descname">Seq2SlateTrainer</code><span class="sig-paren">(</span><em class="sig-param">seq2slate_net: ml.rl.models.seq2slate.Seq2SlateTransformerNet</em>, <em class="sig-param">baseline_net: ml.rl.models.seq2slate.BaselineNet</em>, <em class="sig-param">parameters: ml.rl.parameters.Seq2SlateTransformerParameters</em>, <em class="sig-param">eval_parameters: ml.rl.parameters.EvaluationParameters</em>, <em class="sig-param">minibatch_size: int</em>, <em class="sig-param">use_gpu: bool = False</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.training.ranking.seq2slate_trainer.Seq2SlateTrainer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#ml.rl.training.ranking.ranking_trainer.RankingTrainer" title="ml.rl.training.ranking.ranking_trainer.RankingTrainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.training.ranking.ranking_trainer.RankingTrainer</span></code></a></p>
+<em class="property">class </em><code class="sig-prename descclassname">ml.rl.training.ranking.seq2slate_trainer.</code><code class="sig-name descname">Seq2SlateTrainer</code><span class="sig-paren">(</span><em class="sig-param">seq2slate_net: ml.rl.models.seq2slate.Seq2SlateTransformerNet</em>, <em class="sig-param">baseline_net: ml.rl.models.seq2slate.BaselineNet</em>, <em class="sig-param">parameters: ml.rl.parameters.Seq2SlateTransformerParameters</em>, <em class="sig-param">minibatch_size: int</em>, <em class="sig-param">use_gpu: bool = False</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.training.ranking.seq2slate_trainer.Seq2SlateTrainer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="ml.rl.training.html#ml.rl.training.trainer.Trainer" title="ml.rl.training.trainer.Trainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">ml.rl.training.trainer.Trainer</span></code></a></p>
 <dl class="method">
 <dt id="ml.rl.training.ranking.seq2slate_trainer.Seq2SlateTrainer.train">
 <code class="sig-name descname">train</code><span class="sig-paren">(</span><em class="sig-param">training_batch: ml.rl.types.PreprocessedTrainingBatch</em><span class="sig-paren">)</span><a class="headerlink" href="#ml.rl.training.ranking.seq2slate_trainer.Seq2SlateTrainer.train" title="Permalink to this definition">¶</a></dt>
