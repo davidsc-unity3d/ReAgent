@@ -78,7 +78,9 @@ object Preprocessor {
     }
 
     val sqlCommand = query.concat(
-      s" FROM ${timelineConfig.outputTableName} where ABS(HASH(mdp_id || 'train')) % 10000 <= CAST(${queryConfig.tableSample} * 100 AS INTEGER)")
+      s" FROM ${timelineConfig.outputTableName}"
+      + s" where (ABS(HASH(mdp_id || 'null_mdp_id')) % 10000 <= CAST(${queryConfig.tableSample} * 100 AS INTEGER)) AND"
+      + s" (ABS(HASH(mdp_id || 'null_mdp_id')) % 10000 > CAST(${queryConfig.tableSample / 10.0} * 100 AS INTEGER))")
 
     log.info("Executing query: ")
     log.info(sqlCommand)
@@ -95,7 +97,9 @@ object Preprocessor {
     // Write the eval table
     val evalSqlCommand =
       query.concat(
-        s" FROM ${timelineConfig.outputTableName} where ABS(HASH(mdp_id || 'eval')) % 10000 <= CAST(${queryConfig.tableSample / 10.0} * 100 AS INTEGER) ORDER BY mdp_id, sequence_number")
+        s" FROM ${timelineConfig.outputTableName}"
+        + s" where ABS(HASH(mdp_id || 'null_mdp_id')) % 10000 <= CAST(${queryConfig.tableSample / 10.0} * 100 AS INTEGER)"
+        + s" ORDER BY mdp_id, sequence_number")
 
     log.info("Executing query: ")
     log.info(evalSqlCommand)
